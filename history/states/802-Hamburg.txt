@@ -19,15 +19,8 @@ state= {
 			}			
 		}
 		add_core_of = GER
-		add_core_of = HNN
-		1939.1.1 = {
-			buildings = {
-				synthetic_refinery = 3
-				anti_air_building = 5
-				dockyard = 7
-				arms_factory = 2
-			}
-		}
+		
+		set_demilitarized_zone = yes
 	}
 
 	provinces= {
