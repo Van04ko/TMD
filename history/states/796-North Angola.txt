@@ -4,7 +4,8 @@ state={
 	name="STATE_796"
 
 	history={
-		owner = LAT
+		owner = SOV
+		
 		buildings = {
 			infrastructure = 5
 			arms_factory = 1
@@ -17,10 +18,8 @@ state={
 			310 1 
 		}
 		add_core_of = LAT
-		1941.11.1 = {
-			add_core_of = BLR
-		}
-
+		
+		set_demilitarized_zone = yes
 	}
 
 	provinces={

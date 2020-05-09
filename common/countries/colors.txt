@@ -34,8 +34,8 @@ CZE = {	color = rgb { 54 167 156 }
 		color_ui = rgb { 70 217 203 }
 }
 POL = {
-	color = rgb { 241 156 187 }
-	color_ui = rgb { 241 156 187 }
+	color = rgb { 197  92  106 }
+	color_ui = rgb { 197  92  106 }
 }
 AUS = {
 	color = rgb { 194 198 215 }
@@ -740,6 +740,6 @@ TRA = {
 	color_ui = rgb { 244	164	96 }
 }
 WUK = {
-	color = rgb { 255 83 73 }
-	color_ui = rgb { 255 83 73 }
+	color = rgb { 180 76 67 }
+	color_ui = rgb { 180 76 67 }
 }

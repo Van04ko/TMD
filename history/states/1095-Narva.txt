@@ -5,7 +5,7 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = EST
+		owner = SOV
 		victory_points = {
 			4640 1 
 		}
@@ -18,10 +18,8 @@ state={
 
 		}
 		add_core_of = EST
-		1941.11.1 = {
-			add_core_of = FIN
-		}
-
+		
+		set_demilitarized_zone = yes
 	}
 
 	provinces={
