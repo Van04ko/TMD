@@ -1,6 +1,6 @@
 ideas = {
 
-	country = {
+country = {
 		
 		UKR_political_crisis_1 = {
 			picture = generic_disjointed_gov
@@ -9,358 +9,248 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.15
-				political_power_gain = -0.2
 				fascism_drift = 0.02
 				communism_drift = 0.02
 				democratic_drift = 0.02
 			}
 		}
 		
-		UKR_political_crisis_2 = {
-			picture = usa_great_depression_3
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.3
-				production_speed_buildings_factor = -0.15
-			}
-		}
-		
-		UKR_political_crisis_3 = {
-			picture = usa_great_depression_3
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.3
-				production_speed_buildings_factor = -0.15
-			}
-		}
-	
-	
-		##############################
-	
-	
-	
-	
-		Ukrain_great_depresion_1 = {
-			picture = usa_great_depression_3
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.3
-				production_speed_buildings_factor = -0.15
-			}
-		}
-		
-		Ukrain_great_depresion_2 = {
-			picture = great_depression
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.2
-				production_speed_buildings_factor = -0.15
-			}
-		}
-		
-		Ukrain_great_depresion_3 = {
-			picture = idea_partial_economic_mobilisation
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.1
-				production_speed_buildings_factor = -0.15
-			}
-		}
-		
-		Ukrain_great_depresion_4 = {
-		
-			picture = usa_great_depression_3
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.3
-				production_speed_buildings_factor = -0.45
-				consumer_goods_factor = 0.2
-			}
-		}
-		
-		Ukrain_great_depresion_5 = {
-			picture = idea_tot_economic_mobilisation
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				production_speed_buildings_factor = -0.1
-			}
-		}
-		
-		Independent_Ukrain = {
-		
-			picture = idea_hun_treaty_of_trianon
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				war_support_factor = 0.4
-			}
-		}
-		
-		Great_win = {
-		
-			picture = generic_victors_of_ww1
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				neutrality_drift = 0.05
-				political_power_gain = 0.5
-			}
-		}
-		
-		Dictature_Skoropadsky = {
-		
-			picture = generic_pp_unity_bonus
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.15
-			}
-		}
-		
-		Bad_times = {
-		
-			picture = usa_great_depression_3
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.1
-				production_speed_buildings_factor = -0.3
-				consumer_goods_factor = 0.1
-			}
-		}
-		
-		Plan_Dunai = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		Defense_commun = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_defence_factor	= 0.2
-			}
-		}
-		
-		Narodnaya_armia_1 = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_morale_factor = 0.1
-				army_org_factor = -0.05
-				training_time_army_factor = -0.1
-			}
-		}
-		
-		Narodnaya_armia_2_attack = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_morale_factor = 0.1
-				army_attack_factor = 0.1
-				army_org_factor = -0.05
-				training_time_army_factor = -0.15
-			}
-		}
-		
-		Narodnaya_armia_2_defence = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_morale_factor = 0.1
-				army_org_factor = -0.05
-				army_defence_factor = 0.1
-				training_time_army_factor = 0.15
-			}
-		}
-		
-		Narodnaya_armia_3_defence = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_morale_factor = 0.1
-				army_org_factor = -0.025
-				training_time_army_factor = -0.15
-				army_defence_factor = 0.1
-			}
-		}
-		
-		Narodnaya_armia_3_attack = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_morale_factor = 0.1
-				army_attack_factor = 0.1
-				army_org_factor = -0.025
-				training_time_army_factor = -0.15
-			}
-		}
-		
-		Defence_politic = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				army_defence_factor	= 0.2
-				production_speed_bunker_factor = 0.2
-			}
-		}
-		
-		country_free_people = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				partisan_effect = 0.3
-				monthly_population = 0.1
-			}
-		}
-		
-		
-		Distribution_property = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		Subsiding_citizen_factories = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-				consumer_goods_factor = -0.05
-			}
-		}
-		Subsiding_military_factories = {
-		
-			picture = idea_generic_exploit_mines
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				production_speed_arms_factory_factor = 0.15
-				consumer_goods_factor = -0.5
-			}
-		}
-		
-		mass_emigrations = {
-			picture = idea_eng_a_change_in_course
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				monthly_population = -0.1
-			}
-		}
-		Privatisation_economic = {
-			picture = idea_chi_hyper_inflation2
+		UKR_oligarchism = {
+			picture = ROM_king_carol_ii_hedonist
 			allowed = {
 			}
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.15
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-				production_speed_infrastructure_factor = 0.15
-			}
-		}
-		Legalise_drugs = {
-			picture = idea_chi_hyper_inflation
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				monthly_population = -0.01
-				consumer_goods_factor = -0.05
-			}
-		}
-		Agreement_with_bands = {
-			picture = generic_intel_bonus
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				trade_opinion_factor = -0.1
-				political_power_cost = 0.1
-				army_defence_factor = 0.1
-			}
-		}
-		Ukrain_corruption_1 = {
-			picture = idea_generic_deal_with_the_devil
-			allowed = {
-			}
-			removal_cost = -1
-			modifier = {
-				political_power_cost = -0.1
-				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.10
 			}
 		}
 		
-		Ukrain_corruption_2 = {
-			picture = idea_generic_deal_with_the_devil2
+		UKR_NKWD = {
+			picture = generic_oppression
 			allowed = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_cost = -0.15
-				consumer_goods_factor = 0.1
+				political_power_gain = 0.15
+				stability_factor = -0.10
+				monarchy_drift = -0.05
+				fascism_drift = -0.03
+				democratic_drift = -0.03
 			}
 		}
+		
+		UKR_communism_1 = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.15
+			}
+		}
+		
+		UKR_Red_Squads_1 = {
+			picture = generic_communist_army
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_command_power = 10
+				experience_gain_army = 0.05
+				max_dig_in = 5
+				training_time_army_factor = -0.15
+			}
+		}
+		
+		UKR_Red_Squads_2 = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_command_power = 20
+				experience_gain_army = 0.05
+				max_dig_in = 5
+				army_org_Factor = 0.02
+				conscription = 0.02
+				training_time_army_factor = -0.15
+			}
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		
+		UKR_Red_Squads_3 = {
+			picture = MEX_revolutionary_army 
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_command_power = 30
+				experience_gain_army = 0.05
+				max_dig_in = 5
+				army_org_Factor = 0.02
+				conscription = 0.02
+				training_time_army_factor = -0.15
+				planning_speed = 0.1
+				military_leader_cost_factor = -0.50
+				army_leader_start_planning_level = 1
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+		
+		UKR_Red_Cossaks_Squad = {
+			picture = jap_the_unthinkable_option
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+			}
+		}
+		
+		UKR_comintern_influence = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+		
+		UKR_new_crop_1 = {
+			picture = eng_for_the_good_of_the_revolution
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.8
+				global_building_slots_factor = 0.15
+			}
+		}
+		
+		UKR_new_crop_2 = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 1.2
+				global_building_slots_factor = 0.30
+			}
+		}
+		
+		UKR_collectivization = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.8
+				global_building_slots_factor = 0.20
+				min_export = -0.15
+				conscription_factor = 0.10
+			}
+		}
+		
+		UKR_Military_production_1 = {
+			picture = SPR_class_war
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.12 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.08 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.04 instant = yes
+				}
+			}
+		}
+		
+		UKR_Military_production_2 = {
+			picture = strategic_bombing_focus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.16 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.12 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				light_tank_equipment = {
+					build_cost_ic = -0.06 instant = yes
+				}
+			}
+		}
+		
+		UKR_Heavy_war_industry_1 = {
+			picture = generic_acquire_tanks
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_factory_efficiency_gain_factor = 0.04
+				production_speed_buildings_factor = 0.10
+				
+				
+			}
+		}
+		
+		UKR_Heavy_war_industry_2 = {
+			picture = generic_license_production
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			
+				industrial_capacity_factory = 0.16
+				industrial_capacity_dockyard = 0.16
+				production_factory_efficiency_gain_factor = 0.08
+				production_speed_buildings_factor = 0.20
+				
+				
+			}
+		}
+		
+		UKR_Sacrifice = {
+			picture = officers_purged
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+			
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+				conscription_factor = -0.06
+			}
+		}
+	
 	}
 }

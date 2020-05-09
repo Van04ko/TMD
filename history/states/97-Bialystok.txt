@@ -6,7 +6,7 @@ state={
 	state_category = rural
 	
 	history={
-		owner = POL
+		owner = SOV
 		victory_points = {
 			318 1 
 		}		
@@ -14,12 +14,10 @@ state={
 			infrastructure = 5
 			industrial_complex = 1
 		}
-		add_core_of = POL
+		add_core_of = SOV
 		add_core_of = BLR
-		1941.11.1 = {
-			owner = BLR
-			add_core_of = BLR
-		}
+		
+		set_demilitarized_zone = yes
 	}
 
 	provinces={

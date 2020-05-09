@@ -19,16 +19,6 @@ state={
 			9544 1		
 		}
 		add_core_of = POL
-		1941.11.1 = {
-			add_core_of = UKR
-			owner = UKR
-		}
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 3
-			}
-		}
 	}
 
 	provinces={

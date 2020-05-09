@@ -6,15 +6,12 @@ state={
 	state_category = town
 
 	history={
-		owner = SOV
+		owner = UKR
 		buildings = {
 			infrastructure = 6
 		}
-		add_core_of = SOV
-		1941.11.1 = {
-			add_core_of = UKR
-		}
-		
+		add_core_of = UKR
+		add_core_of = BLR
 	}
 
 	provinces={

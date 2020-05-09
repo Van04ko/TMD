@@ -11,6 +11,7 @@ set_fuel_ratio = 0.3
 
 add_ideas = {
 	UKR_political_crisis_1
+	UKR_oligarchism
 }
 
 # Starting tech
@@ -69,9 +70,9 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 10	fascism = 10	communism = 0
-	neutrality = 12
-	monarchy = 68
+set_popularities = {	democratic = 10	fascism = 10	communism = 10
+	neutrality = 30
+	monarchy = 40
     anarchism = 0 
 }
 set_politics = {
@@ -87,20 +88,16 @@ create_country_leader = {
 	picture = "gfx/leaders/UKR/Andriy_Livytskyi.dds"
 	expire = "1953.3.1"
 	ideology = conservatism
-	traits = {
-		
-	}
+	traits = {	}
 }
 
 create_country_leader = {
-	name = "Nikita Sergeyevich Khrushchev"
+	name = "Nikita Khrushchev"
 	desc = ""
 	picture = "gfx/leaders/UKR/Nikita_Sergeyevich_Khrushchev.dds"
 	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
+	ideology = stalinism
+	traits = {	}
 }
 
 create_country_leader = {
@@ -109,9 +106,7 @@ create_country_leader = {
 	picture = "gfx/leaders/UKR/Stepan_Bandera.dds"
 	expire = "1953.3.1"
 	ideology = fascism_ideology
-	traits = {
-		
-	}
+	traits = {	}
 }
 
 create_country_leader = {
@@ -120,9 +115,16 @@ create_country_leader = {
 	picture = "gfx/leaders/UKR/Pavlo_Skoropadsky.dds"
 	expire = "1945.4.26"
 	ideology = monarchy_ideology
-	traits = {
-		
-	}
+	traits = {	}
+}
+
+create_country_leader = {
+	name = "Stanislav Wojciechowski"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1953.3.1"
+	ideology = oligarchism
+	traits = {	}
 }
 #create_country_leader = {
 	name = "Danylo Skoropadskyi"
@@ -130,7 +132,5 @@ create_country_leader = {
 	picture = "gfx/leaders/UKR/Danylo_Skoropadskyi.dds"
 	expire = "1953.3.1"
 	ideology = monarchy_ideology
-	traits = {
-		
-	}
+	traits = {	}
 #}
