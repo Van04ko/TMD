@@ -12,7 +12,7 @@ state=
 	}
 	
 	history={
-		owner = UKR
+		owner = ROM
 		buildings = {
 			infrastructure = 4
 			air_base = 2

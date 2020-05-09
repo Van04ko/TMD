@@ -29,6 +29,10 @@ set_technology = {
 	fleet_in_being = 1
 }
 
+add_ideas = {
+WUK_polynization
+}
+
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
@@ -75,36 +79,39 @@ set_politics = {
 	}
 
 create_country_leader = {
-	name = "Kost Levytsky"
+	name = "Pudje Levytsky"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1953.3.1"
 	ideology = conservatism
-	traits = {
-		
-	}
+	traits = {	}
 }
 
 create_country_leader = {
-	name = "Nikita Sergeyevich Khrushchev"
+	name = "Pudje Khrushchev"
 	desc = ""
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 	expire = "1953.3.1"
 	ideology = marxism
-	traits = {
-		
-	}
+	traits = {	}
 }
 
 create_country_leader = {
-	name = "Stepan Bandera"
+	name = "Pudje Bandera"
 	desc = ""
 	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
 	expire = "1953.3.1"
 	ideology = fascism_ideology
-	traits = {
-		
-	}
+	traits = {	}
+}
+
+create_country_leader = {
+	name = "Stefan Fenzik"
+	desc = ""
+	picture = "gfx/leaders/WUK/Portrait_Fencik.dds"
+	expire = "1953.3.1"
+	ideology = oligarchism
+	traits = {Polish_Puppet}
 }
 
 #create_country_leader = {

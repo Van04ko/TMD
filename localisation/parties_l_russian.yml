@@ -1113,6 +1113,15 @@
  MAC_democratic_party:0 "Национальная партия"
  MAC_monarchy_party:0 "Род Карагеоргиевичей"
  
+ TRA_fascism_party:0 "НХП"
+ TRA_fascism_party_long:0 "Национальная-христианская партия"
+ TRA_communism_party:0 "СПТ"
+ TRA_communism_party_long:0 "Социалистическая партия Трансильвании"
+ TRA_democratic_party:0 "СДПТ"
+ TRA_democratic_party_long:0 "Социал-демократическая партия Трансильвании"
+ TRA_neutrality_party:0 "НЦП"
+ TRA_neutrality_party_long:0 "Национал-Царанистская партия"
+ 
  MOL_communism_party:0 "МКП(б)"
  MOL_communism_party_long:0 "Молдавская коммунистическая партия (большевиков)"
  MOL_democratic_party:0 "Сфатул Цэрий"
@@ -1497,25 +1506,12 @@
  MKH_democratic_party:0 "ХПМ"
  MKH_democratic_party_long:0 "Христианская партия Малороссии"
  MKH_fascism_party:0 "Радикалы"
- MKH_neutrality_party_:0 "Запорожская администрация"
- MKH_neutrality_party_long:0 "Запорожская администрация"
- 
- KUB_anarchism_party:0 "Донские вольные казаки"
- KUB_communism_party:0 "СРВ"
- KUB_communism_party_long:0 "Свобода, Революция и Власть"
- KUB_democratic_party:0 "Дон-Кубанская дума"
- KUB_democratic_party_long:0 "Дон-Кубанская дума"
- KUB_fascism_party:0 "ХПА"
- KUB_fascism_party_long:0 "Христианские повстанцы Азова"
- KUB_neutrality_party_:0 "Военный блок"
- KUB_neutrality_party_long:0 "Военный блок"
+ MKH_neutrality_party_:0 "Беспартийные"
+ MKH_neutrality_party_long:0 "Беспартийные"
  
  
- TRA_anarchism_party:0 "Рев-Тигристкое формирование"
- TRA_communism_party:0 "ЗСП"
- TRA_communism_party_long:0 "Закавказская Социалистическая партия"
- TRA_democratic_party:0 "Единство наций"
- TRA_democratic_party_long:0 "Единство наций"
- TRA_fascism_party:0 "Активисты"
- TRA_neutrality_party_:0 "ПРФСК"
- TRA_neutrality_party_long:0 "После революционное формирования стран Кавказа"
+ 
+ 
+ 
+ 
+ 

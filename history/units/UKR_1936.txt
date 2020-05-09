@@ -34,49 +34,89 @@ division_template = {
 ##### OOB #####
 units = {
 
-	division= {			
-		name = "1ya KiVO Mekhanizirovanaya Gruppa"		
-		location = 11670
-		division_template = "Mekhanizirovaniy Korpus"		# 1x H Tank Bge, 2x Mekh Bge
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.85
-
-	}
 	
-	division= {	
+	division= {		# "1ya 'Ukrainska' Strelec. Div."
 		location = 11670
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 	
-	division= {	
+	division= {		# "2ya 'Ukrainska' Strelec. Div."
 		location = 11670
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 	
-	division= {	
+	division= {		# "3ya 'Ukrainska' Strelec. Div."
 		location = 9449
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 	
-	division= {	
+	division= {		# "4ya 'Ukrainska' Strelec. Div."
 		location = 418
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 	
-	division= {	
+	division= {		# "5ya 'Ukrainska' Strelec. Div."
 		location = 3520
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 	
-	division= {	
+	division= {		# "6ya 'Ukrainska' Strelec. Div."
 		location = 525
 		division_template = "Ukrainska Strelecka Divisia" 	
-		start_experience_factor = 0.3
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	
+	division= {		
+		location = 525
+		division_template = "Ukrainska Strelecka Divisia" 	
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
 	}
 }	
 ###################

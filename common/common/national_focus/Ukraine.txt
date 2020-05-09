@@ -289,6 +289,9 @@ focus_tree = {
 			focus = UKR_Liberty_Spirit
 			focus = UKR_Earth_Revolution
 		}
+		completion_reward = {
+		set_cosmetic_tag = UKR_reich
+		}
 		x = 11
 		y = 2
 
@@ -384,6 +387,7 @@ focus_tree = {
 			focus = UKR_Death_or_Dishonor
 		}
 		completion_reward = {
+		set_cosmetic_tag = UKR_USR
 			if = {
 				kill_country_leader = yes
 			}
@@ -637,14 +641,14 @@ focus_tree = {
 			focus = UKR_Alliens_Moscow
 		}
 		completion_reward = {
-			add_ideas = UKR_New_Сrop_1
+			add_ideas = UKR_new_crop_1
 		}
 		x = 20
 		y = 5
 
 	}
 	focus = {
-		id = UKR_Collctivithation
+		id = UKR_collectivization
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10
 		prerequisite = {
@@ -653,14 +657,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			if = {
-				limit = { has_idea = UKR_New_Сrop_1 }
+				limit = { has_idea = UKR_new_crop_1 }
 				swap_ideas = {
-					remove_idea = UKR_New_Сrop_1
-					add_idea = UKR_New_Сrop_2
+					remove_idea = UKR_new_crop_1
+					add_idea = UKR_new_crop_2
 				}
 			}
 			else = {
-				add_ideas = UKR_Сollectivization
+				add_ideas = UKR_collectivization
 			}
 			random_owned_state = {
 				limit = { is_fully_controlled_by = ROOT }
@@ -778,7 +782,7 @@ focus_tree = {
 			focus = UKR_Nationalization_Factory
 		}
 		completion_reward = { 
-		add_stability = -0.8
+		add_stability = -0.08
 		add_ideas = UKR_Sacrifice
 		}
 		x = 22
@@ -804,7 +808,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		cost = 10
 		prerequisite = {
-			focus = UKR_Collctivithation
+			focus = UKR_collectivization
 		}
 		prerequisite = {
 			focus = UKR_Heavy_intustry
@@ -911,7 +915,7 @@ focus_tree = {
 			focus = UKR_Weapon_For_Everyone
 		}
 		prerequisite = {
-			focus = UKR_Collctivithation
+			focus = UKR_collectivization
 		}
 		prerequisite = {
 			focus = UKR_Heavy_intustry

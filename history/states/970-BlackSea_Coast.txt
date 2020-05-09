@@ -8,6 +8,11 @@ state={
 
 	history={
 		owner = KUB
+		
+		victory_points = {
+			719 3
+		}
+		
 		buildings = {
 			infrastructure = 4
 			air_base = 2

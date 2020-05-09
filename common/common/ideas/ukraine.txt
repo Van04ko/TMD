@@ -21,8 +21,7 @@ country = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.1
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.15
 				production_speed_buildings_factor = -0.10
 			}
 		}
@@ -125,7 +124,7 @@ country = {
 			}
 		}
 		
-		UKR_New_Сrop_1 = {
+		UKR_new_crop_1 = {
 			picture = eng_for_the_good_of_the_revolution
 			allowed = {
 			}
@@ -136,7 +135,7 @@ country = {
 			}
 		}
 		
-		UKR_New_Сrop_2 = {
+		UKR_new_crop_2 = {
 			picture = eng_spirit_of_the_industrial_revolution
 			allowed = {
 			}
@@ -147,7 +146,7 @@ country = {
 			}
 		}
 		
-		UKR_Сollectivization = {
+		UKR_collectivization = {
 			picture = eng_spirit_of_the_industrial_revolution
 			allowed = {
 			}

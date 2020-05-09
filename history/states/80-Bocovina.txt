@@ -8,13 +8,13 @@ state={
 	
 	
 	history={
-		owner = UKR
+		owner = WUK
 		buildings = {
 			infrastructure = 6
 			arms_factory = 1
 		}
 		add_core_of = ROM
-		add_core_of = UKR
+		add_core_of = WUK
 		add_core_of = MOL
 		victory_points = {
 			577 1 
