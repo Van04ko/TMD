@@ -23,10 +23,10 @@ state={
 			10400 10
 		}
 		victory_points = {
-			14261 10
+			14261 5
 		}
 		victory_points = {
-			14227 5
+			14227 3
 		}
 		add_core_of = SAF
 	}

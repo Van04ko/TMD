@@ -8,21 +8,13 @@ state={
 	buildings_max_level_factor=1.000
 	state_category = pastoral
 	history={
-		owner = CHI
+		owner = XSM
 		add_core_of = CHI
 		add_core_of = PRC
+		add_core_of = XSM
 		buildings = {
 			infrastructure = 1
 
 		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 1
-				infrastructure = 2
-
-			}
-
-		}
-
 	}
 }
