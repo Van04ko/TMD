@@ -1,10 +1,9 @@
 leader_traits = {
 
 	Polish_Puppet{
-		random = no
-		
+		random = no		
+		conscription_factor = -0.20
 		stability_factor = -0.1
-		conscription_factor_ = -0.01
 		
 		
 		ai_will_do = {
