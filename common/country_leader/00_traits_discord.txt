@@ -4,7 +4,7 @@ leader_traits = {
 		random = no
 		
 		stability_factor = -0.1
-		factor_conscription = -0.01
+		conscription_factor_ = -0.01
 		
 		
 		ai_will_do = {
@@ -29,11 +29,7 @@ leader_traits = {
 		random = no
 		war_support_weekly = 0.005
 		planning_speed = 0.25
-		category_all_infantry = {
-			max_organisation = 8
-		}
-		
-		
+			
 		ai_will_do = {
 		factor = 1
 		}

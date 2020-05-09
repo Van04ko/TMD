@@ -126,11 +126,3 @@ create_country_leader = {
 	ideology = oligarchism
 	traits = {	}
 }
-#create_country_leader = {
-	name = "Danylo Skoropadskyi"
-	desc = ""
-	picture = "gfx/leaders/UKR/Danylo_Skoropadskyi.dds"
-	expire = "1953.3.1"
-	ideology = monarchy_ideology
-	traits = {	}
-#}
