@@ -1,0 +1,17 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_idea_traits_strip"
+		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
+		noOfFrames = 15		
+	}
+
+	### new tfv nat spirit icons
+
+	spriteType = {
+		name = "sidor_kovpak"
+		texturefile = "gfx/interface/ideas/idea_sidor_kovpak.dds"
+	}
+}

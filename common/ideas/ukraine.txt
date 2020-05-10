@@ -262,11 +262,6 @@ country = {
 				original_tag = "UKR"
 			}
 			available = {
-				NOT = { has_country_flag = counter_purge }
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
 				has_completed_focus = UKR_Earth_Revolution
 			}
 			
@@ -284,5 +279,20 @@ country = {
 				factor = 0
 			}
 		}
+		
+		#sidor_kovpak = {
+		#	
+		#	allowed = {
+		#		original_tag = "UKR"
+		#	}
+		#	available = {
+		#	}
+		#	
+		#	traits = { head_of_intelligence }
+		#	
+		#	ai_will_do = {
+		#		factor = 0
+		#	}
+		#}
 	}
 }
