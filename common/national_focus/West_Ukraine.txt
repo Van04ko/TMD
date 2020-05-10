@@ -1,0 +1,19 @@
+focus_tree = {
+	id = West_Ukraine
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WUK
+		}
+	}
+	default = no
+	focus = {
+		id = WUK_Dishonor
+		icon = GFX_goal_generic_territory_or_war
+		cost = 0
+		x = 2
+		y = 0
+
+	}
+}
