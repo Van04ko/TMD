@@ -18,7 +18,6 @@ state=
 			air_base = 2
 		}
 		add_core_of = ROM
-		add_core_of = UKR
 		add_core_of = MOL
 		victory_points = {
 			3707 1
