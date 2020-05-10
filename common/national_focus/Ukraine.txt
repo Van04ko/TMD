@@ -598,7 +598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Alliens_Moscow
-		icon = GFX_focus_fra_loyalty_stalin
+		icon = GFX_soviet_union
 		cost = 5
 		prerequisite = {
 			focus = UKR_Chornui_WORONOK
@@ -674,7 +674,15 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+			random_owned_state = {
+				limit = { is_fully_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
 			}
 			random_owned_state = {
 				limit = { is_fully_controlled_by = ROOT }
@@ -684,17 +692,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
-			}
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 		}
 		x = 18
@@ -773,7 +770,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 			random_owned_state = {
 				limit = { is_fully_controlled_by = ROOT }
@@ -783,7 +779,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 		}
 		x = 21
@@ -921,7 +916,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 			random_owned_state = {
 				limit = { is_fully_controlled_by = ROOT }
@@ -931,7 +925,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 		}
 		x = 24

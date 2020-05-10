@@ -7,34 +7,18 @@ bookmarks = {
 		default_country = "GER"
 		default = yes
 		
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
+		"UKR"={
+			history = "UKR_GATHERING_STORM_DESC"
+			ideology = monarchy
+			available = {  }
 			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
+				UKR_political_crisis_1
+				UKR_oligarchism
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_france_leads
-			}
-		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { has_dlc = "La Resistance" } 
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-				FRA_invite_communist_ministers
-				FRA_utilize_the_leagues
-				FRA_je_suis_la_deluge
+				UKR_Hetman_of_All_UKRaine
+				UKR_Earth_Revolution
+				UKR_Lebensraum
 			}
 		}
 		"USA"={

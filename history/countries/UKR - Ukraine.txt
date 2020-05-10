@@ -128,3 +128,63 @@ create_country_leader = {
 	ideology = oligarchism
 	traits = {	}
 }
+
+create_field_marshal = {
+	name = "Pavlo Skoropadsky"
+		picture = "Pavlo_Skoropadsky.dds"
+	traits = { old_guard media_personality cavalry_officer }
+	skill = 4
+	
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Osip Mikitka"
+		picture = "Osip_Mikitka.dds"
+	traits = {  }
+	skill = 1 
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Miron Tarnawski"
+		picture = "Miron_Tarnawski.dds"
+	traits = {  }
+	skill = 1 
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Anton Kravs"
+		picture = "Anton_Kravs.dds"
+	traits = {  }
+	skill = 1 
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Sergey Delvig"
+		picture = "Sergey_Delvig.dds"
+	traits = { cavalry_officer  }
+	skill = 2
+	
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

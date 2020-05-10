@@ -13,7 +13,7 @@ state={
 	history={
 		owner = WUK
 		victory_points = {
-			11411 2 # Stanislawów
+			11411 10 # Stanislawów
 		}
 		buildings = {
 			infrastructure = 5

@@ -12,7 +12,7 @@ state={
 	history={
 		owner = WUK
 		victory_points = {
-			438 1 # Tarnopol
+			438 3 # Tarnopol
 		}
 		buildings = {
 			infrastructure = 5

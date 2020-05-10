@@ -6,17 +6,15 @@ state={
 	state_category = rural
 	
 	history={
-		owner = SOV	
+		owner = LIT	
 		victory_points = {
 			13601 1 # Lida
 		}
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = SOV
+		add_core_of = LIT
 		add_core_of = BLR
-		
-		set_demilitarized_zone = yes
 	}
 
 	provinces={

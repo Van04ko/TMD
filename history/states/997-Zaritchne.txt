@@ -12,6 +12,10 @@ state={
 		}
 		add_core_of = UKR
 		add_core_of = BLR
+		
+		victory_points = {
+			6579 1
+		}
 	}
 
 	provinces={
