@@ -1,12 +1,14 @@
 ﻿l_russian:
 
 ###Украина###
-                    
+    
+
+    
 #Коммунизм#
  #Фокусы                 
  UKR_Skoropadsky:0 "Вопрос Украинской государственности"
  UKR_RADA:0 "Собрание депутатов Верховной Рады"
- UKR_Earth_Revolution:0 "Земля Революций!"
+ UKR_Earth_Revolution:0 "§RЗемля Революций§!"
  UKR_Chornui_WORONOK:0 "Устранить угрозу Республики"
  UKR_New_Roads:0 "Железные дороги для Страны"
  UKR_Red_Army_Squads:0 "Отряды УРККА"

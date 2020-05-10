@@ -378,7 +378,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Earth_Revolution
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_generic_join_comintern
 		cost = 10
 		prerequisite = {
 			focus = UKR_RADA
@@ -538,7 +538,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Chornui_WORONOK
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_focus_spr_class_war
 		cost = 10
 		prerequisite = {
 			focus = UKR_Earth_Revolution
@@ -552,7 +552,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Moscow_opposition
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_fra_loyalty_trotzky
 		cost = 5
 		prerequisite = {
 			focus = UKR_Chornui_WORONOK
@@ -570,7 +570,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_New_Alles
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_ger_great_red_menace
 		cost = 10
 		prerequisite = {
 			focus = UKR_Moscow_opposition
@@ -598,7 +598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Alliens_Moscow
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_focus_fra_loyalty_stalin
 		cost = 5
 		prerequisite = {
 			focus = UKR_Chornui_WORONOK
@@ -615,7 +615,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_New_Roads
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		prerequisite = {
 			focus = UKR_Earth_Revolution
@@ -635,7 +635,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_New_Seeds
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_focus_hol_abandon_the_gold_standard
 		cost = 10
 		prerequisite = {
 			focus = UKR_Alliens_Moscow
@@ -649,7 +649,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_collectivization
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_prc_agrarian_socialism
 		cost = 10
 		prerequisite = {
 			focus = UKR_New_Alles
@@ -703,7 +703,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Heavy_intustry
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_soviet_construction
 		cost = 10
 		prerequisite = {
 			focus = UKR_New_Seeds
@@ -711,8 +711,38 @@ focus_tree = {
 		}
 		x = 20
 		y = 6
+		
+		available = {
+			controls_state = 228
+			controls_state = 227
+			controls_state = 218
+		}
+		
 		completion_reward = {
 			add_ideas = UKR_Heavy_war_industry_1
+			
+			add_resource = {
+				type = tungsten
+				amount = 11
+				state = 228
+			}
+			
+			add_resource = {
+				type = aluminium
+				amount = 13
+				state = 228
+			}
+			
+			add_resource = {
+				type = steel
+				amount = 14
+				state = 227
+			}
+			add_resource = {
+				type = steel
+				amount = 9
+				state = 218
+			}
 		}
 	}
 	focus = {
@@ -728,7 +758,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Nationalization_Factory
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_rom_parties_end
 		cost = 10
 		prerequisite = {
 			focus = UKR_New_Roads
@@ -762,7 +792,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Red_Army_Squads
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_generic_manpower
 		cost = 5
 		prerequisite = {
 			focus = UKR_Earth_Revolution
@@ -776,7 +806,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Sacrifice_of_People
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_generic_concessions
 		cost = 10
 		prerequisite = {
 			focus = UKR_Nationalization_Factory
@@ -791,7 +821,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Likbez
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_socialist_science
 		cost = 7
 		prerequisite = {
 			focus = UKR_Sacrifice_of_People
@@ -805,7 +835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_New_place
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
 			focus = UKR_collectivization
@@ -832,7 +862,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Mobilization
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_por_workers_of_iberia
 		cost = 10
 		prerequisite = {
 			focus = UKR_Red_Army_Squads
@@ -847,7 +877,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Lwiv_Officer
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {
 			focus = UKR_Mobilization
@@ -867,7 +897,8 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Weapon_For_Everyone
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_combined_arms
+		
 		cost = 10
 		prerequisite = {
 			focus = UKR_Lwiv_Officer
@@ -983,7 +1014,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UKR_Red_cossaks
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_RAJ_lions_of_the_great_war
 		cost = 10
 		
 		prerequisite = {
