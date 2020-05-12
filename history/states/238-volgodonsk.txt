@@ -12,6 +12,12 @@ state={
 			infrastructure = 4
 		}
 		add_core_of = KUB
+		victory_points = {
+			6503 5
+		}
+		victory_points = {
+			775 1
+		}
 	}
 
 	provinces={

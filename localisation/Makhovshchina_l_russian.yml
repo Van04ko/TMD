@@ -1,4 +1,5 @@
 ﻿l_russian:
+ #######Полит ветка
  MKH_the_strengthening_of_the_power_of_makhno:0 "Укрепление власти Махно"
  MKH_the_strengthening_of_the_power_of_makhno_desc:0 "Нестор Иванович, которого в народе прозвали батькой, авторитет в Махновщине. Следует убрать его оппозицию и укрепить власть Махно для блага нашего края."
  MKH_an_oasis_for_anarchists:0 "Оазис для анархистов"
@@ -17,8 +18,6 @@
  MKH_save_the_cossacks_desc:0 ""
  MKH_russian_question:0 "Русский вопрос"
  MKH_russian_question_desc:0 ""
- MKH_harvest:0 "Собрать урожай"
- MKH_harvest_desc:0 ""
  MKH_red_support:0 "§RПоддержка красных§!"
  MKH_red_support_desc:0 ""
  MKH_anarchic_society_of_russia:0 "§RАнархическое общество России§!"
@@ -27,6 +26,8 @@
  MKH_the_support_of_the_white_desc:0 ""
  MKH_the_path_of_anarchism:0 "§RПуть анархизма§!"
  MKH_the_path_of_anarchism_desc:0 ""
+ 
+ ######Эконом ветка
  MKH_collect_cartridges_for_a_rainy_day:0 "Собрать патроны на черный день"
  MKH_collect_cartridges_for_a_rainy_day_desc:0 ""
  MKH_to_rob_the_ukrainian_locomotives:0 "Ограбить украинские паровозы"
@@ -83,8 +84,6 @@
  MKH_peace_to_the_cottages_war_to_the_palaces_desc:0 ""
  MKH_formation_of_the_economy:0 "Формирование экономики"
  MKH_formation_of_the_economy_desc:0 ""
- MKH_formation_of_the_economy_1:0 "Формирование экономики"
- MKH_formation_of_the_economy_1_desc:0 ""
  MKH_organization_of_science_in_zaporozhye_national_university:0 "Организация Запорожского университета"
  MKH_organization_of_science_in_zaporozhye_national_university_desc:0 ""
  MKH_industry_for_the_war:0 "Промышленность для войны"
@@ -93,6 +92,8 @@
  MKH_the_reformation_of_the_council_desc:0 ""
  MKH_anarchism_of_the_world:0 "Анархизм всего мира"
  MKH_anarchism_of_the_world_desc:0 ""
+ 
+ #######Военная ветка
  MKH_militarization:0 "Милитаризация"
  MKH_militarization_desc:0 ""
  MKH_insulation:0 "Изоляция"
@@ -115,6 +116,8 @@
  MKH_request_specialists_from_the_kharkiv_tank_factory_desc:0 "Мы отправили запрос специалистов Харьковского танкового завода, на покупку лицензий и дальнейшего производства в нашей стране."
  MKH_request_specialists_from_man_military_factories:0 "Запросить специалистов "MAN""
  MKH_request_specialists_from_man_military_factories_desc:0 ""
+ 
+ ######Морская ветка
  MKH_launch_the_cruiser_aurora:0 "Спустить крейсер "Севастополь""
  MKH_launch_the_cruiser_aurora_desc:0 ""
  MKH_the_construction_of_the_shipyards:0 "Строительство верфей"
@@ -148,7 +151,15 @@
  MKH_dynamic_sea_battles:0 "Динамичные морские сражения"
  MKH_dynamic_sea_battles_desc:0 ""
  MKH_navy:0 "Будет получен крейсер "Аврора""
+ 
+ ######Идеи
+ MKH_formation_of_the_economy_1:0 "Формирование экономики"
+ MKH_formation_of_the_economy_1_desc:0 ""
+ MKH_the_birthplace_of_anarchy:0 "Родина Анархии"
+ MKH_the_birthplace_of_anarchy_desc:0 ""
  MKH_technology_mine_trawling:0 "Технология траления мин"
  MKH_technology_mine_trawling_desc:0 ""
  MKH_technology_naval:0 "Динамичные сражения"
- MKH_technology_naval_desc:0 "123"
+ MKH_technology_naval_desc:0 ""
+ MKH_harvest:0 "Собрать урожай"
+ MKH_harvest_desc:0 ""

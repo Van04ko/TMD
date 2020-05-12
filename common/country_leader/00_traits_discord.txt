@@ -1,5 +1,26 @@
 leader_traits = {
 
+	Illiterate_leader_1{
+		random = no		
+		research_speed_factor = -0.04
+		production_speed_buildings_factor = -0.1
+		consumer_goods_factor = 0.03
+				
+		ai_will_do = {
+		factor = 1
+		}
+	}
+
+	Illiterate_leader_2{
+		random = no		
+		research_speed_factor = -0.01
+		global_building_slots_factor = 0.10
+				
+		ai_will_do = {
+		factor = 1
+		}
+	}
+
 	Polish_Puppet{
 		random = no		
 		conscription_factor = -0.20

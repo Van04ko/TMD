@@ -276,6 +276,7 @@
  VICTORY_POINTS_9780:0 "Шкодер"
  
  #Кавказ
+ VICTORY_POINTS_6783:0 "Ейск"
  VICTORY_POINTS_3668:0 "Махачкала"
  VICTORY_POINTS_670:0 "Магас"
  VICTORY_POINTS_9628:0 "Орджоникидзе"
@@ -477,7 +478,7 @@
  VICTORY_POINTS_5157:0 "Дехрадун" 
  VICTORY_POINTS_5002:0 "Герсен" 
  
- ####################################################################Оригинал файл
+ #######Оригинал файл
  VICTORY_POINTS_TOOLTIP:0 "§G$NAME$§! победных очков = §Y$POINTS$§!"
  VICTORY_POINTS_6521:0 "Берлин"
  VICTORY_POINTS_692:0 "Мюнхен"

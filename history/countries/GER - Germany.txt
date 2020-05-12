@@ -290,15 +290,16 @@ create_import = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
 	democratic = 20
-	fascism = 60
+	fascism = 20
 	communism = 20
+	neutrality = 40
 }
 
 create_faction = Axis
@@ -336,6 +337,15 @@ create_country_leader = {
 	traits = {
 	}
 }
+
+create_country_leader = {
+		name = "August von Mackensen"
+		desc = "POLITICS_AUGUST_VON_MACKENSEN_DESC"
+		picture = GFX_portrait_ger_august_von_mackensen
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {	}
+	}
 
 create_country_leader = {
 	name = "Wilhelm Pieck"

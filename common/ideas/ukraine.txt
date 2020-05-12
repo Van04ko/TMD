@@ -2,6 +2,17 @@ ideas = {
 
 country = {
 		
+		UKR_Language_question = {
+		picture = hol_the_foundations_of_defense
+		allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				research_speed_factor = -0.10
+			}
+		}
+		
 		UKR_political_crisis_1 = {
 			picture = generic_disjointed_gov
 			allowed = {

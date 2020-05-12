@@ -14,9 +14,10 @@ bookmarks = {
 			ideas = {
 				UKR_political_crisis_1
 				UKR_oligarchism
+				UKR_Language_question
 			}
 			focuses = {
-				UKR_Hetman_of_All_UKRaine
+				UKR_Hetman_of_All_Ukraine
 				UKR_Earth_Revolution
 				UKR_Lebensraum
 			}
