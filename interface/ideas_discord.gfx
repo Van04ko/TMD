@@ -10,7 +10,7 @@ spriteTypes = {
 
 	### new tfv nat spirit icons
 
-	spriteType = {
+	SpriteType = {
 		name = "sidor_kovpak"
 		texturefile = "gfx/interface/ideas/idea_sidor_kovpak.dds"
 	}

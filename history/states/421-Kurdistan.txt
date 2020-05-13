@@ -7,15 +7,12 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = PER
+		owner = IRQ
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = PER
-		1941.11.1 = {
-			owner = IRQ
-			controller = IRQ
-		}
+		add_core_of = IRQ
 	}
 
 	provinces={

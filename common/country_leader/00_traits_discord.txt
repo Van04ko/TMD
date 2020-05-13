@@ -2,9 +2,9 @@ leader_traits = {
 
 	Illiterate_leader_1{
 		random = no		
-		research_speed_factor = -0.04
+		research_speed_factor = -0.04	
+		political_power_cost = 0.10
 		production_speed_buildings_factor = -0.1
-		consumer_goods_factor = 0.03
 				
 		ai_will_do = {
 		factor = 1
@@ -20,7 +20,59 @@ leader_traits = {
 		factor = 1
 		}
 	}
-
+	
+	oligarch_defens{
+		random = no	
+		
+		political_power_cost = 0.09
+		consumer_goods_factor = 0.03
+		air_chief_cost_factor = -0.15
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+		
+		ai_will_do = {
+		factor = 1
+		}
+	}
+	
+	oligarch_economist{
+		random = no	
+		
+		political_power_cost = 0.09
+		consumer_goods_factor = 0.03
+		production_speed_buildings_factor = 0.12
+		economy_cost_factor = -0.15
+		
+		ai_will_do = {
+		factor = 1
+		}
+	}
+	
+	oligarch_railroad_owner{
+		random = no	
+		
+		political_power_cost = 0.06
+		consumer_goods_factor = 0.02
+		production_speed_infrastructure_factor = 0.16
+		army_speed_factor = 0.08
+		trade_laws_cost_factor = -0.15
+		
+		ai_will_do = {
+		factor = 1
+		}
+	}
+	
+	doctor{
+		random = no	
+		
+		political_power_cost = -0.05
+		monthly_population = 0.5
+		
+		ai_will_do = {
+		factor = 1
+		}
+	}
+	
 	Polish_Puppet{
 		random = no		
 		conscription_factor = -0.20

@@ -8,8 +8,18 @@ country = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = -0.10
-				research_speed_factor = -0.10
+				stability_factor = -0.07
+				research_speed_factor = -0.09
+			}
+		}
+		
+		UKR_Likbezgr = {
+		picture = jap_duplicate_research
+		allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.07
 			}
 		}
 		
@@ -34,6 +44,17 @@ country = {
 			modifier = {
 				consumer_goods_factor = 0.15
 				production_speed_buildings_factor = -0.10
+			}
+		}
+		
+		UKR_nationalization_of_industry = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {	
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.10
 			}
 		}
 		
@@ -110,6 +131,82 @@ country = {
 			}
 			research_bonus = {
 				land_doctrine = 0.10
+			}
+		}
+		
+		UKR_Red_Squads_4 = {
+			picture = MEX_revolutionary_army 
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				max_command_power = 30
+				experience_gain_army = 0.05
+				max_dig_in = 5
+				army_org_Factor = 0.02
+				conscription = 0.05
+				training_time_army_factor = -0.15
+				planning_speed = 0.1
+				military_leader_cost_factor = -0.50
+				army_leader_start_planning_level = 1
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+		
+		UKR_white_russians_1 = {
+			picture = prc_low_popular_support
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.04
+				weekly_manpower = 500
+			}
+		}
+		
+		UKR_white_russians_2 = {
+			picture = prc_low_popular_support2
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.08
+				weekly_manpower = 1000
+			}
+		}
+		
+		UKR_white_russians_3 = {
+			picture = prc_low_popular_support3
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.12
+				weekly_manpower = 1500
+			}
+		}
+		
+		UKR_white_russians_4 = {
+			picture = triumphant_will
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.16
+				weekly_manpower = 2000
+			}
+		}
+		
+		UKR_Mobilization_resistance = {
+			picture = chi_forced_conscription
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.10
+				mobilization_speed = -0.25
 			}
 		}
 		
@@ -291,19 +388,104 @@ country = {
 			}
 		}
 		
-		#sidor_kovpak = {
-		#	
-		#	allowed = {
-		#		original_tag = "UKR"
-		#	}
-		#	available = {
-		#	}
-		#	
-		#	traits = { head_of_intelligence }
-		#	
-		#	ai_will_do = {
-		#		factor = 0
-		#	}
-		#}
+		sidor_kovpak = {
+			
+			picture = kenneth_anderson
+			
+			allowed = {
+				original_tag = "UKR"
+			}
+			available = {
+			}
+			
+			traits = { head_of_intelligence }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		auxentius_korczak_chepurkovsky = {
+			
+			picture = charles_coughlin
+			
+			allowed = {
+				original_tag = "UKR"
+			}
+			available = {
+			}
+			
+			traits = { doctor }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		stanislav_wojciechowski = {
+		
+			cost = 50
+			
+			picture = robert_goddard
+			
+			allowed = {
+				original_tag = "UKR"
+			}
+			available = {
+				NOT = {
+					has_completed_focus = UKR_Nationalization_Factory
+				}
+			}
+			
+			traits = { oligarch_railroad_owner }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		grigory_petrovsky = {
+		
+			cost = 50
+			
+			picture = USA_harry_white
+			
+			allowed = {
+				original_tag = "UKR"
+			}
+			available = {
+				NOT = {
+					has_completed_focus = UKR_Nationalization_Factory
+				}
+			}
+			
+			traits = { oligarch_economist }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		lev_akhmatov = {
+		
+			cost = 50
+			
+			picture = ritter_von_greim
+			
+			allowed = {
+				original_tag = "UKR"
+			}
+			available = {
+				NOT = {
+					has_completed_focus = UKR_Nationalization_Factory
+				}
+			}
+			
+			traits = { oligarch_defens }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
 	}
 }

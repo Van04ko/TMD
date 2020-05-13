@@ -27,6 +27,7 @@
  UKR_Weapon_For_Everyone:0 "«Каждому по винтовке»""
  UKR_New_place:0 "Новые Возможности"
  UKR_Crimean:0 "Поиск врагов, и да плюс Крым"
+ UKR_detachments:0 "Массовая мобилизация УРККА"
 #Идеи
  UKR_political_crisis_1:0 "Политический кризис"
  UKR_oligarchism:0 "Власть Олихархов"
@@ -35,6 +36,8 @@
  UKR_Red_Squads_1:0 "Крассные вооруженные отряды"
  UKR_Red_Squads_2:0 "Армия Революции"
  UKR_Red_Squads_3:0 "УРККА"
+ UKR_Red_Squads_4:0 "УРККА"
+ UKR_Mobilization_resistance:0 "Сопротивление мобилизации в армию"
  UKR_Red_Cossaks_Squad:0 "Красное козачество"
  UKR_comintern_influence:0 "Успехи Украинской Революции"
  UKR_new_crop_1:0 "Новые зерновые культуры"
@@ -45,5 +48,29 @@
  UKR_Heavy_war_industry_1:0 "Индустриализация"
  UKR_Heavy_war_industry_2:0 "Масштабная Индустриализация"
  UKR_Sacrifice:0 "Жертва украинского народа"
- sidor_kovpak:0 "Сидор Ковпак"
  UKR_Language_question:0 "Языковой вопрос"
+ UKR_Likbezgr:0 "Программа ликвидации безграмотности"
+ UKR_nationalization_of_industry:0 "Национализация государственной промышленности"
+ 
+ 
+ #Политики
+ sidor_kovpak:0 "Сидор Ковпак"
+ auxentius_korczak_chepurkovsky:0 "Авксентий Корчак-Чепурковский"
+ lev_akhmatov:0 "Лев Ахматов"
+ grigory_petrovsky:0 "Григорий Петровский"
+ stanislav_wojciechowski:0 "Станислав Войцеховский"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

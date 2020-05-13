@@ -6,3 +6,8 @@
  Polish_Puppet:0 "Польская марионетка"
  Illiterate_leader_1:0 "Безграмотный руководитель"
  Illiterate_leader_2:0 "Участник программы ЛикБез"
+ 
+ oligarch_defens:0 "§YОлигарх§!\nМинистр обороны"
+ oligarch_economist:0 "§YОлигарх§!\nЭкономист"
+ oligarch_railroad_owner:0 "§YОлигарх§!\nВладелец У.Ж.Д."
+ doctor:0 "Врач эпидемиолог"

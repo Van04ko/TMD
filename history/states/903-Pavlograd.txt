@@ -11,17 +11,16 @@ state={
 	}
 	
 	history={
+		owner = MKH
 		victory_points = {
 			472 1
 		}
-		owner = MKH
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1
 			arms_factory = 1
 		}
 		add_core_of = MKH
-		add_core_of = UKR
 	}
 
 	provinces={
