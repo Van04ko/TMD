@@ -1,0 +1,180 @@
+﻿###########################
+# Turkey Events
+###########################
+
+add_namespace = turkey
+
+# President dies
+country_event = {
+	id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = TUR
+		#has_government = neutrality
+		date > 1938.11.1
+		has_start_date < 1936.01.02
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			date > 1938.12.1
+		}
+		modifier = {
+			factor = 0.2
+			date > 1939.1.1
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ismet Inönü"
+				desc = "POLITICS_ISMET_INÖNÜ_DESC"
+				picture = "Portrait_Turkey_Ismet_Inonu.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					Militarist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = turkey.1.a
+		every_country = {
+	 		limit = {
+				has_unit_leader = 59
+			}
+	 		remove_unit_leader = 59
+	 	}	
+	}			
+}
+
+# Demand Cyprus
+	country_event = {
+			id = turkey.2
+			title = turkey.2.t
+			desc = turkey.2.d
+			picture = GFX_report_event_military_planning
+
+			is_triggered_only = yes
+
+	option = { # Accept
+			name = turkey.3.a
+			ai_chance = { factor = 100 }
+			TUR = {
+			country_event = { id = turkey.3 }
+			}
+		}
+	option = { # Refuse
+			name = turkey.3.b
+			ai_chance = { factor = 0 }
+			TUR = {
+			country_event = { id = turkey.2 }
+			}
+		}
+	}
+	# ENG Accepts
+				country_event = {
+				id = turkey.3.a
+				title = turkey.3.t
+				desc = turkey.3.d
+				picture = GFX_report_event_military_planning
+
+				is_triggered_only = yes
+
+				option = {
+				name = turkey.5.a
+				transfer_state = 183
+								}
+							}
+	# ENG Declines
+	country_event = {
+				id = turkey.3.b
+				title = turkey.2.t
+				desc = turkey.2.d
+				picture = GFX_report_event_military_planning
+
+				is_triggered_only = yes
+
+				option = {
+				name = turkey.2.a
+				create_wargoal = {
+				type = take_state
+				target = ENG
+				generator = { 183 }
+					}
+				}
+			}
+			
+# Syria Demand (Fra)
+	country_event = {
+			id = turkey.6
+			title = turkey.6.t
+			desc = turkey.6.d
+			picture = GFX_report_event_korean_war_march
+
+			is_triggered_only = yes
+
+	option = { # Accept
+			name = turkey.6.a
+			ai_chance = { factor = 100 }
+			turkey = {
+			country_event = { id = turkey.7 }
+			}
+		}
+	option = { # Refuse
+			name = turkey.5.b
+			ai_chance = { factor = 0 }
+			TUR = {
+			country_event = { id = turkey.7 }
+			}
+		}
+	}
+
+	# FRA Declines
+			country_event = {
+			id = turkey.7
+			title = turkey.7.t
+			desc = turkey.7.d
+			picture = GFX_report_event_nra_march
+
+			is_triggered_only = yes
+
+			option = {
+			name = turkey.7.a
+			create_wargoal = {
+			type = take_state
+			target = FRA
+			generator = { 677 680 554 553 }
+			}
+		}
+	}
+
+	# FRA Accepts
+			country_event = {
+			id = turkey.8
+			title = turkey.8.t
+			desc = turkey.8.d
+			picture = GFX_report_event_generic_read_write
+
+			is_triggered_only = yes
+
+			option = {
+			name = turkey.7.a
+			transfer_state = 677
+			transfer_state = 680
+			transfer_state = 554
+			transfer_state = 553
+		}
+	}
+	
+	

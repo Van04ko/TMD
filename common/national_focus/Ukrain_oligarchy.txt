@@ -1,0 +1,317 @@
+focus_tree = {
+	id = oligarchy_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = UKO
+		}
+	}
+	default = no
+	
+	focus = {
+		id = UKR_declaration_republic #Объявление республики
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 10
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 5
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_declaration_republic"
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = UKR_replace_goverment #Заменить гос. аппарат 
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = UKR_declaration_republic }
+		relative_position_id = UKR_declaration_republic
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_replace_goverment"
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UKR_three_transformation_company #Компания трёх преобразований 
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 0
+		y = 2
+		cost = 3
+		prerequisite = { focus = UKR_replace_goverment }
+		relative_position_id = UKR_declaration_republic
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = UKR_privatisation_economic #Приватизация экономики
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = UKR_three_transformation_company }
+		relative_position_id = UKR_three_transformation_company
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_privatisation_economic"
+			add_timed_idea = { idea = Privatisation_economic days = 365 }
+		}
+	}
+	
+	focus = {
+		id = UKR_legalisation_drugs #Легализация наркотиков
+		icon = GFX_goal_generic_major_alliance
+		x = -5
+		y = 2
+		cost = 7
+		prerequisite = { focus = UKR_privatisation_economic }
+		relative_position_id = UKR_three_transformation_company
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_legalisation_drugs"
+			add_ideas = { Legalise_drugs }
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = UKR_agreement_with_bands #Договор с бандами
+		icon = GFX_focus_mex_privatisation
+		x = -7
+		y = 3
+		cost = 2
+		prerequisite = { focus = UKR_legalisation_drugs }
+		relative_position_id = UKR_three_transformation_company
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_agreement_with_bands"
+			add_stability = -0.1
+			add_ideas = { Agreement_with_bands }
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = UKR_best_house_in_Kiev #Лучший дом в Киеве
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 3
+		y = 1
+		cost = 3
+		prerequisite = { focus = UKR_three_transformation_company }
+		relative_position_id = UKR_three_transformation_company
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_best_house_in_Kiev"
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_ideas = { Ukrain_corruption_1 }
+		}
+	}
+	
+	focus = {
+		id = UKR_i_just_wanna_this_car #Я просто хочу эту машину
+		icon = GFX_focus_rom_parties_end
+		x = 5
+		y = 2
+		cost = 3
+		prerequisite = { focus = UKR_best_house_in_Kiev }
+		relative_position_id = UKR_three_transformation_company
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_i_just_wanna_this_car"
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			swap_ideas = { 
+			  remove_idea = Ukrain_corruption_1 
+			  add_idea = Ukrain_corruption_2 
+			}
+		}
+	}
+	
+	focus = {
+		id = UKR_legitimisation_regime #Легитимизация режима 
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 3
+		cost = 9
+		prerequisite = { focus = UKR_three_transformation_company }
+		relative_position_id = UKR_declaration_republic
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_legitimisation_regime"
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = UKR_allow_free_press #Разрешение ''Свободной'' прессы
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = UKR_legitimisation_regime }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_allow_free_press"
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			}
+			add_stability = 0.05
+			
+		}
+	}
+	
+	focus = {
+		id = UKR_open_door_political_prisoner #Выпуск из под ареста политических заключённых 
+		icon = GFX_goal_continuous_boost_freedom
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = UKR_legitimisation_regime }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_open_door_political_prisoner"
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = UKR_legalise_contract_armies #Разрешение контрактных армий
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = UKR_open_door_political_prisoner }
+		prerequisite = { focus = UKR_allow_free_press }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_legalise_contract_armies"
+			add_stability = 0.02
+			add_war_support	= 0.05
+		}
+	}
+	
+	focus = {
+		id = UKR_decentralisation_country #Децентрализовать страну
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = UKR_open_door_political_prisoner }
+		prerequisite = { focus = UKR_allow_free_press }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_decentralisation_country"
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UKR_free_departure_from_country #Свободный выезд из страны
+		icon = GFX_focus_prc_infiltration
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = UKR_open_door_political_prisoner }
+		prerequisite = { focus = UKR_allow_free_press }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus UKR_free_departure_from_country"
+			add_stability = 0.02
+			add_timed_idea = { idea = mass_emigrations days = 150 }
+			
+		}
+	}
+	
+	focus = {
+		id = UKR_division_country_on_prefectures #Разделение страны на префектуры
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = UKR_free_departure_from_country }
+		prerequisite = { focus = UKR_decentralisation_country }
+		prerequisite = { focus = UKR_legalise_contract_armies }
+		relative_position_id = UKR_legitimisation_regime
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}

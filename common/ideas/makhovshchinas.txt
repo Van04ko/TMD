@@ -1,8 +1,20 @@
 ideas = {
 
     country = {
+	    MKH_risk_of_starvation = { 
+            picture = risk_of_starvation 
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				
+			}
+        }
 	    MKH_formation_of_the_economy_1 = { 
-            picture = antiimperialism_union 
+            picture = generic_goods_red_bonus 
             removal_cost = -1 
 			allowed = { always = no }
 			allowed_civil_war = {
@@ -14,7 +26,7 @@ ideas = {
 			}
         }
 		MKH_the_birthplace_of_anarchy = { 
-            picture = antiimperialism_union 
+            picture = spr_anarchist_society 
             removal_cost = -1 
 			allowed = { always = no }
 			allowed_civil_war = {
@@ -25,6 +37,20 @@ ideas = {
 				conscription = 0.05
 			}
         }
+		MKH_pavlogradskaya_military_academy = { 
+            picture = military_academy 
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				training_time_army_factor = -0.1
+				army_org = 5
+				recon_factor = 0.05
+			}
+        }
 		MKH_technology_mine_trawling = {
 			allowed = {
 				always = no
@@ -33,7 +59,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = generic_sea_focused_navy
+			picture = mine_trawling
 			modifier = {
 				navy_capital_ship_defence_factor = 0.06
 				navy_screen_defence_factor = 0.06
@@ -47,7 +73,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = generic_coastal_navy
+			picture = generic_navy_bonus
 			modifier = {
 				navy_capital_ship_attack_factor = 0.06
 				navy_submarine_attack_factor = 0.06
@@ -61,9 +87,180 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = generic_coastal_navy
+			picture = generic_manpower_bonus
 			modifier = {
 				conscription = 0.01
+			}
+		}
+		MKH_defensive_intensive_fire = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_coastal_navy
+			modifier = {
+				navy_capital_ship_attack_factor = 0.05
+				navy_capital_ship_defence_factor = 0.05
+				navy_submarine_attack_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_screen_attack_factor = 0.05
+				navy_screen_defence_factor = 0.05
+			}
+		}
+	}
+	
+	political_advisor = {
+	
+		maria_nikiforova = {
+		
+			picture = maria_nikiforova
+			
+			allowed = {
+				original_tag = "MKH"
+			}
+			available = {
+			    has_government = anarchism
+			}
+		
+			traits = { work_horses }
+		}
+		
+		polikarp_makhno = {
+		
+			picture = polikarp_makhno
+			
+			allowed = {
+				original_tag = "MKH"
+			}
+			available = {
+			    has_government = anarchism
+			}
+		
+			traits = { peasant }
+		}
+	}
+	
+	army_chief = {
+		
+		victor_belash = {
+		
+		    picture = 
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_government = anarchism
+			}
+			
+			traits = { defense }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+	
+	    alexandrovich_shchors = {
+			ledger = army
+			
+			picture = alexandrovich_shchors
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_government = communism
+			}
+			
+			traits = { experienced_officer }
+			
+			modifier = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		
+	    }
+		
+		emelyan_makhno = {
+			ledger = army
+			
+			picture = emelyan_makhno
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_government = anarchism
+			}
+			
+			traits = { common_soldier }
+			
+			modifier = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	tank_manufacturer = {
+		
+		designer = yes
+		
+		kharkov_tank_factory = {
+		
+			picture = generic_tank_manufacturer_1
+			
+			allowed = {
+				original_tag = MKH
+			}
+
+			available = {
+				OR = {
+				    controls_state = 221
+					has_completed_focus = MKH_request_specialists_from_the_kharkiv_tank_factory
+				}
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		GER_MAN = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = MKH
+			}
+			
+			available = {
+				has_completed_focus = MKH_request_specialists_from_man_military_factories
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}

@@ -14,10 +14,9 @@ bookmarks = {
 			ideas = {
 				UKR_political_crisis_1
 				UKR_oligarchism
-				UKR_Language_question
 			}
 			focuses = {
-				UKR_Hetman_of_All_Ukraine
+				UKR_Hetman_of_All_UKRaine
 				UKR_Earth_Revolution
 				UKR_Lebensraum
 			}
@@ -114,7 +113,7 @@ bookmarks = {
 			history = "MKH_GATHERING_STORM_DESC"
 			ideology = anarchism
 			ideas = {
-				#
+				MKH_risk_of_starvation
 			}	
 			focuses = {
 				MKH_the_strengthening_of_the_power_of_makhno

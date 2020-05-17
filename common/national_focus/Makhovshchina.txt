@@ -1130,7 +1130,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_militarization #Милитаризация
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_combined_arms
 		mutually_exclusive = { focus = MKH_insulation  }
 		x = 23
 		y = 1
@@ -1147,7 +1147,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_militarization"
 		    add_tech_bonus = {
-				bonus = 1.0
+				bonus = 1.25
 				uses = 1
 				category = land_doctrine 
             }
@@ -1175,8 +1175,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_insulation"
 		    add_tech_bonus = {
 				bonus = 1.0
-				uses = 1
-				category = land_doctrine 
+				uses = 3
+				category = construction_tech 
             }
             add_equipment_to_stockpile = {
               type = artillery_equipment
@@ -1205,8 +1205,63 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_women_in_the_army"
-		    
-	    }
+            custom_effect_tooltip = MKH_womens_infantry_divisions_tt
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_tech = tech_recon
+                    }
+                    division_template = {
+                       name = "Women's infantry divisions"
+                       priority = 2
+                       division_names_group = ROM_INF_01
+                        regiments = {
+                           infantry = { x = 0 y = 0 }
+                           infantry = { x = 0 y = 1 }
+                           infantry = { x = 0 y = 2 }
+
+                           infantry = { x = 1 y = 0 }
+                           infantry = { x = 1 y = 1 }
+                           infantry = { x = 1 y = 2 }
+
+                        }
+                        support = {
+                          engineer = { x = 0 y = 0 }
+                          recon = { x = 0 y = 1 }
+                        }
+                    }
+                    else = {
+                        division_template = {
+                           name = "Women's infantry divisions"
+                           priority = 2
+                           division_names_group = ROM_INF_01
+                            regiments = {
+                               infantry = { x = 0 y = 0 }
+                               infantry = { x = 0 y = 1 }
+                               infantry = { x = 0 y = 2 }
+
+                               infantry = { x = 1 y = 0 }
+                               infantry = { x = 1 y = 1 }
+                               infantry = { x = 1 y = 2 }
+
+                            }
+                            support = {
+                              engineer = { x = 0 y = 0 }
+							  recon = { x = 0 y = 1 }
+                            }
+                        }
+                    }
+                }
+                random_owned_controlled_state = {
+                    limit = { ROOT = { has_full_control_of_state = PREV } }
+                    prioritize = { 46 }
+                    create_unit = {
+                        division = "name = \"Women's infantry divisions\" division_template = \"Women's infantry divisions\" start_experience_factor = 1.0"
+                        owner = MKH
+                    }
+                }
+            }
+        }
 	}
 	
 	focus = {
@@ -1228,13 +1283,22 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_women_in_command"
-		    
+		    create_corps_commander = {
+	            name = "Marusya Nikiforova"
+	            portrait_path = "gfx/leaders/MKH/Marusya_Nikiforova.dds"
+	            traits = { organizer skirmisher }
+	            skill = 3
+	            attack_skill = 2
+	            defense_skill = 4
+	            planning_skill = 4
+	            logistics_skill = 3
+            }
 	    }
 	}
 	
 	focus = {
 		id = MKH_special_forces #Войска спецназначения
-		icon = GFX_goal_unknown
+		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = MKH_women_in_the_army }
 		relative_position_id = MKH_women_in_the_army
 		x = 0
@@ -1251,13 +1315,23 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_special_forces"
-		    
+		    add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 3
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
 	    }
 	}
 	
 	focus = {
 		id = MKH_the_fast_capture_theory #Теория "Быстрого захвата"
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = MKH_women_in_the_army }
 		relative_position_id = MKH_women_in_the_army
 		x = -2
@@ -1274,13 +1348,17 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_fast_capture_theory"
-		    
+		    add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				category = cat_mobile_warfare 
+            }
 	    }
 	}
 	
 	focus = {
-		id = MKH_the_construction_of_the_fortified_line #Строительство линей укрепрайонов
-		icon = GFX_goal_unknown
+		id = MKH_the_construction_of_the_fortified_line #Возведение линей укрепрайонов
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = MKH_women_in_command }
 		relative_position_id = MKH_women_in_command
 		x = 0
@@ -1297,12 +1375,32 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_construction_of_the_fortified_line"
-		    
-	    }
+			196 = {
+				add_building_construction = { type = bunker province = 721 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 737 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 11715 level = 1 instant_build = yes }
+			}
+			226 = {
+				add_building_construction = { type = bunker province = 11561 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 6423 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 9433 level = 1 instant_build = yes }
+			}
+			903 = {
+				add_building_construction = { type = bunker province = 9463 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 9479 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 11452 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 486 level = 1 instant_build = yes }
+				add_building_construction = { type = bunker province = 472 level = 1 instant_build = yes }
+	        }
+			200 = {
+				add_building_construction = { type = bunker province = 429 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9571 level = 1 instant_build = yes }
+			}
+		}
 	}
 	
 	focus = {
-		id = MKH_sevastopol_coast_guard #Береговая охрана Севастополя
+		id = MKH_chersonese_coast_guard #Береговая охрана Херсонес
 		icon = GFX_goal_unknown
 		prerequisite = { focus = MKH_women_in_command }
 		relative_position_id = MKH_women_in_command
@@ -1319,15 +1417,25 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_sevastopol_coast_guard"
-		    
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_chersonese_coast_guard"
+		    196 = {
+				add_building_construction = { type = coastal_bunker province = 721 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 568 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 9712 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 6771 level = 3 instant_build = yes }
+			}
+			200 = {
+				add_building_construction = { type = coastal_bunker province = 11700 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 9729 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 9571 level = 3 instant_build = yes }
+			}
 	    }
 	}
 	
 	focus = {
 		id = MKH_solve_the_problem_of_equipment_production_in_the_council #Решить в совете проблему производства снаряжения
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_special_forces
 		x = 0
 		y = 1
@@ -1355,7 +1463,7 @@ focus_tree = {
 	focus = {
 		id = MKH_open_zaporozhye_machine-building_design #Открыть Запорожское машиностроительное бюро
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_the_fast_capture_theory
 		x = 0
 		y = 1
@@ -1380,9 +1488,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MKH_sevastopol_military_academy #Севастопольская военная академия
+		id = MKH_pavlogradskayal_military_academy #Павлоградская военная академия
 		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_the_fast_capture_theory
 		x = -2
 		y = 1
@@ -1397,19 +1505,15 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_sevastopol_military_academy"
-		    add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine 
-            }			
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_pavlogradskayal_military_academy"
+		    add_ideas = MKH_pavlogradskaya_military_academy			
 	    }
 	}
 	
 	focus = {
 		id = MKH_reform_in_the_army #Реформа в армии
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_the_construction_of_the_fortified_line
 		x = 0
 		y = 1
@@ -1431,9 +1535,9 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_the_dominance_of_the_aircraft_makhno #Доминирование авиации Махно
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
-		relative_position_id = MKH_sevastopol_coast_guard
+		icon = GFX_focus_usa_escort_fighters
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
+		relative_position_id = MKH_chersonese_coast_guard
 		x = 0
 		y = 1
 		cost = 10
@@ -1460,8 +1564,8 @@ focus_tree = {
 	focus = {
 		id = MKH_to_open_the_zaporozhye_aircraft_repair_plant #Открыть Запорожский авиаремонтный завод
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_sevastopol_coast_guard }
-		relative_position_id = MKH_sevastopol_coast_guard
+		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
+		relative_position_id = MKH_chersonese_coast_guard
 		x = 2
 		y = 1
 		cost = 10
@@ -1488,7 +1592,7 @@ focus_tree = {
 	focus = {
 		id = MKH_father_makhno_carts #Тачанки батьки Махно
 		icon = GFX_father_makhno_carts
-		prerequisite = { focus = MKH_sevastopol_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant  }
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant  }
 		relative_position_id = MKH_open_zaporozhye_machine-building_design
 		x = 0
 		y = 1
@@ -1516,7 +1620,7 @@ focus_tree = {
 	focus = {
 		id = MKH_early_tanks #Ранние танки
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_sevastopol_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
 		relative_position_id = MKH_solve_the_problem_of_equipment_production_in_the_council
 		x = 0
 		y = 1
@@ -1539,7 +1643,7 @@ focus_tree = {
 	focus = {
 		id = MKH_new_command #Новое командование
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_sevastopol_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
 		relative_position_id = MKH_reform_in_the_army
 		x = 0
 		y = 1
@@ -1562,7 +1666,7 @@ focus_tree = {
 	focus = {
 		id = MKH_the_purchase_of_the_aircraft #Покупка самолетов
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_sevastopol_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
 		relative_position_id = MKH_the_dominance_of_the_aircraft_makhno
 		x = 0
 		y = 1
@@ -1633,7 +1737,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = MKH_production_of_the_latest_artillery focus = MKH_counter-protection  }
 		relative_position_id = MKH_production_of_the_latest_artillery
-		mutually_exclusive = { focus = MKH_request_specialists_from_krupp_military_factories }
+		mutually_exclusive = { focus = MKH_request_specialists_from_man_military_factories }
 		x = 0
 		y = 1
 		cost = 10
@@ -1659,7 +1763,7 @@ focus_tree = {
     }
 	
     focus = {
-		id = MKH_request_specialists_from_krupp_military_factories #Запросить специалистов из военных заводов "Krupp"
+		id = MKH_request_specialists_from_man_military_factories #Запросить специалистов из военных заводов "MAN"
 		icon = GFX_goal_unknown
 		prerequisite = { focus = MKH_production_of_the_latest_artillery focus = MKH_counter-protection  }
 		relative_position_id = MKH_counter-protection
@@ -1677,7 +1781,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_request_specialists_from_krupp_military_factories"
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_request_specialists_from_man_military_factories"
 		    add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1
@@ -1691,7 +1795,7 @@ focus_tree = {
 	focus = {
 		id = MKH_to_steal_the_experimental_equipment #Выкрасть экспериментальное оборудование 
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_krupp_military_factories }
+		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
 		relative_position_id = MKH_request_specialists_from_the_kharkiv_tank_factory
 		x = -1
 		y = 1
@@ -1714,7 +1818,7 @@ focus_tree = {
 	focus = {
 		id = MKH_construction_of_a_nuclear_reactor #Строительство Ядерного реактора 
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_krupp_military_factories }
+		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
 		relative_position_id = MKH_request_specialists_from_the_kharkiv_tank_factory
 		x = 1
 		y = 1
@@ -1737,8 +1841,8 @@ focus_tree = {
 	focus = {
 		id = MKH_protecting_the_nation #Защита нации
 		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_krupp_military_factories }
-		relative_position_id = MKH_request_specialists_from_krupp_military_factories
+		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
+		relative_position_id = MKH_request_specialists_from_man_military_factories
 		x = 1
 		y = 1
 		cost = 10
@@ -2003,11 +2107,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_marine_aviation"
 		    add_tech_bonus = {
-				name = nav_bomber_bonus
+				name = naval_air
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
-				category = naval_bomber
+				category = naval_air
 			}
 	    }
 	}
@@ -2086,7 +2190,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_defensive_fire"
-		    
+		    add_ideas = MKH_defensive_intensive_fire
 	    }
 	}
 	

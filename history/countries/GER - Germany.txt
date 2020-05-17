@@ -339,13 +339,14 @@ create_country_leader = {
 }
 
 create_country_leader = {
-		name = "August von Mackensen"
-		desc = "POLITICS_AUGUST_VON_MACKENSEN_DESC"
-		picture = GFX_portrait_ger_august_von_mackensen
-		expire = "1965.1.1"
-		ideology = despotism
-		traits = {	}
+    name = "August von Mackensen"
+    desc = "POLITICS_AUGUST_VON_MACKENSEN_DESC"
+	picture = "gfx/leaders/GER/August_von_Mackensen.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {	
 	}
+}
 
 create_country_leader = {
 	name = "Wilhelm Pieck"

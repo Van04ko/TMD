@@ -10,8 +10,13 @@ spriteTypes = {
 
 	### new tfv nat spirit icons
 
-	SpriteType = {
-		name = "sidor_kovpak"
-		texturefile = "gfx/interface/ideas/idea_sidor_kovpak.dds"
+	spriteType = {
+		name = "GFX_sidor_kovpak"
+		texturefile = "gfx/interface/ideas/sidor_kovpak.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_mine_trawling"
+		texturefile = "gfx/interface/ideas/mine_trawling.dds"
 	}
 }

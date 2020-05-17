@@ -85,7 +85,7 @@ bookmarks = {
 			history = "MKH_BLITZKRIEG_DESC_DESC"
 			ideology = anarchism
 			ideas = {
-				#
+				MKH_risk_of_starvation
 			}	
 			focuses = {
 				MKH_the_strengthening_of_the_power_of_makhno

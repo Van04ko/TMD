@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+	name = "Infantry divisions of Batka Makhno"				# Militia units (lowest experience, oldest equipment)
 
 	division_names_group = MKH_GAR_01
 
@@ -22,8 +22,9 @@ units = {
 				name_order = 1
 		}
 		location = 11405
-		division_template = "Militia"
+		division_template = "Infantry divisions of Batka Makhno"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
 	}
 	division = {
 		name = "Infantry divisions of Batka Makhno"
@@ -32,7 +33,8 @@ units = {
 				name_order = 2
 		}
 		location = 3573
-		division_template = "Militia"
+		division_template = "Infantry divisions of Batka Makhno"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.3
 
 	}
@@ -43,7 +45,8 @@ units = {
 				name_order = 3
 		}
 		location = 429
-		division_template = "Militia"
+		division_template = "Infantry divisions of Batka Makhno"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.3
 
 	}
@@ -54,7 +57,32 @@ units = {
 				name_order = 4
 		}
 		location = 767
-		division_template = "Militia"
+		division_template = "Infantry divisions of Batka Makhno"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Infantry divisions of Batka Makhno"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 9479
+		division_template = "Infantry divisions of Batka Makhno"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Infantry divisions of Batka Makhno"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 11561
+		division_template = "Infantry divisions of Batka Makhno"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.3
 
 	}

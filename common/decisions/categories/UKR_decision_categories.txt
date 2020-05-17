@@ -1,0 +1,85 @@
+ukrain_economic_category = {
+
+	icon = generic_industry
+	picture = GFX_decision_cat_generic_scandinavia
+	
+	allowed = {
+		original_tag = UKR
+	}
+	
+	available = {
+		has_completed_focus = AUM_create_new_cooperatives
+	}
+	
+	visible = {
+		has_completed_focus = AUM_create_new_cooperatives
+	}
+	
+}
+
+ukrain_world_expansion_category = {
+
+	icon = generic_industry
+	picture = GFX_decision_cat_generic_scandinavia
+	
+	allowed = {
+		original_tag = UKR
+	}
+	
+	available = {
+		has_completed_focus = AUM_world_expansion
+	}
+	
+	visible = {
+		has_completed_focus = AUM_world_expansion
+	}
+	
+}
+
+ukrain_europe_expansion_category = {
+
+	icon = generic_industry
+	picture = GFX_decision_cat_generic_scandinavia
+	
+	allowed = {
+		original_tag = UKR
+	}
+	
+	available = {
+		NOT = { has_country_flag = Europe_revolution_succesful }
+		has_completed_focus = AUM_europe_expansion
+	}
+	
+	visible = {
+		NOT = { has_country_flag = Europe_revolution_succesful }
+		has_completed_focus = AUM_europe_expansion
+	}
+	
+}
+
+ukrain_base_economic = {
+
+	icon = generic_industry
+	picture = GFX_decision_cat_generic_scandinavia
+	
+	allowed = {
+		original_tag = UKR
+		NOT = { has_country_flag = UKR_anarchy }
+
+	}
+	
+	available = {
+		has_completed_focus = UKR_reopen_national_bank
+		NOT = { has_country_flag = UKR_anarchy }
+	}
+	
+	visible = {
+		has_completed_focus = UKR_reopen_national_bank
+		OR = {
+			NOT = { has_completed_focus = UKR_allies_with_anarchist }
+			NOT = { has_completed_focus = UKR_war_with_anarchist }
+			NOT = { has_completed_focus = UKR_the_enemy_is_us_Makhno }
+		}
+	}
+	
+}
