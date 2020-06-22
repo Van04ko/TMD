@@ -1,14 +1,12 @@
-
-units= {
-
+units = {
 	##### Naval OOB #####
 	fleet = {
-		name = "Aurora"			
+		name = "Battleship "Sevastopol""			
 		naval_base = 137 # Crimea
 		task_force = {
 			name = "Armada Argentina"
 			location = 127 # Crimea
-			ship = { name = "Aurora" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = MKH } } }
+			ship = { name = "Battleship "Sevastopol"" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = MKH version_name = "Battleship "Sevastopol"" } } }
 		}
 	}
 }

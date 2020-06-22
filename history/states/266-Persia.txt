@@ -27,10 +27,6 @@ state={
 			14167 5 
 		}
 		add_core_of = PER
-		1941.11.1 = {
-			owner = AZR
-			add_core_of = AZR
-		}
 	}
 
 	provinces={

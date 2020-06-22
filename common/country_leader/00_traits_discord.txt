@@ -5,7 +5,7 @@ leader_traits = {
 		research_speed_factor = -0.04	
 		political_power_cost = 0.10
 		production_speed_buildings_factor = -0.1
-				
+		
 		ai_will_do = {
 		factor = 1
 		}
@@ -15,7 +15,7 @@ leader_traits = {
 		random = no		
 		research_speed_factor = -0.01
 		global_building_slots_factor = 0.10
-				
+
 		ai_will_do = {
 		factor = 1
 		}
@@ -111,7 +111,6 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		consumer_goods_factor = -0.05
-		stability_factor = 0.05
 		production_speed_buildings_factor = 0.1
 		
 		ai_will_do = {
@@ -146,7 +145,7 @@ leader_traits = {
 	peasant{
 		random = no
 		political_power_cost = 0.05
-		production_speed_infrasture_factor = 0.2
+		production_speed_infrastructure_factor = 0.2 
 		production_speed_industrial_complex_factor = 0.2
 		stability_factor = 0.05
 		
@@ -178,6 +177,133 @@ leader_traits = {
 		random = no
 		army_morale_factor = 0.1
 		attrition = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	experienced_partisan{
+	    random = no
+	    max_planning = 0.25 
+	    defence = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	publicist = {
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		trade_opinion_factor = 0.10
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	
+	ataman = {
+		random = no
+		political_power_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dislikes_machno{
+	    random = no
+	    anarchism_drift = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	sailor_zheleznyak{
+	    random = no
+	    communism_drift = 0.1
+		invasion_preparation = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	military_training{
+	    random = no
+	    training_time_army_factor = -0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	} 
+	
+	ataman_army{
+	    random = no
+	    army_morale_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	defence_anarchist{
+	    random = no
+	    army_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	} 
+	
+	military_theorist_anarchism = {
+		random = no
+		experience_gain_army = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	field = {
+		random = no
+		army_morale_factor = 0.1
+		experience_loss_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	colonel_neutraliry = {
+		random = no
+		recon_factor = 0.05
+		army_org_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	king_russian_emp = {
+		random = no
+		stability_factor = 0.15
+		political_power_gain = 0.10
+		monarchy_drift = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	queen_russian_emp = {
+		random = no
+		stability_factor = 0.15
+		political_power_gain = 0.10
+		democratic_drift = 0.25
 		
 		ai_will_do = {
 			factor = 1

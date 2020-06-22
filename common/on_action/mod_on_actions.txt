@@ -1,0 +1,39 @@
+on_actions = {
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					tag = UKR
+					has_government = anarchism
+					MCH = {
+						has_country_flag = ukr_anarcho_war
+					}
+				}
+				MCH = {
+					puppet = UKR
+					set_autonomy = {
+						target = UKR
+						autonomy_state = integrated_puppet
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = UKR
+					NOT = {
+						has_government = anarchism
+					}
+					MCH = {
+						has_country_flag = ukr_anarcho_war
+					}
+				}
+				UKR = {
+					create_wargoal = {
+						type = annex_everything
+						target = MCH
+					}
+				}
+			}
+		}
+	}
+				

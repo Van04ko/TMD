@@ -1,7 +1,4 @@
 ﻿l_russian:
-
-
-
  communism:0 "Коммунизм"
  communism_noun:0 "Коммунизм"
  democratic:0 "Демократия"
@@ -103,6 +100,8 @@
  national_conservatism:0 "Национал-консерватизм"
  national_conservatism_desc:0 "Национал-консерваторы требуют построения высокодуховного общества, соблюдающего традиции и религиозные догмы, и выступают против либерального, инновационного мышления."
  monarchy_drift:0 "Ежедневная поддержка монархии" 
+ constitutional_monarchy:0 "Конституционная монархия"
+ constitutional_monarchy_desc:0 "Конституционная монархия — монархия, при которой власть монарха ограничена так, что в сфере государственной власти он не обладает верховными полномочиями."
  
  #Anarchism
  anarchism:0 "Анархизм"
@@ -1505,10 +1504,30 @@
  NFL_Progressive_Conservative_Party:0 "Прогрессивно-консервативная партия"
  
  MKH_anarchism_party:0 "Повстанческое движение"
- MKH_communism_party:0 "СНПМ"
- MKH_communism_party_long:0 "Социалистическо-народная партия Малороссии"
- MKH_democratic_party:0 "ХПМ"
- MKH_democratic_party_long:0 "Христианская партия Малороссии"
+ MKH_communism_party:0 "СНПН"
+ MKH_communism_party_long:0 "Социалистическо-народная партия Новороссии"
+ MKH_democratic_party:0 "ХПН"
+ MKH_democratic_party_long:0 "Христианская партия Новороссии"
  MKH_fascism_party:0 "Радикалы"
  MKH_neutrality_party:0 "Беспартийные"
  MKH_neutrality_party_long:0 "Беспартийные"
+ MKH_monarchy_party:0 "Запорожская администрация"
+ 
+ BIR_fascism_party:0 "Имперская Администрация"
+ BIR_communism_party:0 "Народ и Воля"
+ BIR_democratic_party:0 "Британский штаб командования" 
+ BIR_neutrality_party:0 "Военная Администрация"
+ BIR_anarchism_party:0 "Народный Фронт России"
+ BIR_monarchy_party:0 "Партия короля"
+ BIR_fascism:0 "Имперская Интервенция России"
+ BIR_fascism_ADJ:0 "Имперск."
+ BIR_communism_ADJ:0 "Революц."
+ BIR_democratic_ADJ:0 "Британск."
+ BIR_neutrality_ADJ:0 "Британск."
+ BIR_anarchism_ADJ:0 "Свободн."
+ BIR_monarchy_ADJ:0 "Роялистск." 
+ 
+ BIR_democtatic_quenn:0 "КДП"
+ BIR_democtatic_quenn_long:0 "Конституционно-демократическая партия"
+ BIR_monarchy_king:0 "Роялисты"
+ BIR_monarchy_king_long:0 "Роялисты"

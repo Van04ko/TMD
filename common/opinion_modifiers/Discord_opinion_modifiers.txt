@@ -1,0 +1,24 @@
+opinion_modifiers = {
+
+	#MKH
+	MKH_robbed_a_train = { value = -20 }
+	MKH_tried_rob_a_train = { value = -15 }
+	MKH_cooperation_with_germany = { value = 25 }
+	MKH_cooperation_with_the_free_territory = { value = 25 }
+	MKH_approve_a_request_ukraine = { value = 25 }
+	MKH_do_not_approve_an_application_ukraine = { value = -25 }
+	MKH_approve_a_request_germany = { value = 25 }
+	MKH_do_not_approve_an_application_germany = { value = -25 }
+	MKH_bought_crimea = { value = 25 }
+	MKH_sold_crimea = { value = 25 }
+	MKH_did_not_sell_crimea = { value = -30 }
+	
+	#BIR
+	BIR_at_war = { value = -50 }
+	BIR_landlease_accepted = { value = 25 }
+	BIR_landlease_denied = { value = -25 }
+	BIR_puppet_accepted = { value = 25 }
+	BIR_puppet_denied = { value = -25 }
+	BIR_pounds_currency = { value = 25 }
+	BIR_rubles_currency = { value = -25 
+}

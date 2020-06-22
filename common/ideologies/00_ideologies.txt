@@ -25,6 +25,9 @@ ideologies = {
 			
 			national_liberals = {
 			}
+			
+			constitutional_monarchy = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -264,13 +267,6 @@ ideologies = {
 		
 			monarchy_ideology = {
 			}
-			
-			kundtism = {
-				can_be_randomly_selected = no
-			}
-			
-			national_conservatism = {
-			}
 
 		}
 
@@ -334,36 +330,6 @@ ideologies = {
 				can_be_randomly_selected = no
 			}
 			anarcho_sindicalism = {
-				can_be_randomly_selected = no
-			}
-			
-			#subbase_none
-			sinthetic_anarchism = {
-				can_be_randomly_selected = no
-			}
-			mutualism = {
-				can_be_randomly_selected = no
-			}
-			
-			#subbase_right
-			anarcho_agorism = {
-				can_be_randomly_selected = no
-			}
-			anarcho_egoism = {
-				can_be_randomly_selected = no
-			}
-			libertarian = {
-				can_be_randomly_selected = no
-			}
-			
-			#subbase_specific
-			anarcho_nationalism = {
-				can_be_randomly_selected = no
-			}
-			anarcho_monarchism = {
-				can_be_randomly_selected = no
-			}
-			anarcho_transgumanism = {
 				can_be_randomly_selected = no
 			}
 		}

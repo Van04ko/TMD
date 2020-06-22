@@ -1,4 +1,4 @@
-version="1.9.2"
+version="1.9.3"
 tags={
 	"Alternative History"
 	"National Focuses"
@@ -6,4 +6,4 @@ tags={
 	"Ideologies"
 }
 name="The Mother of Discord"
-supported_version="1.9.2"
+supported_version="1.9.3"

@@ -15,11 +15,9 @@ leader_traits = {
 
 	General_Staff{
 		random = no
-		war_support_weekly = 0.005
+		war_support_weekly = 0.05
 		planning_speed = 0.25
-		category_all_infantry = {
-			max_organisation = 8
-		}
+	    army_org_factor = 0.05 
 		
 		
 		ai_will_do = {
@@ -31,7 +29,6 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		consumer_goods_factor = -0.05
-		stability_factor = 0.05
 		production_speed_buildings_factor = 0.1
 		
 		ai_will_do = {

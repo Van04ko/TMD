@@ -1,0 +1,32 @@
+spriteTypes = {
+
+	#Идеологии
+	spriteType = {
+		name = "GFX_ideology_monarchy_group"
+		texturefile = "gfx/interface/ideologies/monarchy_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_aristocracy"
+		texturefile = "gfx/interface/ideologies/aristocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_militarism"
+		texturefile = "gfx/interface/ideologies/militarism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_religious_order"
+		texturefile = "gfx/interface/ideologies/religious_order.dds"
+	}
+
+	
+	#anarchism
+	spriteType = {
+		name = "GFX_ideology_anarchism_group"
+		texturefile = "gfx/interface/ideologies/anarchism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho-primitivism"
+		texturefile = "gfx/interface/ideologies/anarcho-primitivism.dds"
+	}
+
+}

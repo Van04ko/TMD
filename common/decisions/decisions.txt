@@ -1,0 +1,300 @@
+train_robbery_category = {
+	prepair_robbery = {
+		icon = 1111
+		available = {
+			NOT = {
+				has_country_flag = robbery_preparation_complete
+			}
+			has_equipment = {
+				support_equipment > 49
+			}
+		}
+		visible = {
+			has_completed_focus = MKH_to_rob_the_ukrainian_locomotives
+		}
+		cost = 10
+		days_remove = 15
+		ai_will_do = {
+			factor = 999
+		}
+		remove_effect = {
+			set_country_flag = robbery_preparation_complete
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -50
+			}
+		}
+	}
+	rob_train_kharkov = {
+		icon = 1111
+		available = {
+			has_country_flag = robbery_preparation_complete
+		}
+		visible = {
+			has_completed_focus = MKH_to_rob_the_ukrainian_locomotives
+		}
+		cost = 30
+		days_remove = 25
+		remove_effect = {
+			random_list = {
+				90 = {
+					country_event = {
+						id = mkh.2
+						days = 1
+					}
+				}
+				10 = {
+					country_event = {
+						id = mkh.3
+						days = 1
+					}
+				}
+			}
+			clr_country_flag = robbery_preparation_complete
+		}
+	}
+	rob_train_mariupol = {
+		icon = 1111
+		available = {
+			has_country_flag = robbery_preparation_complete
+		}
+		visible = {
+			has_completed_focus = MKH_to_rob_the_ukrainian_locomotives
+		}
+		cost = 30
+		days_remove = 25
+		remove_effect = {
+			random_list = {
+				90 = {
+					country_event = {
+						id = mkh.2
+						days = 1
+					}
+				}
+				10 = {
+					country_event = {
+						id = mkh.3
+						days = 1
+					}
+				}
+			}
+			clr_country_flag = robbery_preparation_complete
+		}
+	}
+	rob_train_sevastopol = {
+		icon = 1111
+		available = {
+			has_country_flag = robbery_preparation_complete
+		}
+		visible = {
+			has_completed_focus = MKH_to_rob_the_ukrainian_locomotives
+		}
+		cost = 30
+		days_remove = 25
+		remove_effect = {
+			random_list = {
+				90 = {
+					country_event = {
+						id = mkh.2
+						days = 1
+					}
+				}
+				10 = {
+					country_event = {
+						id = mkh.3
+						days = 1
+					}
+				}
+			}
+			clr_country_flag = robbery_preparation_complete
+		}
+	}
+}
+resources_research_category = {
+	steel_dnepr = {
+		icon = 1111
+		available = {
+			has_completed_focus = MKH_resource_exploration
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = MKH_resource_exploration
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			226 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+	tungsten_dnepr = {
+		icon = 1111
+		available = {
+			has_completed_focus = MKH_resource_exploration
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = MKH_resource_exploration
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			226 = {
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+			}
+		}
+	}
+	oil_herson = {
+		icon = 1111
+		available = {
+			has_completed_focus = MKH_resource_exploration
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = MKH_resource_exploration
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			196 = {
+				add_resource = {
+					type = oil
+					amount = 6
+				}
+			}
+		}
+	}
+}
+ukr_anarchy_support_category = {
+	ukr_people = {
+		icon = 1111
+		available = {
+			has_completed_focus = MKH_organize_a_workers_strike
+		}
+		visible = {
+			has_completed_focus = MKH_organize_a_workers_strike
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 50
+		targeted_modifier = {
+			tag = UKR
+			anarchism_drift = 0.15
+		}
+		modifier = {
+			political_power_gain = -0.5
+		}
+	}
+	ukr_government = {
+		icon = 1111
+		available = {
+			has_completed_focus = MKH_organize_a_workers_strike
+		}
+		visible = {
+			has_completed_focus = MKH_organize_a_workers_strike
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 50
+		targeted_modifier = {
+			tag = UKR
+			stability_weekly = -0.25
+		}
+		modifier = {
+			political_power_gain = -1
+		}
+	}
+	ukr_anarcho_coup = {
+		icon = 111
+		available = {
+			has_completed_focus = MKH_organize_a_workers_strike
+			UKR = {
+				anarchism > 0.45
+			}
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 150
+		remove_effect = {
+			UKR = {
+				start_civil_war = {
+					ideology = anarchism
+					size = highest_party_ideology@exclude_ruling_party
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = ukr_anarcho_war
+		}
+	}
+}
+
+# Харьков 221 903
+# Донетчина 227 200
+# Луганщина 228 221 227
+# ростов 218 227 228
+ukr_border_war_category = {
+	kharkov_border_war = {
+		icon = 111
+		allowed = {
+			original_tag = MKH
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			221 = {
+				any_neighbor_state = {
+					is_controlled_by = MKH
+				}
+			}
+			divisions_in_border_state = {
+				state = 903
+				border_state = 221
+				size > 0
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 903
+					num_provinces = 4
+					on_win = mkh.6
+					on_lose = mkh.7
+				}
+				defender = {
+					state = 221
+					num_provinces = 4
+					on_win = mkh.7
+					on_lose = mkh.6
+				}
+			}
+		}
+	}
+					
+			
+		
+		
+		

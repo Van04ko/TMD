@@ -364,7 +364,7 @@ country = {
 	
 	political_advisor = {
 	
-		nikita_khrushchev = {
+		nikita_khrushchev_ukr = {
 			
 			allowed = {
 				original_tag = "UKR"
@@ -424,7 +424,7 @@ country = {
 		
 		stanislav_wojciechowski = {
 		
-			cost = 50
+			cost = 100
 			
 			picture = robert_goddard
 			
@@ -446,7 +446,7 @@ country = {
 		
 		grigory_petrovsky = {
 		
-			cost = 50
+			cost = 100
 			
 			picture = USA_harry_white
 			
@@ -468,7 +468,7 @@ country = {
 		
 		lev_akhmatov = {
 		
-			cost = 50
+			cost = 100
 			
 			picture = ritter_von_greim
 			

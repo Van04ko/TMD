@@ -294,6 +294,26 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = monarchy_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = anarchism_ideology
+	traits = {
+		#
+	}
+}
+
 create_field_marshal = {
 	name = "Petre Dumitrescu"
 	gfx = GFX_Portrait_romania_petre_dumitrescu

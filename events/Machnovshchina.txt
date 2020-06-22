@@ -1,0 +1,435 @@
+add_namespace = mkh
+
+
+country_event = {
+	id = mkh.1
+	title = mkh.1.t
+	desc = mkh.1.d
+	picture = GFX_report_event_mackhno_near_death
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.1.a
+		if = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "Theodosius Sushi"
+			desc = ""
+			picture = "gfx/leaders/UKR/Theodosius_Sushi.dds"
+			expire = "1953.3.1"
+			ideology = anarchism_ideology
+			traits = {
+			}
+		}
+		add_political_power = -150
+		add_stability = -0.10
+		add_war_support = -0.10
+	}
+	option = {
+		name = mkh.1.b
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+country_event = {
+	id = mkh.2
+	title = mkh.2.t
+	desc = mkh.2.d
+	picture = GFX_report_event_generic_train
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.2.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 200
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = UKR
+			modifier = MKH_robbed_a_train
+		}
+	}
+}
+country_event = {
+	id = mkh.3
+	title = mkh.3.t
+	desc = mkh.3.d
+	picture = GFX_report_event_generic_train
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.3.a
+		add_war_support = -0.05
+		add_stability = -0.05
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = UKR
+			modifier = MKH_tried_rob_a_train
+		}
+	}
+}
+country_event = {
+	id = mkh.4
+	title = mkh.4.t
+	desc = mkh.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.4.a
+		add_political_power = 150
+		add_war_support = 0.15
+		add_stability = 0.5
+		add_manpower = 10000
+	}
+}
+country_event = {
+	id = mkh.5
+	title = mkh.5.t
+	desc = mkh.5.d
+	picture = GFX_report_event_generic_factory
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.5.a
+		add_political_power = 50
+		add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = 100
+            producer = MKH
+        }
+		add_equipment_to_stockpile = {
+            type = fighter_equipment
+            amount = 5
+            producer = MKH
+        }
+	}
+}
+country_event = {
+	id = mkh.6 #Great
+	title = mkh.6.t
+	desc = mkh.6.d
+	picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.6.a
+		add_political_power = 100
+		army_experience = 5
+		add_stability = 3
+	}
+}
+country_event = {
+	id = mkh.7 #Fail
+	title = mkh.7.t
+	desc = mkh.7.d
+	picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.7.a
+		add_political_power = -100
+		army_experience = -5
+		add_stability = -3
+	}
+}
+country_event = {
+	id = mkh.8 
+	title = mkh.8.t
+	desc = mkh.8.d
+	picture = GFX_report_event_generic_factory
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.8.a
+		GER = { country_event = { id = mkh.9 days = 5 } }
+		
+	}
+}
+country_event = {
+	id = mkh.9
+	title = mkh.9.t
+	desc = mkh.9.d
+	picture = GFX_report_event_generic_sign_treaty2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.9.a
+		GER = {
+		    create_production_license = {
+                target = MKH
+                equipment = {
+                    type = fighter_equipment_0
+                }
+                cost_factor = 0
+            }
+			create_production_license = {
+                target = MKH
+                equipment = {
+                    type = fighter_equipment_1
+                }
+                cost_factor = 0
+            }
+			create_production_license = {
+                target = MKH
+                equipment = {
+                    type = fighter_equipment_2
+                }
+                cost_factor = 0
+            }
+		}
+		add_opinion_modifier = {
+			target = MKH
+			modifier = MKH_cooperation_with_germany
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = MKH_cooperation_with_the_free_territory
+		}
+	}
+}
+country_event = {
+	id = mkh.10
+	title = mkh.10.t
+	desc = mkh.10.d
+	picture = GFX_report_event_generic_lend_lease
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.10.a
+		MKH = {
+		    hidden_effect = {
+	            set_country_flag = MKH_approve_a_request_ukr
+		    }
+		}
+		add_political_power = 50
+		add_opinion_modifier = {
+			target = MKH
+			modifier = MKH_approve_a_request_ukraine
+		}
+	}
+	
+	option = {
+		name = mkh.10.b
+		ai_chance = { factor = 0 }
+		MKH = {
+		    hidden_effect = {
+	            set_country_flag = MKH_do_not_approve_an_application_ukr
+		    }
+		}
+		add_opinion_modifier = {
+			target = MKH
+			modifier = MKH_do_not_approve_an_application_ukraine
+		}
+	}
+} 
+country_event = {
+	id = mkh.11
+	title = mkh.11.t
+	desc = mkh.11.d
+	picture = GFX_report_event_generic_lend_lease
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.11.a
+		MKH = {
+		    hidden_effect = {
+	            set_country_flag = MKH_approve_a_request_ger
+		    }
+		}
+		add_political_power = 50
+		add_opinion_modifier = {
+			target = MKH
+			modifier = MKH_approve_a_request_germany
+		}
+	}
+	
+	option = {
+		name = mkh.11.b
+		ai_chance = { factor = 0 }
+		MKH = {
+		    hidden_effect = {
+	            set_country_flag = MKH_do_not_approve_an_application_ger
+		    }
+		}
+		add_opinion_modifier = {
+			target = MKH
+			modifier = MKH_do_not_approve_an_application_germany
+		}
+	}
+}
+country_event = {
+	id = mkh.12
+	title = mkh.12.t
+	desc = mkh.12.d
+	picture = GFX_report_event_mackhno
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.12.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = mkh.13
+	title = mkh.13.t
+	desc = mkh.13.d
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.13.a
+		MKH = {
+		    set_state_owner = 137
+			add_ideas = MKH_crimean_elite
+			add_timed_idea = {
+                idea = MKH_bought_crimea
+                days = 180
+            }
+		}
+		add_opinion_modifier = {
+		    target = UKR
+			modifier = MKH_bought_crimea
+		}
+		add_opinion_modifier = {
+		    target = MKH
+			modifier = MKH_sold_crimea
+		}
+		UKR = {
+		    add_timed_idea = {
+                idea = MKH_the_sale_of_the_crimea
+                days = 180
+            }
+	    }
+	}
+	option = {
+		name = mkh.13.b
+		ai_chance = { factor = 0 }
+		137 = {
+			owner = {
+				FROM = {
+					create_wargoal = {
+                        type = take_state_focus
+                        target = PREV
+						generator = { 137 }
+                        
+					}
+				}
+			}
+		}
+		add_opinion_modifier = {
+		    target = MKH
+			modifier = MKH_did_not_sell_crimea
+		}
+		add_timed_idea = {
+            idea = MKH_the_sale_of_the_crimea
+            days = 180
+        }
+	}
+}
+country_event = {
+	id = mkh.14
+	title = mkh.14.t
+	desc = mkh.14.d
+	picture = GFX_report_event_crimea
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.14.a
+		add_political_power = -100
+		add_stability = -5
+		add_manpower = -1000
+		add_popularity = {
+            ideology = neutrality
+            popularity = 5.0
+        }
+		add_popularity = {
+            ideology = communism
+            popularity = 5.0
+        }
+	}
+}
+country_event = {
+	id = mkh.15
+	title = mkh.15.t
+	desc = mkh.15.d
+	picture = GFX_report_event_generic_purged
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = mkh.15.a
+		add_political_power = -100
+		add_stability = -5
+		add_manpower = -500
+			add_timed_idea = {
+            idea = MKH_enemies_are_repressed
+            days = 90
+        }
+	}
+}

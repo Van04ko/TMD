@@ -12,6 +12,7 @@ state={
 			714 3
 		}		
 		add_core_of = TRA
+		add_core_of = GEO
 	}
 
 	provinces={

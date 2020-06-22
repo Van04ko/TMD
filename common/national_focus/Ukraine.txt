@@ -760,7 +760,16 @@ focus_tree = {
 			focus = UKR_Hetman_of_All_Ukraine
 		}
 		completion_reward = {
-		set_cosmetic_tag = UKR_reich
+			add_stability = -0.10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = UKR_reich
 		}
 		x = 11
 		y = 2
@@ -961,6 +970,7 @@ focus_tree = {
 						    ##	 ##
 								##
 							   ##
+	
 	focus = {
 		id = UKR_Ribbentrop_Vinichenko
 		icon = GFX_goal_tripartite_pact
@@ -985,9 +995,10 @@ focus_tree = {
 		x = 14
 		y = 6
 
+
 	}
 	focus = {
-		id = UKR_New_Romania
+		id = UKR_New_Moldova
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		prerequisite = {
@@ -1126,25 +1137,26 @@ focus_tree = {
 			}
 			create_country_leader = {
 				name = "Danylo Skoropadskyi"
-					desc = ""
-					picture = "gfx/leaders/UKR/Danylo_Skoropadskyi.dds"
-					expire = "1953.3.1"
-					ideology = monarchy_ideology
-					traits = {
-					}
+				desc = ""
+				picture = "gfx/leaders/UKR/Danylo_Skoropadskyi.dds"
+				expire = "1953.3.1"
+				ideology = monarchy_ideology
+				traits = {
 				}
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
 			}
 			remove_ideas = UKR_political_crisis_1
 			add_timed_idea = { idea = UKR_communism_1 days = 730 }
-			set_cosmetic_tag = UKR_USR
-			add_stability = -0.05
+			add_stability = -0.10
 			add_popularity = {
 				ideology = communism
 				popularity = 0.15
 			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			set_cosmetic_tag = UKR_USR
+			
 		}
 		x = 17
 		y = 2
@@ -1509,9 +1521,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_idea = UKR_Heavy_war_industry_1 }			
-				add_ideas = {
-					add_idea = UKR_Military_production_2
-				}
+				add_ideas = UKR_Military_production_2
 			}
 			else = {
 				add_ideas = UKR_Military_production_1
@@ -1735,100 +1745,134 @@ focus_tree = {
 	#####  Industry - Focus  ###### 
 	###############################
 	
-	focus = {
-		id = UKR_Land_Reform
-		icon = GFX_goal_generic_position_armies
-		cost = 10
-		x = 49
-		y = 2
-
-	}
+	
 	focus = {
 		id = UKR_Industrialization
 		icon = GFX_goal_generic_production
 		cost = 10
-		x = 52
-		y = 0
-
-	}
-	focus = {
-		id = UKR_Fields_Industrialization
-		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10
-		x = 46
-		y = 4
-
-	}
-	focus = {
-		id = UKR_Last_Find
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10
-		x = 45
-		y = 5
-
-	}
-	focus = {
-		id = UKR_New_Towns_of_East
-		icon = GFX_goal_generic_construction
-		cost = 10
-		x = 49
-		y = 4
-
-	}
-	focus = {
-		id = UKR_Dnepro_Iron
-		icon = GFX_goal_generic_construction2
-		cost = 10
 		x = 48
-		y = 5
-
-	}
-	focus = {
-		id = TUR_Donbas_Iron
-		icon = GFX_goal_generic_construction2
-		cost = 10
-		x = 51
-		y = 5
-
-	}
-	focus = {
-		id = UKR_Educational_Reform
-		icon = GFX_focus_research
-		cost = 10
-		x = 51
-		y = 1
-
-	}
-	focus = {
-		id = UKR_Final_Industrialization
-		icon = GFX_goal_generic_production2
-		cost = 10
-		x = 54
-		y = 6
+		y = 0
 
 	}
 	focus = {
 		id = UKR_Technical_Institutes
 		icon = GFX_goal_generic_radar
 		cost = 10
-		x = 51
+		x = 50
+		y = 1
+		prerequisite = {
+			focus = UKR_Industrialization
+		}
+
+	}
+	focus = {
+		id = UKR_Educational_Reform
+		icon = GFX_focus_research
+		cost = 10
+		x = 50
 		y = 2
+		prerequisite = {
+			focus = UKR_Technical_Institutes
+		}
+
+	}
+	focus = {
+		id = UKR_Concerns
+		icon = GFX_goal_generic_production2
+		cost = 10
+		x = 47
+		y = 1
+		prerequisite = {
+			focus = UKR_Industrialization
+		}
+
+	}
+	focus = {
+		id = UKR_Land_Reform
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 45
+		y = 1
+		prerequisite = {
+			focus = UKR_Industrialization
+		}
+
+	}
+	focus = {
+		id = UKR_Dnepro_Iron
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 44
+		y = 2
+		prerequisite = {
+			focus = UKR_Land_Reform
+		}
+
+	}
+	focus = {
+		id = UKR_Donbas_Iron
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 46
+		y = 2
+		prerequisite = {
+			focus = UKR_Land_Reform
+		}
+
+	}
+	focus = {
+		id = UKR_New_Towns_of_East
+		icon = GFX_goal_generic_construction
+		cost = 10
+		x = 47
+		y = 3
+		prerequisite = {
+			focus = UKR_Donbas_Iron
+		}
+
+	}
+	focus = {
+		id = UKR_New_Towns_of_West
+		icon = GFX_goal_generic_construction
+		cost = 10
+		x = 43
+		y = 3
+		prerequisite = {
+			focus = UKR_Dnepro_Iron
+		}
+
+	}
+	focus = {
+		id = UKR_Fields_Industrialization
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		x = 45
+		y = 3
+		prerequisite = {
+			focus = UKR_Dnepro_Iron focus = UKR_Donbas_Iron
+		}
+
+	}
+	focus = {
+		id = UKR_Last_Find
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10
+		x = 43
+		y = 4
+		prerequisite = {
+			focus = UKR_Fields_Industrialization
+		}
 
 	}
 	focus = {
 		id = UKR_Earth_is_our_Gold
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
-		x = 52
-		y = 6
-
-	}
-	focus = {
-		id = UKR_Cars
-		icon = GFX_goal_generic_army_motorized
-		cost = 10
-		x = 53
+		x = 45
 		y = 4
+		prerequisite = {
+			focus = UKR_Fields_Industrialization
+		}
 
 	}
 	
@@ -1922,8 +1966,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Legacy_of_the_Sich
 		}
-		x = 33
-		y = 0
+		x = 30
+		y = 1
 
 	}
 	focus = {
@@ -1933,7 +1977,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Army_Reform
 		}
-		x = 32
+		x = 29
 		y = 2
 
 	}
@@ -1944,7 +1988,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Doctrine
 		}
-		x = 31
+		x = 30
 		y = 3
 
 	}
@@ -1955,7 +1999,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Legacy_of_the_Sich
 		}
-		x = 33
+		x = 32
 		y = 1
 
 	}
@@ -1969,7 +2013,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Army_Reform
 		}
-		x = 36
+		x = 33
 		y = 2
 
 	}
@@ -1980,7 +2024,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Ptashki
 		}
-		x = 33
+		x = 32
 		y = 3
 
 	}
@@ -1991,7 +2035,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Hearts_Of_Iron
 		}
-		x = 33
+		x = 31
 		y = 4
 
 	}
@@ -2002,7 +2046,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Doctrine
 		}
-		x = 35
+		x = 34
 		y = 3
 
 	}
@@ -2013,7 +2057,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Cavalry_Strike
 		}
-		x = 35
+		x = 31
 		y = 5
 
 	}
@@ -2024,7 +2068,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Ptashki
 		}
-		x = 37
+		x = 36
 		y = 3
 
 	}
@@ -2035,7 +2079,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Fire_Storm
 		}
-		x = 37
+		x = 35
 		y = 4
 
 	}
@@ -2046,7 +2090,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Doctrine
 		}
-		x = 39
+		x = 38
 		y = 3
 
 	}
@@ -2057,7 +2101,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Ptashki
 		}
-		x = 41
+		x = 40
 		y = 3
 
 	}
@@ -2068,7 +2112,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UKR_Iron_Horse
 		}
-		x = 41
+		x = 39
 		y = 4
 
 	}

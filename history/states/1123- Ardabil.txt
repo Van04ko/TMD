@@ -1,0 +1,31 @@
+
+state={
+	id=1123
+	name="STATE_1123"
+	manpower = 486400
+	
+	state_category = pastoral
+
+	resources={
+		oil=1
+	}
+	
+	history={
+	
+		owner = PER		
+		
+		victory_points = {
+			4901 1 
+		}
+	
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PER
+		add_core_of = AZR
+	}
+
+	provinces={
+		4901 10454 12793 14175 14181
+	}
+}

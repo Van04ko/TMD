@@ -104,7 +104,6 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Qazi Muhammad Essa"
-	
 	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
 	expire = "1960.1.1"
 	ideology = centrism
@@ -115,7 +114,6 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Muhammad Ali Jinnah"
-	
 	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
 	expire = "1960.1.1"
 	ideology = liberalism
@@ -126,12 +124,31 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Haji Mohammad Danesh"
-	
 	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
 	expire = "1960.1.1"
 	ideology = marxism
 	traits = {
 		
+	}
+}
+
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = monarchy_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = anarchism_ideology
+	traits = {
+		#
 	}
 }
 

@@ -1,0 +1,1378 @@
+focus_tree = {
+	id = bir_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = bir
+		}
+	}
+	continuous_focus_position = { x = 100 y = 2000 }
+	
+	default = no
+	
+	focus = {
+		id = BIR_begin_invasion #Начало вторжения
+		icon = GFX_generic_burning_soviet_flag
+		x = 8
+		y = 0
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_begin_invasion" 
+			add_political_power = 150
+			add_stability = 0.10
+			add_opinion_modifier = {
+                target = SOV 
+                modifier = BIR_at_war
+            }
+
+		}
+	}
+	
+	focus = {
+		id = BIR_army_moving #Переброска войск
+		icon = GFX_transfer_of_armies
+		prerequisite = { focus = BIR_begin_invasion }
+		relative_position_id = BIR_begin_invasion
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_army_moving"
+			add_war_support = 0.10
+			custom_effect_tooltip = bir_british_tt
+			hidden_effect = {
+				division_template = {
+					name = "British army intersections"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						field_hospital = { x = 0 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+					create_unit = {
+						division = " name = \"British army intersections\" division_template = \"British army intersections\"start_experience_factor = 1 start_equipment_factor = 1"
+						owner = BIR 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_province_control #Контроль над провинциями
+		icon = GFX_control_of_the_provinces
+        prerequisite = { focus = BIR_army_moving }
+		relative_position_id = BIR_army_moving
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_province_control"
+			swap_ideas = {
+				remove_idea = BIR_intervention_start
+				add_idea = BIR_intervention_continuation
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_control_locals #Вербовка населения
+		icon = GFX_recruitment_of_the_population
+		prerequisite = { focus = BIR_army_moving }
+		relative_position_id = BIR_army_moving
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_control_locals"
+		    add_ideas = BIR_local_militia
+		}
+	}
+	
+	focus = {
+		id = BIR_local_industry #Экспроприировать местную промышленность
+		icon = GFX_generic_take_the_factory
+		prerequisite = { focus = BIR_army_moving }
+		relative_position_id = BIR_army_moving
+		x = 2
+		y = 1
+		cost = 10
+
+        cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_local_industry"
+			random_state = {			
+			    limit = {
+					is_owned_and_controlled_by = ROOT
+					is_capital = no
+				}
+				add_building_construction = { 
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_extra_state_shared_building_slots = 1
+		    }
+			random_state = {			
+			    limit = {
+					is_owned_and_controlled_by = ROOT
+					is_capital = no
+				}
+				add_building_construction = { 
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_extra_state_shared_building_slots = 1
+		    }
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_enemy_damage #Обескровить врага
+		icon = GFX_exsanguinate_the_enemy_sov
+		prerequisite = { focus = BIR_province_control focus = BIR_local_industry focus = BIR_control_locals }
+		relative_position_id = BIR_province_control
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_enemy_damage"
+			SOV = { # ПОМЕНЯТЬ ВСЕ ТЕГИ, ЭТИ ДЛЯ ТЕСТА
+				add_ideas = BIR_antisov_propaganda
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_ask_lend_lease #Запросить лендлиз
+		icon = GFX_britannia_trade
+		prerequisite = { focus = BIR_province_control focus = BIR_local_industry focus = BIR_control_locals }
+		relative_position_id = BIR_province_control
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		select_effect = {
+			country_event = {
+				id = bir.1
+				days = 10
+			}
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_ask_lend_lease"
+			effect_tooltip = {
+				country_event = {
+					id = bir.1
+					days = 10
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_stabilize_the_fuel_flow #Стабилизировать топливный поток
+		icon = GFX_fossil_fuel
+		prerequisite = { focus = BIR_province_control focus = BIR_local_industry focus = BIR_control_locals }
+		relative_position_id = BIR_control_locals
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_stabilize_the_fuel_flow"
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_royal_air #Королевская авиация
+		icon = GFX_royal_air
+		prerequisite = { focus = BIR_province_control focus = BIR_local_industry focus = BIR_control_locals }
+		relative_position_id = BIR_local_industry
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_royal_air"
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 250
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 150
+				producer = ENG
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_military_government #Военное правительство
+		icon = GFX_military_goverment
+		prerequisite = { focus = BIR_province_control focus = BIR_local_industry focus = BIR_control_locals }
+		relative_position_id = BIR_local_industry
+		x = 2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_military_government"
+			add_stability = 0.15
+			add_war_support = 0.10
+			add_popularity = {
+                ideology = neutrality
+                popularity = 0.15
+            }
+		}
+	}
+	
+	focus = { 
+		id = BIR_communication_support #Поддержка связи
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = BIR_stabilize_the_fuel_flow focus = BIR_enemy_damage focus = BIR_ask_lend_lease focus = BIR_royal_air focus = BIR_military_government }
+		relative_position_id = BIR_stabilize_the_fuel_flow
+		mutually_exclusive = { focus = BIR_to_form_the_russian_nation }
+		x = -6
+		y = 2
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_communication_support"
+			ENG = {
+				set_autonomy = {
+		            target = BIR
+		            autonomous_state = autonomy_colony
+		            freedom_level = 0.5
+	            }
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = BIR_puppet_accepted
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = BIR_puppet_accepted
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_british_greatness #Британское величие
+		icon = GFX_britain_glory
+		prerequisite = { focus = BIR_communication_support }
+		relative_position_id = BIR_communication_support
+		x = -1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_british_greatness"
+			add_ideas = BIR_british_influence
+		}
+	}
+	
+	focus = {
+		id = BIR_to_bring_democracy #Привнести демократию
+		icon = GFX_bring_democracy 
+		prerequisite = { focus = BIR_communication_support }
+		relative_position_id = BIR_communication_support
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_bring_democracy"
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.50
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_imperial_ambitions #Имперские амбиции
+		icon = GFX_imperial_ambitions
+		prerequisite = { focus = BIR_british_greatness }
+		relative_position_id = BIR_british_greatness
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_imperial_ambitions"
+			add_ideas = BIR_imperial_ambitious
+		}
+	}
+	
+    focus = {
+		id = BIR_finish_what_you_started #Завершить начатое
+		icon = GFX_finish_what_you_started
+		prerequisite = { focus = BIR_to_bring_democracy }
+		relative_position_id = BIR_to_bring_democracy
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_finish_what_you_started"
+			if = {
+				limit = {
+					has_idea = BIR_intervention_start
+				}
+				remove_ideas = BIR_intervention_continuation
+			}
+			else_if = {
+				limit = {
+					has_idea = BIR_intervention_start
+				}
+				remove_ideas = BIR_intervention_continuation
+			}
+			SOV = {
+                add_stability = -0.10
+				add_ideas = BIR_early_defeat
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_colony_of_russia #Колония Россия
+		icon = GFX_rus_accept_british_dominance
+		prerequisite = { focus = BIR_finish_what_you_started }
+		relative_position_id = BIR_finish_what_you_started
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_colony_of_russia"
+			add_stability = 0.05
+			add_political_power = 50
+			set_cosmetic_tag = BIR_RUS
+			ENG = {
+				set_autonomy = {
+		            target = BIR
+		            autonomous_state = autonomy_dominion
+		            freedom_level = 0.5
+	            }
+			}
+			create_country_leader = {
+	            name = "Alexandra Fyodorovna Romanova"
+	            desc = ""
+	            picture = "gfx/leaders/BIR/Alexandra_Fyodorovna_Romanova.dds"
+	            expire = "1965.1.1"
+	            ideology = constitutional_monarchy
+	            traits = {
+		            queen_russian_emp
+	            } 
+            }
+			set_party_name = { 
+                ideology = democratic 
+                long_name = BIR_democtatic_quenn_long 
+                name = BIR_democtatic_quenn
+            }
+		}
+	}
+	
+	focus = {
+		id = BIR_to_form_the_russian_nation #Сформировать русскую нацию
+		icon = GFX_crushed_nation_rus
+		prerequisite = { focus = BIR_stabilize_the_fuel_flow focus = BIR_enemy_damage focus = BIR_ask_lend_lease focus = BIR_royal_air focus = BIR_military_government }
+		relative_position_id = BIR_stabilize_the_fuel_flow
+		mutually_exclusive = { focus = BIR_communication_support }
+		x = 6
+		y = 2
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_form_the_russian_nation"
+			add_opinion_modifier = {
+				target = ENG
+				modifier = BIR_puppet_denied
+			}
+			reverse_add_opinion_modifier = {
+				target = ENG
+				modifier = BIR_puppet_denied
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_seek_help #Найти поддержку
+		icon = GFX_find_support
+		prerequisite = { focus = BIR_to_form_the_russian_nation }
+		relative_position_id = BIR_to_form_the_russian_nation
+		x = -1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_seek_help"
+			GER = {
+				give_guarantee = BIR
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_russian_legends #Легенды россии
+		icon = GFX_legends_of_russia
+		prerequisite = { focus = BIR_to_form_the_russian_nation }
+		relative_position_id = BIR_to_form_the_russian_nation
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_russian_legends"
+			create_field_marshal = {
+	            name = "Leonid Aksenov"
+	            portrait_path = "gfx/leaders/BIR/generic_russia_3.dds"
+	            traits = { brilliant_strategist trait_reckless cavalry_officer }
+	            skill = 4
+	            attack_skill = 3
+	            defense_skill = 4
+	            planning_skill = 2
+	            logistics_skill = 1
+            }
+		    create_corps_commander = {
+	            name = "Nikolai Kuchin"
+	            portrait_path = "gfx/leaders/BIR/generic_russia_5.dds"
+	            traits = { career_officer }
+	            skill = 2
+	            attack_skill = 3
+	            defense_skill = 4
+	            planning_skill = 4
+	            logistics_skill = 3
+            }
+			create_corps_commander = {
+	            name = "Sergey Romanovsky"
+	            portrait_path = "gfx/leaders/BIR/generic_russia_2.dds"
+	            traits = { cavalry_officer }
+	            skill = 3
+	            attack_skill = 3
+	            defense_skill = 4
+	            planning_skill = 4
+	            logistics_skill = 3
+            }
+		}
+	}
+	
+	focus = {
+		id = BIR_to_get_credit_for_military_time #Кредит военного времени
+		icon = GFX_loan_military_time
+		prerequisite = { focus = BIR_russian_legends }
+		relative_position_id = BIR_russian_legends
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_get_credit_for_military_time"
+			country_event = {
+				id = bir.5
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_final_push #Финальный рывок
+		icon = GFX_final_push
+		prerequisite = { focus = BIR_seek_help }
+		relative_position_id = BIR_seek_help
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+	
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_final_push"
+			if = {
+				limit = {
+					has_idea = BIR_intervention_start
+				}
+				remove_ideas = BIR_intervention_start
+			}
+			else_if = {
+				limit = {
+					has_idea = BIR_intervention_continuation
+				}
+				remove_ideas = BIR_intervention_continuation
+			}
+			SOV = {
+                add_stability = -0.10
+				add_ideas = BIR_early_defeat
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_crown_of_the_empire #Корона империи
+		icon = GFX_crown_of_empires
+		prerequisite = { focus = BIR_final_push }
+		relative_position_id = BIR_final_push
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_crown_of_the_empire"
+			add_stability = 0.15
+			add_political_power = 150
+			set_politics = {
+	            ruling_party = monarchy
+            }
+			create_country_leader = {
+	            name = "Michael Romanov"
+	            desc = ""
+	            picture = "gfx/leaders/BIR/Michael_Romanov_military.dds"
+	            expire = "1965.1.1"
+	            ideology = monarchy_ideology
+	            traits = {
+		            king_russian_emp
+	            }
+            }
+			set_party_name = { 
+                ideology = monarchy
+                long_name = BIR_monarchy_king_long 
+                name = BIR_monarchy_king
+            }
+			set_cosmetic_tag = BIR_EMP
+		}
+	}
+	
+	focus = {
+		id = BIR_resource_exploration #Разведка ресурсов
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = BIR_stabilize_the_fuel_flow }
+		relative_position_id = BIR_stabilize_the_fuel_flow
+		x = 0
+		y = 6
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_resource_exploration"
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_determine_the_currency #Определиться с валютой
+		icon = GFX_determine_the_currency
+		prerequisite = { focus = BIR_resource_exploration }
+		relative_position_id = BIR_resource_exploration
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_determine_the_currency"
+			BIR = { country_event = { id = bir.7 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = BIR_reprisals_of_traitors #Репрессии предателей
+		icon = GFX_reprisals_of_traitors
+		prerequisite = { focus = BIR_resource_exploration }
+		relative_position_id = BIR_resource_exploration
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_reprisals_of_traitors"
+			add_stability = 0.05
+			add_war_support = -0.05
+			add_manpower = -1000
+		}
+	}
+	
+	focus = {
+		id = BIR_country_rebuild #Восстановление страны
+		icon = GFX_generic_positive_mobile_workers
+		prerequisite = { focus = BIR_resource_exploration }
+		relative_position_id = BIR_resource_exploration
+		x = 2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_country_rebuild"
+			add_ideas = BIR_country_rebuilds
+		}
+	}
+	
+	focus = {
+		id = BIR_to_expel_the_japanese_invaders #Выгнать японских интервентов
+		icon = GFX_war_with_jir
+		prerequisite = { focus = BIR_determine_the_currency focus = BIR_reprisals_of_traitors focus = BIR_country_rebuild }
+		relative_position_id = BIR_determine_the_currency
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_expel_the_japanese_invaders"
+			declare_war_on = {
+				target = JIR
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_to_expel_the_chinese_invaders #Выгнать китайских интервентов
+		icon = GFX_focus_attack_china
+		prerequisite = { focus = BIR_determine_the_currency focus = BIR_reprisals_of_traitors focus = BIR_country_rebuild }
+		relative_position_id = BIR_determine_the_currency
+		x = 3
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_expel_the_chinese_invaders"
+			declare_war_on = {
+				target = CIR
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_united_russia #Единая россия
+		icon = GFX_united_russia
+		prerequisite = { focus = BIR_to_expel_the_chinese_invaders focus = BIR_to_expel_the_japanese_invaders }
+		relative_position_id = BIR_to_expel_the_japanese_invaders
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_united_russia"
+			load_focus_tree = rus_bri_focus_tree
+		}
+	}
+	
+	focus = {
+		id = BIR_industrial_politics #Промышленная политика
+		icon = GFX_focus_generic_industry_2
+		x = 24
+		y = 0
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_industrial_politics"
+			add_timed_idea = {
+                idea = BIR_industrial_political
+                days = 90
+            }
+		}
+	}
+	
+	focus = {
+		id = BIR_laying_of_roads #Укладка дорог
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BIR_industrial_politics }
+		relative_position_id = BIR_industrial_politics
+		x = -1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_laying_of_roads"
+			every_owned_state = {
+				limit = {
+					is_core_of = BIR 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_military_training #Военные учения
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = BIR_industrial_politics }
+		relative_position_id = BIR_industrial_politics
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_military_training"
+			army_experience = 25
+			air_experience = 25
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = land_doctrine
+            }
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category =  infantry_weapons 
+            }
+		}
+	}
+	
+	focus = {
+		id = BIR_opium_for_the_people #Опиум для народа
+		icon = GFX_the_opium_trade
+		prerequisite = { focus = BIR_laying_of_roads }
+		relative_position_id = BIR_laying_of_roads
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_opium_for_the_people"
+			add_political_power = -50
+			add_ideas = BIR_opium_trade
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_restore_the_agricultural_sector #Восстановить аграрный сектор
+		icon = GFX_generic_agrarian_reform
+		prerequisite = { focus = BIR_military_training }
+		relative_position_id = BIR_military_training
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_restore_the_agricultural_sector"
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_production_of_tanks #Производство танков
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = BIR_opium_for_the_people focus = BIR_restore_the_agricultural_sector }
+		relative_position_id = BIR_opium_for_the_people
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_production_of_tanks"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = cat_light_armor
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_modernization_of_aviation #Модернизация авиации
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = BIR_production_of_tanks }
+		relative_position_id = BIR_production_of_tanks
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_modernization_of_aviation"
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 4
+				category = light_air
+	            category = medium_air
+				category = tactical_bomber
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_expansion_of_the_capital_region #Расширение столичного региона
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = BIR_production_of_tanks }
+		relative_position_id = BIR_production_of_tanks
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_expansion_of_the_capital_region"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_protection_of_workers_rights #Защита прав трудящихся 
+		icon = GFX_protection_of_workers_rights
+		prerequisite = { focus = BIR_production_of_tanks }
+		relative_position_id = BIR_production_of_tanks
+		x = 2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_protection_of_workers_rights"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = electronics
+				category = construction_tech 
+				category = excavation_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_construction_of_airfields #Строительство аэродромов
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = BIR_modernization_of_aviation focus = BIR_expansion_of_the_capital_region focus = BIR_protection_of_workers_rights }
+		relative_position_id = BIR_expansion_of_the_capital_region
+		x = -1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_construction_of_airfields"
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			405 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_salvation_army #Армия спасения
+		icon = GFX_salvation_army
+		prerequisite = { focus = BIR_modernization_of_aviation focus = BIR_expansion_of_the_capital_region focus = BIR_protection_of_workers_rights }
+		relative_position_id = BIR_expansion_of_the_capital_region
+		x = 1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_salvation_army"
+			capital_scope = {
+				create_unit = {
+					division = " name = \"British army intersections\" division_template = \"British army intersections\" start_experience_factor = 1 start_equipment_factor = 1 "
+					owner = BIR 
+				}
+				create_unit = {
+					division = " name = \"British army intersections\" division_template = \"British army intersections\" start_experience_factor = 1 start_equipment_factor = 1 "
+					owner = BIR 
+				}
+				create_unit = {
+					division = " name = \"British army intersections\" division_template = \"British army intersections\" start_experience_factor = 1 start_equipment_factor = 1 "
+					owner = BIR 
+				}
+				create_unit = {
+					division = " name = \"British army intersections\" division_template = \"British army intersections\" start_experience_factor = 1 start_equipment_factor = 1 "
+					owner = BIR 
+				}
+				create_unit = {
+					division = " name = \"British army intersections\" division_template = \"British army intersections\" start_experience_factor = 1 start_equipment_factor = 1 "
+					owner = BIR 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BIR_state_plan #Государственный план
+		icon = GFX_generic_reformation_of_the_council
+		prerequisite = { focus = BIR_salvation_army focus = BIR_construction_of_airfields  }
+		relative_position_id = BIR_salvation_army
+		x = -1
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_state_plan"
+			add_ideas = extensive_conscription
+		}
+	}
+	
+	focus = {
+		id = BIR_to_increase_the_appeal #Увеличить призыв
+		icon = GFX_generic_mobilization
+		prerequisite = { focus = BIR_state_plan  }
+		relative_position_id = BIR_state_plan
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BIR_to_increase_the_appeal"
+			add_ideas = war_economy
+		}
+	}

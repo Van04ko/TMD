@@ -57,21 +57,18 @@ add_ideas = {
 	start_resistance = yes
 	set_compliance = 20
 	set_resistance = 0
-	set_garrison_strength = 1.0
 }
 
 684 = {
 	start_resistance = yes
 	set_compliance = 20
 	set_resistance = 0
-	set_garrison_strength = 1.0
 }
 
 633 = {
 	start_resistance = yes
 	set_compliance = 20
 	set_resistance = 0
-	set_garrison_strength = 1.0
 }
 
 if = {
@@ -405,6 +402,26 @@ create_country_leader = {
 	expire = "1989.1.1"
 	ideology = liberalism
 	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = monarchy_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jonas Lote"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = anarchism_ideology
+	traits = {
+		#
 	}
 }
 

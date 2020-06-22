@@ -14,6 +14,7 @@
  
  #Румыния
  VICTORY_POINTS_3665:0 "Хунедоара"
+ VICTORY_POINTS_6761:0 "Сучава"
 
  #ExW
  VICTORY_POINTS_9904:0 "Рим"
@@ -132,6 +133,12 @@
  VICTORY_POINTS_13682:0 "Ибри"  
  VICTORY_POINTS_4993:0 "Сохар" 
  VICTORY_POINTS_13688:0 "Эс-Сиб"  
+ VICTORY_POINTS_8000:0 "Хадибу"  
+ VICTORY_POINTS_13589:0 "Эль-Хасаб" 
+ VICTORY_POINTS_4901:0 "Ардебиль"
+ VICTORY_POINTS_4473:0 "Ленкорань"
+ VICTORY_POINTS_14173:0 "Зенджан"
+ VICTORY_POINTS_4477:0 "Евлах"
 
  #АФГАН
  VICTORY_POINTS_12653:0 "Файзабад"

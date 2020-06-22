@@ -125,5 +125,22 @@ create_country_leader = {
 #	}
 #}
 
+create_country_leader = {
+	name = "Andriy Melnyk"
+	picture = "gfx/leaders/WUK/portrait_UKR_Andriy_Melnyk.dds"
+	expire = "1965.1.1"
+	ideology = monarchy_ideology
+	traits = {
+		#
+	}
+}
 
-
+create_country_leader = {
+	name = "Congress of Anarchists"
+	picture = "gfx/leaders/ANA/Congress_of_Anarchists.dds"
+	expire = "1965.1.1"
+	ideology = anarchism_ideology
+	traits = {
+		#
+	}
+}

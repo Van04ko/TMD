@@ -2,7 +2,7 @@
 
 ###Украина###
     
-
+    
     
 #Коммунизм#
  #Фокусы                 
@@ -20,14 +20,47 @@
  UKR_New_Alles:0 "Поиск союзников за рубежом"
  UKR_New_Seeds:0 "Новые зерновые культуры"
  UKR_Sacrifice_of_People:0 "Жертва Украинского Народа"
- UKR_Lwiv_Officer:0 "Львовское Офицерское Училище"
+ UKR_Lwiv_Officer:0 "Киевское Офицерское Училище"
  UKR_collectivization:0 "Коллективизация"
  UKR_Heavy_intustry:0 "Тяжёлая промышленность Донбасса"
  UKR_Likbez:0 "Ликвидация Безграмотности"
- UKR_Weapon_For_Everyone:0 "«Каждому по винтовке»""
+ UKR_Weapon_For_Everyone:0 "«Каждому по винтовке»"
  UKR_New_place:0 "Новые Возможности"
  UKR_Crimean:0 "Поиск врагов, и да плюс Крым"
  UKR_detachments:0 "Массовая мобилизация УРККА"
+ 
+ 
+ 
+ UKR_Death_or_Dishonor:0 "§YТретий путь§!"
+ UKR_Identity:0 "Национальная идентичность"
+ UKR_Destroy_the_Traitors:0 "Уничтожение политических оппонентов"
+ UKR_One_Country_One_Nation:0 "Наша страна - наша нация"
+ UKR_Propaganda:0 "Пропаганда"
+ UKR_GerPol:0 "Наш идеологический союзник"
+ UKR_New_Lands:0 "Полная независимость наших действий"
+ UKR_Earth_and_blood:0 "Земля и Кровь"
+ UKR_Uzhgorod_Incident:0 "Ужгородский Инцидент"
+ UKR_Deportation:0 "Депортации нежелательных элементов"
+ UKR_New_Slovakia:0 "Новая Карпатия"
+ UKR_Cze_Ultimatum:0 "Киевский Ультиматум"
+ UKR_Danube_Region:0 "Дунайский регион"
+ UKR_Expand_Carpathian_Ruthenium:0 "Расширить Карпатскую Русь"
+ UKR_Nation_Accounting:0 "Система трудовых лагерей"
+ UKR_Ribbentrop_Vinichenko:0 "Пакт Риббентроп-Виниченко"
+ UKR_Moldova:0 "Приднестровские территориальные претензии"
+ UKR_New_Moldova:0 "Украинизация Молдавии"
+ UKR_Lebensraum:0 "Наше «Жизненное пространство»"
+ UKR_Tra_Alliance:0 "Полезный Союзник"
+ UKR_Kuban:0 "Вторжение в «Малиновий Клин»"
+ UKR_Outline_New_Borders:0 "Очертить новые границы"
+ UKR_Kuban_Railway:0 "Кубанская железная дорога"
+ UKR_Volga_Region:0 "Захват «Жовтий Клин»"
+ UKR_Integration_Don_Cossaks:0 "Интегрировать Кубанские степи"
+ UKR_Volksdeutsche_For_Matherland:0 "Политика регулирования местных народов"
+ UKR_VolgaLand:0 "Земли Волги"
+ 
+ 
+ 
 #Идеи
  UKR_political_crisis_1:0 "Политический кризис"
  UKR_oligarchism:0 "Власть Олихархов"

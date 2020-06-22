@@ -11,12 +11,12 @@ focus_tree = {
 
 	default = no
 	
-	continuous_focus_position = { x = 2400 y = 1700 }
+	continuous_focus_position = { x = 50 y = 1700 }
 	
 	focus = {
 		id = MKH_the_strengthening_of_the_power_of_makhno #Укрепление власти Махно
-		icon = GFX_goal_unknown
-		x = 1
+		icon = GFX_father_makhno
+		x = 4
 		y = 0
 		cost = 2
 		
@@ -25,18 +25,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_strengthening_of_the_power_of_makhno"
 			add_political_power = 150
+			add_stability = 0.10
+			MKH = { country_event = { id = mkh.12 days = 1 } }
 		}
 	}
 	
 	focus = {
 		id = MKH_an_oasis_for_anarchists #Оазис для анархистов
-		icon = GFX_goal_unknown
+		icon = GFX_an_oasis_for_anarchists
 		prerequisite = { focus = MKH_the_strengthening_of_the_power_of_makhno }
 		relative_position_id = MKH_the_strengthening_of_the_power_of_makhno
 		x = 0
@@ -48,19 +54,81 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_an_oasis_for_anarchists"
-			set_state_owner = 137
+			UKR = { country_event = { id = mkh.13 days = 5 } }
 		}
 	}
 	
 	focus = {
-		id = MKH_the_formation_of_the_communes_in_the_crimea #Формирование коммун в Крыму
-		icon = GFX_the_formation_of_the_communes_in_the_crimea
-		prerequisite = { focus = MKH_an_oasis_for_anarchists }
+		id = MKH_hang_on_the_pillars_of_the_alarmists #Повесить на столбах паникеров
+		icon = GFX_hang_it_on_a_lamppost
+		prerequisite = { focus = MKH_the_strengthening_of_the_power_of_makhno }
+		relative_position_id = MKH_the_strengthening_of_the_power_of_makhno
+		x = -2
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_hang_on_the_pillars_of_the_alarmists"
+		    add_stability = -0.05
+			add_manpower = -500
+			add_political_power = -50
+			MKH = { country_event = { id = mkh.14 days = 15 } }
+	    }
+	}
+	
+	focus = {
+		id = MKH_destroy_the_parasites #Уничтожить паразитов
+		icon = GFX_destroy_the_parasites
+		prerequisite = { focus = MKH_an_oasis_for_anarchists focus = MKH_hang_on_the_pillars_of_the_alarmists }
+		relative_position_id = MKH_an_oasis_for_anarchists
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_destroy_the_parasites"
+		    remove_ideas = MKH_enemies_among_us
+			MKH = { country_event = { id = mkh.15 days = 5 } }
+	    }
+	}
+	
+	focus = {
+		id = MKH_anarchist_society #Анархическое общество
+		icon = GFX_workers_society
+		prerequisite = { focus = MKH_an_oasis_for_anarchists focus = MKH_hang_on_the_pillars_of_the_alarmists }
 		relative_position_id = MKH_an_oasis_for_anarchists
 		x = -2
 		y = 1
@@ -71,20 +139,53 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_formation_of_the_communes_in_the_crimea"
-			add_state_core = 137
-		}
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_anarchist_society"
+		    
+	    }
 	}
 	
 	focus = {
-		id = MKH_looting_of_the_crimean_elite #Разграбление крымской элиты
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_an_oasis_for_anarchists }
+		id = MKH_our_revolution #Наша революция
+		icon = GFX_our_revolution
+		prerequisite = { focus = MKH_an_oasis_for_anarchists focus = MKH_hang_on_the_pillars_of_the_alarmists }
 		relative_position_id = MKH_an_oasis_for_anarchists
+		x = -4
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_our_revolution"
+		    
+	    }
+	}
+	
+    focus = {
+		id = MKH_the_formation_of_the_communes_in_the_crimea #Формирование коммун в Крыму
+		icon = GFX_anarchy_crimea
+		prerequisite = { focus = MKH_destroy_the_parasites }
+		relative_position_id = MKH_destroy_the_parasites
 		x = 0
 		y = 1
 		cost = 10
@@ -94,7 +195,39 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_formation_of_the_communes_in_the_crimea"
+			
+		}
+    }
+	
+    focus = {
+		id = MKH_looting_of_the_crimean_elite #Разграбление крымской элиты
+		icon = GFX_rob_the_elite
+		prerequisite = { focus = MKH_anarchist_society }
+		relative_position_id = MKH_anarchist_society
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
 		}
 		
 		completion_reward = {
@@ -102,14 +235,14 @@ focus_tree = {
 			add_stability = 0.15
 			add_war_support = 0.10
 		}
-	}
+    }
 	
 	focus = {
-		id = MKH_black_guard #Чёрная гвардия
-		icon = GFX_black_guard
-		prerequisite = { focus = MKH_an_oasis_for_anarchists }
-		relative_position_id = MKH_an_oasis_for_anarchists
-		x = 2
+		id = MKH_robin_hoods_of_modern_times #Робин гуды современности
+		icon = GFX_robin_hoods_of_modern_times
+		prerequisite = { focus = MKH_our_revolution }
+		relative_position_id = MKH_our_revolution
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -118,44 +251,26 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_black_guard"
-		    load_oob = "MKH_Black_guard"
-	    }
-	}
-	
-	focus = {
-		id = MKH_hang_on_the_pillars_of_the_alarmists #Повесить на столбах паникеров
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_looting_of_the_crimean_elite focus = MKH_the_formation_of_the_communes_in_the_crimea focus = MKH_black_guard }
-		relative_position_id = MKH_looting_of_the_crimean_elite
-		x = -1
-		y = 1
-		cost = 10
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 5
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_robin_hoods_of_modern_times"
+			
 		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_hang_on_the_pillars_of_the_alarmists"
-		    add_stability = -0.05
-	    }
-	}
+    }
 	
 	focus = {
 		id = MKH_harvest_of_the_crimea #Собрать урожай Крыма
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_looting_of_the_crimean_elite focus = MKH_the_formation_of_the_communes_in_the_crimea focus = MKH_black_guard }
-		relative_position_id = MKH_looting_of_the_crimean_elite
-		x = 1
+		icon = GFX_harvested_crop
+		prerequisite = { focus = MKH_the_formation_of_the_communes_in_the_crimea }
+		relative_position_id = MKH_the_formation_of_the_communes_in_the_crimea
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -164,21 +279,25 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_harvest_of_the_crimea"
 		    add_ideas = MKH_harvest 
 	    }
-	}
+    }
 	
-	focus = {
-		id = MKH_save_the_cossacks #Спасти казаков
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_harvest_of_the_crimea focus = MKH_hang_on_the_pillars_of_the_alarmists  }
-		relative_position_id = MKH_hang_on_the_pillars_of_the_alarmists
-		x = 1
+    focus = {
+		id = MKH_black_guard #Чёрная гвардия
+		icon = GFX_black_guard
+		prerequisite = { focus = MKH_looting_of_the_crimean_elite }
+		relative_position_id = MKH_looting_of_the_crimean_elite
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -187,20 +306,81 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_black_guard"
+		    load_oob = "MKH_Black_guard"
+	    }
+    }
+	
+	focus = {
+		id = MKH_connection_with_the_anarchists_of_the_world #Связь с анархистами мира
+		icon = GFX_when_the_anarchists
+		prerequisite = { focus = MKH_robin_hoods_of_modern_times }
+		relative_position_id = MKH_robin_hoods_of_modern_times
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_connection_with_the_anarchists_of_the_world"
+			
+		}
+    }
+	
+    focus = {
+		id = MKH_save_the_cossacks #Спасти казаков
+		icon = GFX_save_the_cossacks
+		prerequisite = { focus = MKH_harvest_of_the_crimea }
+		relative_position_id = MKH_harvest_of_the_crimea
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_save_the_cossacks"
-		    set_state_owner = 234
+		    
 	    }
-	}
+    }
 	
 	focus = {
-		id = MKH_russian_question #Русский вопрос
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_save_the_cossacks  }
-		relative_position_id = MKH_save_the_cossacks
+		id = MKH_make_a_choice_for_ukraine #Сделать выбор Украине
+		icon = GFX_make_a_choice_for_ukraine
+		prerequisite = { focus = MKH_black_guard }
+		relative_position_id = MKH_black_guard
 		x = 0
 		y = 1
 		cost = 10
@@ -210,48 +390,25 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_russian_question"
-		    declare_war_on = {
-               target = SOV
-               type = annex_everything
-            }
-	    }
-	}
-	
-	focus = {
-		id = MKH_red_support #Поддержка красных
-		icon = GFX_soviet_union
-		prerequisite = { focus = MKH_russian_question  }
-		relative_position_id = MKH_russian_question
-		mutually_exclusive = { focus = MKH_anarchic_society_of_russia focus = MKH_the_support_of_the_white }
-		x = -3
-		y = 1
-		cost = 10
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 5
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_red_support"
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_make_a_choice_for_ukraine"
 		    
 	    }
-	}
+    }
 	
 	focus = {
-		id = MKH_anarchic_society_of_russia #Анархическое общество России
-		icon = GFX_anarchy
-		prerequisite = { focus = MKH_russian_question  }
-		relative_position_id = MKH_russian_question
-		mutually_exclusive = { focus = MKH_red_support focus = MKH_the_support_of_the_white }
+		id = MKH_the_choice_is_made #Выбор сделан
+		icon = GFX_the_choice_is_made
+		prerequisite = { focus = MKH_make_a_choice_for_ukraine }
+		relative_position_id = MKH_make_a_choice_for_ukraine
 		x = 0
 		y = 1
 		cost = 10
@@ -261,66 +418,145 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
+		}
+		
+		available = {
+			has_government = anarchism
+			has_global_flag = MKH_always_a_lie
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_anarchic_society_of_russia"
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_choice_is_made"
 		    
 	    }
-	}
+    }
 	
-	focus = {
-		id = MKH_the_support_of_the_white #Поддержка белых
-		icon = GFX_white_guard
-		prerequisite = { focus = MKH_russian_question  }
-		relative_position_id = MKH_russian_question
-        mutually_exclusive = { focus = MKH_anarchic_society_of_russia focus = MKH_red_support }
-		x = 3
-		y = 1
-		cost = 10
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 5
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_support_of_the_white"
-		    
-	    }
-	}
+#focus = {
+#		id = MKH_russian_question #Русский вопрос
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = MKH_save_the_cossacks  }
+#		relative_position_id = MKH_save_the_cossacks
+#		x = 0
+#		y = 1
+#		cost = 10
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		ai_will_do = {
+#			factor = 5
+#		}
+#		
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_russian_question"
+#		    declare_war_on = {
+#              target = SOV
+#               type = annex_everything
+#           }
+#	    }
+#}
 	
-	focus = {
-		id = MKH_the_path_of_anarchism #Путь анархизма
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_russian_question focus = MKH_the_support_of_the_white focus = MKH_red_support  }
-		relative_position_id = MKH_russian_question
-		x = 0
-		y = 2
-		cost = 10
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 5
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_path_of_anarchism"
-		    
-	    }
-	}
+#focus = {
+#		id = MKH_red_support #Поддержка красных
+#		icon = GFX_soviet_union
+#		prerequisite = { focus = MKH_russian_question  }
+#		relative_position_id = MKH_russian_question
+#		mutually_exclusive = { focus = MKH_anarchic_society_of_russia focus = MKH_the_support_of_the_white }
+#		x = -3
+#		y = 1
+#		cost = 10
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		ai_will_do = {
+#			factor = 5
+#		}
+#		
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_red_support"
+#		    
+#	    }
+#}
+	
+#focus = {
+#		id = MKH_anarchic_society_of_russia #Анархическое общество России
+#		icon = GFX_anarchy
+#		prerequisite = { focus = MKH_russian_question  }
+#		relative_position_id = MKH_russian_question
+#		mutually_exclusive = { focus = MKH_red_support focus = MKH_the_support_of_the_white }
+#		x = 0
+#		y = 1
+#		cost = 10
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		ai_will_do = {
+#			factor = 5
+#		}
+#		
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_anarchic_society_of_russia"
+#		    
+#	    }
+#}
+	
+#focus = {
+#		id = MKH_the_support_of_the_white #Поддержка белых
+#		icon = GFX_white_guard
+#		prerequisite = { focus = MKH_russian_question  }
+#		relative_position_id = MKH_russian_question
+#       mutually_exclusive = { focus = MKH_anarchic_society_of_russia focus = MKH_red_support }
+#		x = 3
+#		y = 1
+#		cost = 10
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		ai_will_do = {
+#			factor = 5
+#		}
+#		
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_support_of_the_white"
+#		    
+#	    }
+#}
+	
+#focus = {
+#		id = MKH_the_path_of_anarchism #Путь анархизма
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = MKH_russian_question focus = MKH_the_support_of_the_white focus = MKH_red_support  }
+#		relative_position_id = MKH_russian_question
+#		x = 0
+#		y = 2
+#		cost = 10
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = yes
+#
+#		ai_will_do = {
+#			factor = 5
+#		}
+#		
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_path_of_anarchism"
+#		    
+#	    }
+#}
 	
 	focus = {
 		id = MKH_collect_cartridges_for_a_rainy_day #Собрать патроны на черный день
-		icon = GFX_goal_unknown
-		x = 12
+		icon = GFX_collect_cartridges
+		x = 15
 		y = 0
 		cost = 2
 		
@@ -349,7 +585,7 @@ focus_tree = {
 		relative_position_id = MKH_collect_cartridges_for_a_rainy_day
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -373,7 +609,7 @@ focus_tree = {
 		relative_position_id = MKH_collect_cartridges_for_a_rainy_day
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -383,12 +619,20 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+			has_government = anarchism
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_execution_of_traitors"
-		    add_stability = -0.05
+		    add_stability = -0.10
 			add_political_power = -150
 			add_popularity = {
               ideology = communism
+              popularity = -0.10
+            }
+			add_popularity = {
+              ideology = neutrality
               popularity = -0.10
             }
 	    }
@@ -396,12 +640,12 @@ focus_tree = {
 	
     focus = {
 		id = MKH_to_rob_the_ukrainian_locomotives #Ограбить украинские паровозы
-		icon = GFX_to_rob_the_ukrainian_locomotives
+		icon = GFX_to_rob_locomotives
 		prerequisite = { focus = MKH_peace_to_the_cottages_war_to_the_palaces focus = MKH_execution_of_traitors }
 		relative_position_id = MKH_peace_to_the_cottages_war_to_the_palaces
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -413,28 +657,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_to_rob_the_ukrainian_locomotives"
-		    add_war_support = -0.05
-			add_equipment_to_stockpile = {
-              type = support_equipment
-              amount = 1500
-              producer = MKH
-            }
-			add_equipment_to_stockpile = {
-              type = infantry_equipment
-              amount = 6500
-              producer = MKH
-            }
+		    unlock_decision_category_tooltip = train_robbery_category
 	    }
     }
 	
 	focus = {
 		id = MKH_from_old_to_small #От старого до малого
-		icon = GFX_goal_unknown
+		icon = GFX_generic_mobilization
 		prerequisite = { focus = MKH_peace_to_the_cottages_war_to_the_palaces focus = MKH_execution_of_traitors }
 		relative_position_id = MKH_peace_to_the_cottages_war_to_the_palaces
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -446,7 +680,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_from_old_to_small"
-		    
+		    add_ideas = MKH_old_to_small
 	    }
     }
 	
@@ -457,7 +691,7 @@ focus_tree = {
 		relative_position_id = MKH_peace_to_the_cottages_war_to_the_palaces
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -469,7 +703,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_create_a_precedent"
-		    
+		    unlock_decision_category_tooltip = ukr_border_war_category
 	    }
     }
 	
@@ -493,7 +727,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_industrialization"
-		    
+		    200 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = MKH_industrialization_start
 	    }
     }
 	
@@ -562,7 +804,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_opening_of_factories"
-		    
+		    add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry 
+            }
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 1
+				category = electronics 
+            }
 	    }
     }
 	
@@ -585,7 +836,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_attract_investors"
-		    
+		    add_ideas = MKH_attract_the_investors
 	    }
     }
 	
@@ -620,12 +871,16 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 2
 		    }
+			swap_ideas = {
+                remove_idea = MKH_industrialization_start
+                add_idea = MKH_industrialization_continuation
+            }
 	    }
     }
 	
 	focus = {
 		id = MKH_modern_nation #Современная нация
-		icon = GFX_goal_unknown
+		icon = GFX_generic_elite_industry_reform
 		prerequisite = { focus = MKH_mobilisation_of_workers focus = MKH_attract_investors }
 		relative_position_id = MKH_attract_investors
 		x = 1
@@ -642,13 +897,17 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_modern_nation"
-		    
+            remove_ideas = MKH_industrialization_continuation
+			add_timed_idea = {
+                idea = MKH_the_modern_nation
+                days = 180
+            }
 	    }
     }
 	
 	focus = {
 		id = MKH_agricultural_sector #Аграрный сектор
-		icon = GFX_goal_unknown
+		icon = GFX_generic_agrarian_reform
 		prerequisite = { focus = MKH_create_a_precedent focus = MKH_from_old_to_small focus = MKH_to_rob_the_ukrainian_locomotives }
 		relative_position_id = MKH_create_a_precedent
 		mutually_exclusive = { focus = MKH_industrialization  }
@@ -666,13 +925,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_agricultural_sector"
-		    
+		    add_ideas = MKH_agricultural_sector_start
 	    }
     }
 	
 	focus = {
 		id = MKH_raise_virgin_land #Поднять целину
-		icon = GFX_goal_unknown
+		icon = GFX_generic_raise_virgin_land
 		prerequisite = { focus = MKH_agricultural_sector }
 		relative_position_id = MKH_agricultural_sector
 		x = -1
@@ -689,13 +948,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_raise_virgin_land"
-		    
+		    swap_ideas = {
+                remove_idea = MKH_agricultural_sector_start
+                add_idea = MKH_agricultural_sector_continuation
+            }
 	    }
     }
 	
 	focus = {
 		id = MKH_land_reform #Земельная реформа
-		icon = GFX_land_reform
+		icon = GFX_generic_land_reform
 		prerequisite = { focus = MKH_agricultural_sector }
 		relative_position_id = MKH_agricultural_sector
 		x = 1
@@ -714,10 +976,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_land_reform"
 		    add_stability = 0.15
 			137 = {			
-			    limit = {
-					is_owned_and_controlled_by = ROOT
-					is_capital = no
-				}
 				add_building_construction = { 
 					type = infrastructure
 					level = 2
@@ -758,10 +1016,6 @@ focus_tree = {
 				}
 		    }
 			137 = {			
-			    limit = {
-					is_owned_and_controlled_by = ROOT
-					is_capital = no
-				}
 				add_building_construction = { 
 					type = infrastructure
 					level = 2
@@ -790,13 +1044,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_resource_exploration"
-		    
+		    unlock_decision_category_tooltip = resources_research_category
 	    }
     }
 	
 	focus = {
 		id = MKH_economic_boom #Экономический бум
-		icon = GFX_goal_unknown
+		icon = GFX_generic_elite_agrarian_reform
 		prerequisite = { focus = MKH_highway_gulyai-pole-sevastopol focus = MKH_resource_exploration }
 		relative_position_id = MKH_highway_gulyai-pole-sevastopol
 		x = 1
@@ -813,18 +1067,22 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_economic_boom"
-		    
+            remove_ideas = MKH_agricultural_sector_continuation
+			add_timed_idea = {
+                idea = MKH_the_economic_boom
+                days = 180
+            }
 	    }
     }
 	
 	focus = {
 		id = MKH_overcoming_hunger #Преодоление голода
-		icon = GFX_goal_unknown
+		icon = GFX_overcoming_hunger
 		prerequisite = { focus = MKH_to_rob_the_ukrainian_locomotives }
 		relative_position_id = MKH_to_rob_the_ukrainian_locomotives
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -836,18 +1094,20 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_overcoming_hunger"
-		    
+		    remove_ideas = MKH_risk_of_starvation
+			add_political_power = 150
+			add_stability = 0.05
 	    }
     }
 	
 	focus = {
 		id = MKH_political_arrests #Политические аресты
-		icon = GFX_goal_unknown
+		icon = GFX_generic_prison_nation
 		prerequisite = { focus = MKH_overcoming_hunger }
 		relative_position_id = MKH_overcoming_hunger
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -859,18 +1119,22 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_political_arrests"
-		    
+		    add_manpower = -1000
+			add_timed_idea = {
+                idea = MKH_the_political_arrests
+                days = 90
+            }
 	    }
     }
 	
 	focus = {
 		id = MKH_the_attempted_assassination_of_makhno #Покушение на батьку Махно
-		icon = GFX_goal_unknown
+		icon = GFX_attempted_assassination_of_makhno
 		prerequisite = { focus = MKH_political_arrests }
 		relative_position_id = MKH_political_arrests
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -882,13 +1146,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_attempted_assassination_of_makhno"
-		    
+		    MKH = { country_event = { id = mkh.1 days = 1 } }
 	    }
     }
 	
 	focus = {
 		id = MKH_the_capital_of_anarchy #Столица анархии
-		icon = GFX_the_capital_of_anarchy
+		icon = GFX_capital_of_anarchy
 		prerequisite = { focus = MKH_economic_boom focus = MKH_the_attempted_assassination_of_makhno focus = MKH_modern_nation }
 		relative_position_id = MKH_economic_boom
 		x = -1
@@ -903,18 +1167,29 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+			has_government = anarchism
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_capital_of_anarchy"
-		    random_state = {			
-			    limit = {
-					is_owned_and_controlled_by = ROOT
-					is_capital = yes
-				}
+		    200 = {			
 				add_building_construction = { 
 					type = infrastructure
 					level = 5
 					instant_build = yes 
 				}
+				add_building_construction = { 
+					type = radar_station
+					level = 3
+					instant_build = yes 
+				}
+				add_building_construction = { 
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+				add_extra_state_shared_building_slots = 3
 		    }
 	    }
     }
@@ -938,12 +1213,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_formation_of_the_economy"
-		    add_ideas = MKH_formation_of_the_economy_1
+		    add_ideas = MKH_formation_the_economy_start
 	    }
     }
 	
 	focus = {
-		id = MKH_organization_of_science_in_zaporozhye_national_university #Организация науки в Запорожском национальном университете
+		id = MKH_organization_of_science_in_zaporozhye_national_university #Организация Запорожского университета
 		icon = GFX_focus_research
 		prerequisite = { focus = MKH_economic_boom focus = MKH_the_attempted_assassination_of_makhno focus = MKH_modern_nation }
 		relative_position_id = MKH_economic_boom
@@ -961,13 +1236,29 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_organization_of_science_in_zaporozhye_national_university"
-		    add_research_slot = 1
+		    add_research_slot = 2
+			add_tech_bonus = {
+				bonus = 1.25
+				uses = 1
+				category = infantry_tech
+            }
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 3
+				category = support_tech 
+            }
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = construction_tech
+            }
+			
 	    }
     }
 	
     focus = {
 		id = MKH_deal_with_jews_in_novo-kovno #Сделка с евреями в Ново-Ковно
-		icon = GFX_deal_with_jews_in_novo-kovno
+		icon = GFX_generic_deal_with_jews
 		prerequisite = { focus = MKH_economic_boom focus = MKH_the_attempted_assassination_of_makhno focus = MKH_modern_nation }
 		relative_position_id = MKH_economic_boom
 		x = -7
@@ -984,14 +1275,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_deal_with_jews_in_novo-kovno"
-		    add_war_support = 0.05
-			add_manpower = 10000
+		    MKH = { country_event = { id = mkh.4 days = 1 } }
 	    }
     }
 	
 	focus = {
 		id = MKH_make_an_inventory #Провести инвентаризацию
-		icon = GFX_goal_unknown
+		icon = GFX_discovery_of_the_object
 		prerequisite = { focus = MKH_the_capital_of_anarchy focus = MKH_formation_of_the_economy focus = MKH_organization_of_science_in_zaporozhye_national_university focus = MKH_deal_with_jews_in_novo-kovno }
 		relative_position_id = MKH_the_capital_of_anarchy
 		x = -1
@@ -1008,13 +1298,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_make_an_inventory"
-		    
+		    MKH = { country_event = { id = mkh.5 days = 1 } }
 	    }
     }
 	
 	focus = {
 		id = MKH_the_reformation_of_the_council #Реформация совета
-		icon = GFX_goal_unknown
+		icon = GFX_generic_reformation_of_the_council
 		prerequisite = { focus = MKH_the_capital_of_anarchy focus = MKH_formation_of_the_economy focus = MKH_organization_of_science_in_zaporozhye_national_university focus = MKH_deal_with_jews_in_novo-kovno }
 		relative_position_id = MKH_the_capital_of_anarchy
 		x = -3
@@ -1031,14 +1321,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_reformation_of_the_council"
-		    add_stability = 0.20
-			add_war_support = 0.20	
+		    add_stability = 0.15
+			add_war_support = 0.10
+			add_timed_idea = {
+                idea = MKH_reformation_of_the_council
+                days = 180
+            }
 	    }
     } 
 	
 	focus = {
 		id = MKH_organize_a_workers_strike #Организовать забастовку рабочих
-		icon = GFX_goal_unknown
+		icon = GFX_generic_negative_workers
 		prerequisite = { focus = MKH_the_capital_of_anarchy focus = MKH_formation_of_the_economy focus = MKH_organization_of_science_in_zaporozhye_national_university focus = MKH_deal_with_jews_in_novo-kovno }
 		relative_position_id = MKH_the_capital_of_anarchy
 		x = -5
@@ -1055,13 +1349,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_organize_a_workers_strike"
-		    
+		    unlock_decision_category_tooltip = ukr_anarchy_support_category
 	    }
     }
 	
 	focus = {
 		id = MKH_ask_the_scientists #Расспросить ученых
-		icon = GFX_goal_unknown
+		icon = GFX_generic_study_of_science
 		prerequisite = { focus = MKH_organize_a_workers_strike focus = MKH_the_reformation_of_the_council focus = MKH_make_an_inventory  }
 		relative_position_id = MKH_organize_a_workers_strike
 		x = 1
@@ -1078,13 +1372,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_ask_the_scientists"
-		    
+		    add_ideas = MKH_organization_of_scientists
 	    }
     }
 	
 	focus = {
 		id = MKH_to_establish_production #Наладить производство
-		icon = GFX_goal_unknown
+		icon = GFX_generic_positive_mobile_workers
 		prerequisite = { focus = MKH_organize_a_workers_strike focus = MKH_the_reformation_of_the_council focus = MKH_make_an_inventory  }
 		relative_position_id = MKH_make_an_inventory
 		x = -1
@@ -1101,13 +1395,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_to_establish_production"
-		    
+		    swap_ideas = {
+			    remove_idea = MKH_formation_the_economy_start
+				add_idea = MKH_formation_the_economy_continuation
+			}
 	    }
     }
 	
 	focus = {
 		id = MKH_anarchism_of_the_world #Анархизм всего мира
-		icon = GFX_goal_unknown
+		icon = GFX_anarchism_of_the_world
 		prerequisite = { focus = MKH_ask_the_scientists focus = MKH_to_establish_production  }
 		relative_position_id = MKH_ask_the_scientists
 		x = 1
@@ -1122,9 +1419,28 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+			has_government = anarchism
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_anarchism_of_the_world"
 		    add_ideas = MKH_the_birthplace_of_anarchy
+			CZE = {
+				add_timed_idea = { idea = MKH_anarchism_of_the_world days = 730 }
+			}
+			ROM = {
+				add_timed_idea = { idea = MKH_anarchism_of_the_world days = 730 }
+			}
+			POL = {
+				add_timed_idea = { idea = MKH_anarchism_of_the_world days = 730 }
+			}
+			LIT = {
+				add_timed_idea = { idea = MKH_anarchism_of_the_world days = 730 }
+			}
+			YUG = {
+				add_timed_idea = { idea = MKH_anarchism_of_the_world days = 730 }
+			}
 	    }
     }
 	
@@ -1132,8 +1448,8 @@ focus_tree = {
 		id = MKH_militarization #Милитаризация
 		icon = GFX_focus_generic_combined_arms
 		mutually_exclusive = { focus = MKH_insulation  }
-		x = 23
-		y = 1
+		x = 28
+		y = 0
 		cost = 10
 		
 		cancel_if_invalid = yes
@@ -1159,8 +1475,8 @@ focus_tree = {
 		id = MKH_insulation #Изоляция
 		icon = GFX_goal_generic_construct_military
 		mutually_exclusive = { focus = MKH_militarization  }
-		x = 25
-		y = 1
+		x = 30
+		y = 0
 		cost = 10
 		
 		cancel_if_invalid = yes
@@ -1188,7 +1504,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_women_in_the_army #Женщины в армии
-		icon = GFX_goal_unknown
+		icon = GFX_woman_in_army
 		prerequisite = { focus = MKH_militarization }
 		relative_position_id = MKH_militarization
 		x = 0
@@ -1266,7 +1582,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_women_in_command #Женщины в командовании
-		icon = GFX_goal_unknown
+		icon = GFX_generic_command
 		prerequisite = { focus = MKH_insulation }
 		relative_position_id = MKH_insulation
 		x = 0
@@ -1283,6 +1599,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_women_in_command"
+			custom_effect_tooltip = MKH_women_in_command_tt
 		    create_corps_commander = {
 	            name = "Marusya Nikiforova"
 	            portrait_path = "gfx/leaders/MKH/Marusya_Nikiforova.dds"
@@ -1401,7 +1718,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_chersonese_coast_guard #Береговая охрана Херсонес
-		icon = GFX_goal_unknown
+		icon = GFX_generic_naval_coast
 		prerequisite = { focus = MKH_women_in_command }
 		relative_position_id = MKH_women_in_command
 		x = 2
@@ -1433,8 +1750,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MKH_solve_the_problem_of_equipment_production_in_the_council #Решить в совете проблему производства снаряжения
-		icon = GFX_goal_unknown
+		id = MKH_solve_the_problem_of_equipment_production_in_the_council #Решить проблему производства снаряжения
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_special_forces
 		x = 0
@@ -1451,12 +1768,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_solve_the_problem_of_equipment_production_in_the_council"
-		    add_tech_bonus = {
-				name = infantry_bonus
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
+		    remove_ideas = MKH_the_problem_of_equipment_production_start
+			add_timed_idea = {
+                idea = MKH_the_problem_of_equipment_production_continuation
+                days = 90
+            }
 	    }
 	}
 	
@@ -1479,9 +1795,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_open_zaporozhye_machine-building_design"
+			custom_effect_tooltip = MKH_zaporozhye_machine-building_design_tt
 		    add_tech_bonus = {
 			  name = motorized_bonus
-			  bonus = 1.0
+			  bonus = 0.75
+			  uses = 2
 			  technology = motorised_infantry
 		    }
 	    }
@@ -1512,7 +1830,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_reform_in_the_army #Реформа в армии
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_the_construction_of_the_fortified_line
 		x = 0
@@ -1529,7 +1847,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_reform_in_the_army"
-		    
+		    add_ideas = MKH_reform_army
 	    }
 	}
 	
@@ -1554,15 +1872,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_dominance_of_the_aircraft_makhno"
 		    add_tech_bonus = {
 			  name = air_doc_bonus
-			  bonus = 0.5
-			  uses = 1
+			  bonus = 0.75
+			  uses = 3
 			  category = air_doctrine
 		    }
 	    }
 	}
 	
 	focus = {
-		id = MKH_to_open_the_zaporozhye_aircraft_repair_plant #Открыть Запорожский авиаремонтный завод
+		id = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant #Открыть Днепропетровский авиаремонтный завод
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = MKH_special_forces focus = MKH_the_fast_capture_theory focus = MKH_the_construction_of_the_fortified_line focus = MKH_chersonese_coast_guard }
 		relative_position_id = MKH_chersonese_coast_guard
@@ -1579,7 +1897,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_to_open_the_zaporozhye_aircraft_repair_plant"
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant"
+			custom_effect_tooltip = MKH_dnepropetrovsk_aircraft_repair_plant
 		    add_tech_bonus = {
 			  name = air_doc_bonus
 			  bonus = 1.0
@@ -1592,7 +1911,7 @@ focus_tree = {
 	focus = {
 		id = MKH_father_makhno_carts #Тачанки батьки Махно
 		icon = GFX_father_makhno_carts
-		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant  }
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant  }
 		relative_position_id = MKH_open_zaporozhye_machine-building_design
 		x = 0
 		y = 1
@@ -1611,7 +1930,7 @@ focus_tree = {
 		    add_tech_bonus = {
 				name = motorized_bonus
 				ahead_reduction = 1
-				uses = 1
+				uses = 2
 				category = motorized_equipment
 			}
 	    }
@@ -1619,8 +1938,8 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_early_tanks #Ранние танки
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant }
 		relative_position_id = MKH_solve_the_problem_of_equipment_production_in_the_council
 		x = 0
 		y = 1
@@ -1636,14 +1955,21 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_early_tanks"
-		    
+		    add_tech_bonus = {
+			  name = armor_bonus
+			  bonus = 0.75
+			  uses = 3
+			  category = armor
+			  category = cat_light_armor
+			  category = cat_medium_armor
+		    }
 	    }
 	}
 	
 	focus = {
 		id = MKH_new_command #Новое командование
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		icon = GFX_generic_high_command
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant }
 		relative_position_id = MKH_reform_in_the_army
 		x = 0
 		y = 1
@@ -1659,14 +1985,34 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_new_command"
-		    
+			custom_effect_tooltip = MKH_new_command_tt
+			create_field_marshal = {
+	            name = "Aaron Baron"
+	            portrait_path = "gfx/leaders/MKH/Aaron_Baron.dds"
+	            traits = { brilliant_strategist trait_reckless cavalry_officer }
+	            skill = 4
+	            attack_skill = 3
+	            defense_skill = 4
+	            planning_skill = 2
+	            logistics_skill = 1
+            }
+		    create_corps_commander = {
+	            name = "Ivan Markov"
+	            portrait_path = "gfx/leaders/MKH/Ivan_Markov.dds"
+	            traits = { career_officer }
+	            skill = 2
+	            attack_skill = 3
+	            defense_skill = 4
+	            planning_skill = 4
+	            logistics_skill = 3
+            }
 	    }
 	}
 	
 	focus = {
 		id = MKH_the_purchase_of_the_aircraft #Покупка самолетов
-		icon = GFX_goal_unknown
-		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_zaporozhye_aircraft_repair_plant }
+		icon = GFX_generic_buy_fighters
+		prerequisite = { focus = MKH_pavlogradskayal_military_academy focus = MKH_open_zaporozhye_machine-building_design focus = MKH_solve_the_problem_of_equipment_production_in_the_council focus = MKH_reform_in_the_army focus = MKH_the_dominance_of_the_aircraft_makhno focus = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant }
 		relative_position_id = MKH_the_dominance_of_the_aircraft_makhno
 		x = 0
 		y = 1
@@ -1680,15 +2026,21 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+            NOT = {
+                has_war_with = GER
+            }
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_purchase_of_the_aircraft"
-		    
-	    }
+		    MKH = { country_event = { id = mkh.8 days = 5 } }
+        }
 	}
 	
 	focus = {
-		id = MKH_production_of_the_latest_artillery #Производства новейшей артиллерии
-		icon = GFX_goal_unknown
+		id = MKH_production_of_the_latest_artillery #Производство новейшей артиллерии
+		icon = GFX_generic_focus_artillery_doctrine
 		prerequisite = { focus = MKH_father_makhno_carts focus = MKH_early_tanks focus = MKH_new_command focus = MKH_the_purchase_of_the_aircraft }
 		relative_position_id = MKH_early_tanks
 		x = 0
@@ -1705,13 +2057,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_production_of_the_latest_artillery"
-		    
+		    add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = artillery
+				category = cat_anti_tank
+			}
 	    }
 	}
 	
 	focus = {
 		id = MKH_counter-protection #Контр-защита
-		icon = GFX_goal_unknown
+		icon = GFX_generic_defend_nation
 		prerequisite = { focus = MKH_father_makhno_carts focus = MKH_early_tanks focus = MKH_new_command focus = MKH_the_purchase_of_the_aircraft }
 		relative_position_id = MKH_new_command
 		x = 0
@@ -1728,13 +2085,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_counter-protection"
-		    
+		    add_ideas = MKH_counter_protection
 	    }
 	}
 	
     focus = {
 		id = MKH_request_specialists_from_the_kharkiv_tank_factory #Запросить специалистов из Харьковского танкового завода
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = MKH_production_of_the_latest_artillery focus = MKH_counter-protection  }
 		relative_position_id = MKH_production_of_the_latest_artillery
 		mutually_exclusive = { focus = MKH_request_specialists_from_man_military_factories }
@@ -1750,8 +2107,15 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+		    NOT = {
+			    has_war_with = UKR
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_request_specialists_from_the_kharkiv_tank_factory"
+			custom_effect_tooltip = MKH_kharkiv_tank_factory_tt 
 		    add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1
@@ -1759,12 +2123,13 @@ focus_tree = {
 				category = armor
 				technology = gwtank
 			}
+			UKR = { country_event = { id = mkh.10 days = 5 } }
 	    }
     }
 	
     focus = {
 		id = MKH_request_specialists_from_man_military_factories #Запросить специалистов из военных заводов "MAN"
-		icon = GFX_goal_unknown
+		icon = GFX_man_focus
 		prerequisite = { focus = MKH_production_of_the_latest_artillery focus = MKH_counter-protection  }
 		relative_position_id = MKH_counter-protection
 		mutually_exclusive = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory }
@@ -1780,8 +2145,15 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+		    NOT = {
+			    has_war_with = GER
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_request_specialists_from_man_military_factories"
+			custom_effect_tooltip = MKH_man_military_factories_tt
 		    add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1
@@ -1789,12 +2161,13 @@ focus_tree = {
 				category = armor
 				technology = gwtank
 			}
+			GER = { country_event = { id = mkh.11 days = 5 } }
 	    }
     }
 	
 	focus = {
 		id = MKH_to_steal_the_experimental_equipment #Выкрасть экспериментальное оборудование 
-		icon = GFX_goal_unknown
+		icon = GFX_steal_the_experimental_equipment
 		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
 		relative_position_id = MKH_request_specialists_from_the_kharkiv_tank_factory
 		x = -1
@@ -1811,13 +2184,26 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_to_steal_the_experimental_equipment"
-		    
+		    add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+				category = rocketry
+			}
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
 	    }
 	}
 	
 	focus = {
 		id = MKH_construction_of_a_nuclear_reactor #Строительство Ядерного реактора 
-		icon = GFX_goal_unknown
+		icon = GFX_generic_nuclear_technology
 		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
 		relative_position_id = MKH_request_specialists_from_the_kharkiv_tank_factory
 		x = 1
@@ -1834,13 +2220,23 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_construction_of_a_nuclear_reactor"
-		    
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 2
+				category = nuclear
+			}
 	    }
 	}
 	
 	focus = {
 		id = MKH_protecting_the_nation #Защита нации
-		icon = GFX_goal_unknown
+		icon = GFX_generic_save_nation
 		prerequisite = { focus = MKH_request_specialists_from_the_kharkiv_tank_factory focus = MKH_request_specialists_from_man_military_factories }
 		relative_position_id = MKH_request_specialists_from_man_military_factories
 		x = 1
@@ -1857,13 +2253,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_protecting_the_nation"
-		    
+			swap_ideas = {
+                remove_idea = MKH_counter_protection
+                add_idea = MKH_protecting_nation
+            }
 	    }
 	}
 	
 	focus = {
 		id = MKH_closed_city #Закрытый город
-		icon = GFX_goal_unknown
+		icon = GFX_generic_closed_city
 		prerequisite = { focus = MKH_to_steal_the_experimental_equipment focus = MKH_construction_of_a_nuclear_reactor focus = MKH_protecting_the_nation }
 		relative_position_id = MKH_construction_of_a_nuclear_reactor
 		x = 0
@@ -1880,14 +2279,14 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_closed_city"
-		    
+		    add_research_slot = 1
 	    }
 	}
 	
 	focus = {
-		id = MKH_launch_the_cruiser_aurora #Спустить крейсер "Аврора"
+		id = MKH_launch_the_battleship_sevastopol #Спустить линкор "Севастополь"
 		icon = GFX_goal_generic_build_navy
-		x = 37
+		x = 43
 		y = 0
 		cost = 10
 		
@@ -1899,17 +2298,46 @@ focus_tree = {
 			factor = 5
 		}
 		
+		available = {
+		    controls_state = 137
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_launch_the_cruiser_aurora"
-		    load_oob = MKH_navy
-	    }
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_launch_the_battleship_sevastopol"
+		    custom_effect_tooltip = MKH_launch_cruiser_sevastopol_tt 
+            create_equipment_variant = {
+                name = "Battleship Sevastopol"
+                type =  battleship_1
+                parent_version = 0
+                modules = {
+                    fixed_ship_battery_slot = ship_heavy_battery_3
+                    fixed_ship_anti_air_slot = ship_anti_air_4
+                    fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+                    fixed_ship_radar_slot = ship_radar_3
+                    fixed_ship_engine_slot = heavy_ship_engine_4
+                    fixed_ship_secondaries_slot = dp_ship_secondaries
+                    fixed_ship_armor_slot = ship_armor_bb_3
+                    front_1_custom_slot = ship_heavy_battery_3
+                    mid_1_custom_slot = ship_anti_air_4
+                    mid_2_custom_slot = dp_ship_secondaries
+                    mid_3_custom_slot = ship_airplane_launcher_2
+                    rear_1_custom_slot = ship_heavy_battery_3
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_government = communism }
+                }
+                hidden_effect = { load_oob = "MKH_navy" }
+            }
+        }
 	}
 	
 	focus = {
 		id = MKH_the_construction_of_the_shipyards #Строительство верфей
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = MKH_launch_the_cruiser_aurora  }
-		relative_position_id = MKH_launch_the_cruiser_aurora
+		prerequisite = { focus = MKH_launch_the_battleship_sevastopol  }
+		relative_position_id = MKH_launch_the_battleship_sevastopol
 		x = 0
 		y = 1
 		cost = 10
@@ -1924,11 +2352,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_construction_of_the_shipyards"
-		    add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
+		    196 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
 			}
 	    }
 	}
@@ -2061,7 +2491,7 @@ focus_tree = {
 	
 	focus = {
 		id = MKH_lessons_from_the_civil_war #Уроки гражданской войны
-		icon = GFX_goal_unknown
+		icon = GFX_generic_navy_lessons_of_the_great_war
 		prerequisite = { focus = MKH_production_of_destroyers focus = MKH_control_of_the_black_sea }
 		relative_position_id = MKH_production_of_destroyers
 		x = -1
@@ -2135,10 +2565,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_the_hero-city_of_sevastopol"
-		    add_building_construction = {
-				type = coastal_bunker
-				level = 3
-				instant_build = yes
+		    137 = {
+				add_building_construction = { type = coastal_bunker province = 3686 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 6704 level = 3 instant_build = yes }
+				add_building_construction = { type = coastal_bunker province = 9680 level = 3 instant_build = yes }
 			}
 	    }
 	}
@@ -2248,7 +2678,13 @@ focus_tree = {
 				uses = 1
 				technology = marines
 				technology = marines2
-	        } 
+	        }
+            create_navy_leader = {
+               name = "Dmitry Popov"
+               picture = "gfx/leaders/MKH/Dmitry_Popov.dds"
+               traits = { naval_invader }
+               skill = 1
+            }			
 	    }
 	}
 	
@@ -2300,10 +2736,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MKH_construction_of_ports_in_kherson"
-		    add_building_construction = {
-				type = naval_base
-				level = 5
-				instant_build = yes
+			196 = {
+				add_building_construction = { type = naval_base province = 721 level = 5 instant_build = yes }
 			}
 	    }
 	}

@@ -14,10 +14,7 @@ state={
 		buildings = {
 			infrastructure = 4
 		}
-		1941.11.1 = {
-			owner = UAE
-			add_core_of = UAE
-		}
+		add_core_of = UAE
 	}
 
 	provinces={

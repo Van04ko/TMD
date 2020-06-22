@@ -719,22 +719,6 @@ KUB = {
 	color = rgb { 150	43	29 }
 	color_ui = rgb { 150	43	29 }
 }
-CEA = {
-	color = rgb { 36  132  247 }
-	color_ui = rgb { 36  132  247 }
-}
-NEA = {
-	color = rgb { 76  97  121 }
-	color_ui = rgb { 76  97  121 }
-}
-SEA = {
-	color = rgb { 67  127  63 }
-	color_ui = rgb { 67  127  63 }
-}
-WEA = {
-	color = rgb { 120  110  89 }
-	color_ui = rgb { 120  110  89 }
-}
 TRA = {
 	color = rgb { 244	164	96 } ####color = rgb { 251	206	177 } #########
 	color_ui = rgb { 244	164	96 }

@@ -4,6 +4,11 @@ state={
 	name="STATE_890"
 	manpower = 800000
 	
+	resources={
+		tungsten=4
+		steel=6
+	}
+	
 	state_category = town
 
 	history={
@@ -16,10 +21,7 @@ state={
 			industrial_complex = 2
 		}
 		add_core_of = BUL
-		add_core_of = MAC		
-		1941.11.1 = {
-			add_core_of = ALB
-		}
+		add_core_of = MAC
 	}
 
 	provinces={

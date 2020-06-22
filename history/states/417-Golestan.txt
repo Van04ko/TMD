@@ -14,10 +14,6 @@ state={
 		victory_points = {
 			12773 3
 		}
-		1941.11.1 = {
-			owner = IRQ
-			controller = IRQ
-		}
 	}
 
 	provinces={

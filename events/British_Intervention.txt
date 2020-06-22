@@ -1,0 +1,209 @@
+add_namespace = bir
+
+country_event = {
+	id = bir.1
+	title = bir.1.t
+	desc = bir.1.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bir.1.a 
+		ENG = {
+			country_event = {
+				id = bir.2
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = bir.2
+	title = bir.2.t 
+	desc = bir.2.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Послать помощь
+		name = bir.2.a
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 1499
+			}
+			has_equipment = {
+				support_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 499
+			}
+		}
+		ai_chance = 95
+		send_equipment = {
+            equipment = infantry_equipment
+            amount = -1500
+        }
+		send_equipment = {
+			equipment = support_equipment 
+			amount = -1000
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = -500
+		}
+		BIR = {
+			country_event = {
+				id = bir.3
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = bir.2.b 
+		ai_chance = 5
+		BIR = { country_event = { id = bir.4 days = 3 } }
+	}
+}
+country_event = {
+	id = bir.3
+	title = bir.3.t 
+	desc = bir.3.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bir.3.a 
+		add_equipment_to_stockpile = {
+			type = infantry_equipment 
+			amount = 1500
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1000
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 500
+			producer = ENG
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = landlease_accepted
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = landlease_accepted
+		}
+	}
+} 
+country_event = {
+	id = bir.4
+	title = bir.4.t 
+	desc = bir.4.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bir.4.a 
+		add_opinion_modifier = {
+			target = ENG
+			modifier = BIR_landlease_denied
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = BIR_landlease_denied
+		}
+	}
+}
+country_event = {
+	id = bir.5
+	title = bir.5.t 
+	desc = bir.5.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bir.5.a 
+		GER = {
+			country_event = {
+				id = bir.6
+				days = 3
+			}
+		}
+	}
+}
+country_event = {
+	id = bir.7
+	title = bir.7.t 
+	desc = bir.7.d
+	picture = GFX_report_event_
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bir.7.a 
+		add_ideas = BIR_pounds_depence
+		add_opinion_modifier = {
+			target = ENG
+			modifier = BIR_pounds_currency
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = BIR_pounds_currency
+		}
+	}
+	option = {
+		name = bir.7.b
+		add_political_power = -150
+		add_opinion_modifier = {
+			target = ENG
+			modifier = BIR_rubles_currency
+		}
+	}
+}
+country_event = {
+	id = bir.6
+	title = bir.6.t 
+	desc = bir.6.d
+	picture = GFX_report_event_
+	is_triggered_only = yes 
+	fire_only_once = yes
+	
+	option = {
+		name = bir.6.a 
+		ai_chance = 95
+		GER = {
+			create_production_license = {
+				target = BIR 
+				equipment = {
+					type = infantry_equipment_1
+				}
+				cost_factor = 0
+			}
+			create_production_license = {
+				target = BIR 
+				equipment = {
+					type = cat_light_armor_equipment_1
+				}
+				cost_factor = 0
+			}
+			create_production_license = {
+				target = BIR 
+				equipment = {
+					type = artillery_equipment_1
+				}
+				cost_factor = 0
+			}
+		}
+	}
+	option = {
+		name = bir.6.b 
+		ai_chance = 5
+	}
+}

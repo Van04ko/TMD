@@ -86,11 +86,13 @@ bookmarks = {
 			ideology = anarchism
 			ideas = {
 				MKH_risk_of_starvation
+				MKH_the_problem_of_equipment_production_start
+				MKH_enemies_among_us
 			}	
 			focuses = {
 				MKH_the_strengthening_of_the_power_of_makhno
 				MKH_collect_cartridges_for_a_rainy_day
-				MKH_launch_the_cruiser_aurora
+				MKH_launch_the_battleship_sevastopol
 			}			
 		}
 		SOV = {

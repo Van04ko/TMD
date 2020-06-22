@@ -8,7 +8,6 @@ state={
 	history={
 		owner = SOV
 		add_core_of = SOV
-		add_core_of = JIR
 		
 		add_claim_by = JAP
 		buildings = {

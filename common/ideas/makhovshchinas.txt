@@ -10,10 +10,106 @@ ideas = {
 			}
 			
 			modifier = {
-				
 			}
         }
-	    MKH_formation_of_the_economy_1 = { 
+		MKH_the_problem_of_equipment_production_start = { 
+            picture = FRA_factory_strikes 
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+        }
+		MKH_the_problem_of_equipment_production_continuation = { 
+            picture = FRA_factory_strikes 
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				training_time_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			}
+        }
+		MKH_enemies_among_us = { 
+            picture = enemies_among_us
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+			    political_power_gain = -0.5
+			    stability_factor = -0.15
+				neutrality_drift = 0.10
+				communism_drift = 0.10
+			}
+        }
+        MKH_there_are_fewer_enemies = { 
+            picture = enemies_among_us
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+			    political_power_gain = -0.25
+			    stability_factor = -0.075
+				neutrality_drift = 0.05
+				communism_drift = 0.05
+			}
+        } 
+		MKH_enemies_are_repressed = { 
+            picture = generic_purge
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+			    political_power_gain = -0.10
+			    stability_factor = -0.20
+				anarchism_drift = 0.20
+			}
+        }
+		MKH_old_to_small = { 
+            picture = spa_la_division_azul
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				conscription = 0.03
+				training_time_factor = 0.05
+			}
+        }
+		MKH_organization_of_scientists = { 
+            picture = JAP_supremacy_of_technology
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				research_speed_factor = 0.15
+			}
+        }
+	    MKH_formation_the_economy_start = { 
             picture = generic_goods_red_bonus 
             removal_cost = -1 
 			allowed = { always = no }
@@ -22,7 +118,26 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+        }
+		MKH_formation_the_economy_continuation = { 
+            picture = man_five_year_plan_industry 
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
 			}
         }
 		MKH_the_birthplace_of_anarchy = { 
@@ -34,9 +149,23 @@ ideas = {
 			}
 			
 			modifier = {
-				conscription = 0.05
+				conscription = 0.025
+				drift_defence_factor = 0.25
+				foreign_subversive_activites = -0.25
+				send_volunteers_tension = -0.25
+				join_faction_tension = -0.25
 			}
         }
+		MKH_anarchism_of_the_world = {
+			picture = spr_anarchist_society
+			allowed = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				anarchism_drift = 0.10
+			}
+		}
 		MKH_pavlogradskaya_military_academy = { 
             picture = military_academy 
             removal_cost = -1 
@@ -49,6 +178,20 @@ ideas = {
 				training_time_army_factor = -0.1
 				army_org = 5
 				recon_factor = 0.05
+			}
+        }
+		MKH_reform_army = { 
+            picture = reform_army
+            removal_cost = -1 
+			allowed = { always = no }
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+			    minimum_training_level = -0.1
+				experience_gain_army = 0.05
+				experience_loss_factor = -0.1
 			}
         }
 		MKH_technology_mine_trawling = {
@@ -110,6 +253,224 @@ ideas = {
 				navy_screen_defence_factor = 0.05
 			}
 		}
+		MKH_industrialization_start = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = industrialization
+			modifier = {
+			    production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+		MKH_attract_the_investors = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				trade_cost_for_target_factor = -0.5
+				trade_opinion_factor = 0.10
+			    political_power_gain = 0.15
+			}
+		}
+		MKH_industrialization_continuation = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = industrialization
+			modifier = {
+			    production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				land_reinforce_rate = 0.05
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		MKH_the_modern_nation = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = industrialization
+			modifier = {
+			    production_speed_arms_factory_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				land_reinforce_rate = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		MKH_agricultural_sector_start = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = agrarian_reform
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.20
+			    production_speed_arms_factory_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		MKH_agricultural_sector_continuation = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = agrarian_reform
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.20
+			    production_speed_arms_factory_factor = 0.10
+				production_speed_infrastructure_factor = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+		MKH_the_economic_boom = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = agrarian_reform
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.25
+			    production_speed_arms_factory_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+		MKH_the_political_arrests = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_purge
+			modifier = {
+			    war_support_factor = -0.15
+				political_power_gain = -0.10
+				anarchism_drift = -0.05
+			}
+		}
+       	MKH_reformation_of_the_council = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_flexible_foreign_policy
+			modifier = {
+				political_power_gain = 0.15
+				trade_opinion_factor = 0.15
+				enemy_justify_war_goal_time = 0.15
+			}
+		}
+		MKH_counter_protection = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.10
+				join_faction_tension = -0.10
+				enemy_justify_war_goal_time = 0.10
+			}
+		}
+		MKH_protecting_nation = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = 0.10
+				drift_defence_factor = 0.15
+				join_faction_tension = -0.15
+				enemy_justify_war_goal_time = 0.15
+			}
+		}
+		MKH_crimean_elite = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = celebration_of_the_elite
+			modifier = {
+				war_support_factor = -0.10
+				political_power_gain = -0.05
+				neutrality_drift = 0.05
+			}
+		}
+		MKH_bought_crimea = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = the_sale_of_the_crimea
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.10
+			}
+		}
+		MKH_the_sale_of_the_crimea = {
+		    allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = the_sale_of_the_crimea_positive
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
 	}
 	
 	political_advisor = {
@@ -141,13 +502,28 @@ ideas = {
 		
 			traits = { peasant }
 		}
+		
+		vsevolod_volin = {
+		
+			picture = vsevolod_volin
+			
+			allowed = {
+				original_tag = "MKH"
+			}
+			available = {
+			    has_government = anarchism
+				has_completed_focus = MKH_deal_with_jews_in_novo-kovno
+			}
+		
+			traits = { publicist }
+		}
 	}
 	
 	army_chief = {
 		
 		victor_belash = {
 		
-		    picture = 
+		    picture = victor_belash
 			
 			allowed = {
 				original_tag = MKH
@@ -156,7 +532,26 @@ ideas = {
 			    has_government = anarchism
 			}
 			
-			traits = { defense }
+			traits = { defence_anarchist } 
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		general_ivan_markov = {
+		
+		    picture = ivan_markov
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_completed_focus = MKH_new_command
+			    has_government = anarchism
+			}
+			
+			traits = { military_training } 
 			
 			ai_will_do = {
 				factor = 1
@@ -210,6 +605,85 @@ ideas = {
 				factor = 1
 			}
 		}
+		
+		general_maria_nikiforova = {
+		
+			picture = general_maria_nikiforova
+			
+			allowed = {
+				original_tag = "MKH"
+			}
+			available = {
+			    has_completed_focus = MKH_women_in_command
+			    has_government = anarchism
+			}
+		
+			traits = { experienced_partisan }
+		}
+		
+		ivan_markov = {
+			ledger = army
+			
+			picture = ivan_markov
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_completed_focus = MKH_new_command
+			    has_government = anarchism
+			}
+			
+			traits = { ataman_army }
+			
+			modifier = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		aaron_baron = {
+			ledger = army
+			
+			picture = aaron_baron
+			
+			allowed = {
+				original_tag = MKH
+			}
+			available = {
+			    has_completed_focus = MKH_new_command
+			    has_government = anarchism
+			}
+			
+			traits = { field }
+			
+			modifier = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		general_ilya_struk = {
+		
+			picture = general_ilya_struk
+			
+			allowed = {
+				original_tag = "MKH"
+			}
+			available = {
+			    has_government = neutrality
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		
+			traits = { colonel_neutraliry }
+		}
 	}
 	
 	tank_manufacturer = {
@@ -228,6 +702,10 @@ ideas = {
 				OR = {
 				    controls_state = 221
 					has_completed_focus = MKH_request_specialists_from_the_kharkiv_tank_factory
+					has_country_flag = MKH_approve_a_request_ukr
+				}
+				NOT = {
+				    has_country_flag = MKH_do_not_approve_an_application_ukr
 				}
 			}
 			
@@ -241,7 +719,7 @@ ideas = {
 			}
 		}
 		
-		GER_MAN = {
+		MAN = {
 
 			picture = GER_MAN
 			
@@ -250,7 +728,13 @@ ideas = {
 			}
 			
 			available = {
-				has_completed_focus = MKH_request_specialists_from_man_military_factories
+			    OR = {
+				    has_completed_focus = MKH_request_specialists_from_man_military_factories
+				    has_country_flag = MKH_approve_a_request_ger
+				}
+				NOT = {
+				    has_country_flag = MKH_do_not_approve_an_application_ger
+				}
 			}
 			
 			research_bonus = {
@@ -262,6 +746,89 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		dnepropetrovsk_aircraft_repair = {
+		    
+			picture = generic_air_manufacturer_1
+			
+			
+			allowed = {
+				original_tag = MKH
+			}
+			
+			available = {
+				has_completed_focus = MKH_to_open_the_dnepropetrovsk_aircraft_repair_plant
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			  experience_gain_air_factor = 0.1
+			  industry_repair_factor = 0.1
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+	
+		designer = yes
+		
+		zaporozhye_machine-building_design = {
+			
+			picture = generic_motorized_equipment_manufacturer_3
+			
+			allowed = {
+				original_tag = MKH
+			}
+			
+			available = {
+				has_completed_focus = MKH_open_zaporozhye_machine-building_design
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	theorist = {	
+		
+		general_vsevolod_volin = {
+		
+		    picture = vsevolod_volin
+		
+			ledger = army
+			
+			allowed = {
+				original_tag = MKH
+			}
+			
+			available = {
+			    has_government = anarchism
+				has_completed_focus = MKH_deal_with_jews_in_novo-kovno
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist_anarchism }
 		}
 	}
 }

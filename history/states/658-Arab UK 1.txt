@@ -7,23 +7,20 @@ state={
 	state_category = rural
 
 
-	history={
-		add_core_of = UAE
+	history = {
 		owner = ENG
+		
 		victory_points = {
 			7960 1 
 		}
+		
 		buildings = {
 			infrastructure = 2
 			7960 = {
 				naval_base = 3
 			}
 		}
-		1941.11.1 = {
-			owner = UAE
-			add_core_of = UAE
-		}
-
+		add_core_of = UAE
 	}
 
 	provinces={

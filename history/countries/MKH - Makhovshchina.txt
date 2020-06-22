@@ -6,13 +6,15 @@ set_research_slots = 3
 
 set_convoys = 50
 set_stability = 0.3
-set_war_support = 0.5
+set_war_support = 0.35
 set_fuel_ratio = 0.3
 
 
 
 add_ideas = {
 	MKH_risk_of_starvation
+	MKH_the_problem_of_equipment_production_start
+	MKH_enemies_among_us
 }
 
 set_technology = {
@@ -78,11 +80,11 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 0
+	neutrality = 10
 	fascism = 0
 	communism = 10
 	democratic = 0
-	anarchism = 90 
+	anarchism = 80 
 }
 
 create_country_leader = {
@@ -116,6 +118,17 @@ create_country_leader = {
 	traits = {
 		sailor_zheleznyak
 	}
+} 
+
+create_country_leader = {
+	name = "Pavel Scrupule"
+	desc = "POLITICS_JIGME_WANGCHUCK_DESC"
+	picture = "gfx/leaders/MKH/Pavel_Scrupule.dds"
+	expire = "1965.1.1"
+	ideology = monarchy_ideology
+	traits = {
+		#
+	}
 }
 
 1939.1.1 = {
@@ -128,9 +141,9 @@ create_country_leader = {
 	set_popularities = {
 		fascism = 0
 		communism = 10
-		neutrality = 0
+		neutrality = 10
 		democratic = 0 
-		anarchism = 90
+		anarchism = 80
         monarchy = 0		
 	}
 } 

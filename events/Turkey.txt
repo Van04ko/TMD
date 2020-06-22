@@ -2,13 +2,13 @@
 # Turkey Events
 ###########################
 
-add_namespace = turkey
+add_namespace = tur
 
 # President dies
 country_event = {
-	id = turkey.1
-	title = turkey.1.t
-	desc = turkey.1.d
+	id = tur.1
+	title = tur.1.t
+	desc = tur.1.d
 	picture = GFX_report_event_generic_funeral
 
 	fire_only_once = yes
@@ -48,7 +48,7 @@ country_event = {
 	}
 
 	option = {
-		name = turkey.1.a
+		name = tur.1.a
 		every_country = {
 	 		limit = {
 				has_unit_leader = 59
@@ -60,25 +60,25 @@ country_event = {
 
 # Demand Cyprus
 	country_event = {
-			id = turkey.2
-			title = turkey.2.t
-			desc = turkey.2.d
+			id = tur.2
+			title = tur.2.t
+			desc = tur.2.d
 			picture = GFX_report_event_military_planning
 
 			is_triggered_only = yes
 
 	option = { # Accept
-			name = turkey.3.a
+			name = tur.2.a
 			ai_chance = { factor = 100 }
 			TUR = {
-			country_event = { id = turkey.3 }
+			country_event = { id = tur.3 }
 			}
 		}
 	option = { # Refuse
-			name = turkey.3.b
+			name = tur.2.b
 			ai_chance = { factor = 0 }
 			TUR = {
-			country_event = { id = turkey.2 }
+			country_event = { id = tur.2 }
 			}
 		}
 	}
@@ -92,21 +92,21 @@ country_event = {
 				is_triggered_only = yes
 
 				option = {
-				name = turkey.5.a
+				name = turkey.3.a
 				transfer_state = 183
 								}
 							}
 	# ENG Declines
 	country_event = {
-				id = turkey.3.b
-				title = turkey.2.t
-				desc = turkey.2.d
+				id = tur.4.b
+				title = tur.4.t
+				desc = tur.4.d
 				picture = GFX_report_event_military_planning
 
 				is_triggered_only = yes
 
 				option = {
-				name = turkey.2.a
+				name = turkey.4.a
 				create_wargoal = {
 				type = take_state
 				target = ENG
@@ -117,40 +117,40 @@ country_event = {
 			
 # Syria Demand (Fra)
 	country_event = {
-			id = turkey.6
-			title = turkey.6.t
-			desc = turkey.6.d
+			id = tur.6
+			title = tur.6.t
+			desc = tur.6.d
 			picture = GFX_report_event_korean_war_march
 
 			is_triggered_only = yes
 
 	option = { # Accept
-			name = turkey.6.a
+			name = tur.6.a
 			ai_chance = { factor = 100 }
 			turkey = {
-			country_event = { id = turkey.7 }
+			country_event = { id = tur.7 }
 			}
 		}
 	option = { # Refuse
-			name = turkey.5.b
+			name = tur.6.b
 			ai_chance = { factor = 0 }
 			TUR = {
-			country_event = { id = turkey.7 }
+			country_event = { id = tur.7 }
 			}
 		}
 	}
 
 	# FRA Declines
 			country_event = {
-			id = turkey.7
-			title = turkey.7.t
-			desc = turkey.7.d
+			id = tur.7
+			title = tur.7.t
+			desc = tur.7.d
 			picture = GFX_report_event_nra_march
 
 			is_triggered_only = yes
 
 			option = {
-			name = turkey.7.a
+			name = tur.7.a
 			create_wargoal = {
 			type = take_state
 			target = FRA
@@ -161,20 +161,18 @@ country_event = {
 
 	# FRA Accepts
 			country_event = {
-			id = turkey.8
-			title = turkey.8.t
-			desc = turkey.8.d
+			id = tur.8
+			title = tur.8.t
+			desc = tur.8.d
 			picture = GFX_report_event_generic_read_write
 
 			is_triggered_only = yes
 
 			option = {
-			name = turkey.7.a
+			name = turkey.8.a
 			transfer_state = 677
 			transfer_state = 680
 			transfer_state = 554
 			transfer_state = 553
 		}
 	}
-	
-	

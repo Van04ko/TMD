@@ -1,0 +1,24 @@
+train_robbery_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+resources_research_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+ukr_anarchy_support_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+ukr_border_war_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
