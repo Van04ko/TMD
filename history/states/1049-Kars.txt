@@ -1,13 +1,13 @@
+state = {
 
-state={
 	id=1049
 	name="STATE_1049"
 	manpower = 254000
 	
 	state_category = rural
 
-	history={
-		owner = TRA		
+	history = {
+		owner = KAR		
 		victory_points = {
 			13756 1 
 		}
@@ -15,11 +15,8 @@ state={
 			infrastructure = 3
 		}
 		add_core_of = TUR
-		add_core_of = TRA
+		add_core_of = KAR
 		add_claim_by = ARM
 	}
-
-	provinces={
-		6991 7454 10403 10472 12376 13756
-	}
+	provinces = { 6991 10403 10472 12376 13756 7454 11753 789 }
 }

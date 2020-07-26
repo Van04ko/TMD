@@ -1,24 +1,34 @@
 train_robbery_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		original_tag = MKH
 	}
 }
 resources_research_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		original_tag = MKH
 	}
 }
 ukr_anarchy_support_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		original_tag = MKH
 	}
 }
 ukr_border_war_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		original_tag = MKH
+	}
+}
+UKR_category_Intermarium = {
+
+	icon = generic_political_actions
+
+	priority = 90
+
+	allowed = {
+		original_tag = UKR
 	}
 }

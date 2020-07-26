@@ -1,12 +1,13 @@
-state={
+state = {
+
 	id=972
 	name="STATE_972"
+	manpower = 278000
+	
+	state_category=town
 
-	history={
-		owner = TRA
-		victory_points = {
-			3653 3 
-		}
+	history = {
+		owner = KAR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -14,16 +15,12 @@ state={
 				naval_base = 2
 				coastal_bunker = 1
 			}
-
 		}
-		add_core_of = TRA
+		victory_points = {
+			3653 1
+		}
+		add_core_of = KAR
 		add_core_of = GEO
 	}
-
-	provinces={
-		3653 
-	}
-	manpower=1200000
-	buildings_max_level_factor=1.000
-	state_category=town
+	provinces = { 3653 }
 }

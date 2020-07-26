@@ -1,0 +1,23 @@
+state = {
+
+	id=820
+	name="STATE_820"
+	manpower = 344235
+	
+	state_category = pastoral
+	
+	history = {
+		owner = GRE
+		buildings = {
+			infrastructure = 4
+			6995 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			6995 1 
+		}
+		add_core_of = GRE
+	}
+	provinces = { 6995 }
+}

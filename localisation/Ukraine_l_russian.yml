@@ -1,14 +1,19 @@
 ﻿l_russian:
 
-###Украина###
+##Украина##
     
-    
-    
-#Коммунизм#
- #Фокусы                 
+   #Фокусы
+   
+#Гетман
+ UKR_Hetman_of_All_Ukraine:0 "Гетман всея §YУкраины§!"
+ 
+#Демократы
+ UKR_Liberty_Spirit:0 "Дух §GСвободы§!"
+
+#Коммунизм#                 
  UKR_Skoropadsky:0 "Вопрос Украинской государственности"
  UKR_RADA:0 "Собрание депутатов Верховной Рады"
- UKR_Earth_Revolution:0 "§RЗемля Революций§!"
+ UKR_Earth_Revolution:0 "Земля §RРеволюций§!"
  UKR_Chornui_WORONOK:0 "Устранить угрозу Республики"
  UKR_New_Roads:0 "Железные дороги для Страны"
  UKR_Red_Army_Squads:0 "Отряды УРККА"
@@ -28,10 +33,18 @@
  UKR_New_place:0 "Новые Возможности"
  UKR_Crimean:0 "Поиск врагов, и да плюс Крым"
  UKR_detachments:0 "Массовая мобилизация УРККА"
+ UKR_Revanchism_communism:0 "Реваншизм"
+ UKR_Scribble_anarchist_groupings:0 "Подавить анархистские формирования"
+ UKR_Comintern:0 "Коммунистический интернационал"
+ UKR_Conquer_the_Vistula:0 "Покорить Вислу"
+ UKR_Beyond_the_Dniester:0 "Провокации на Днестре"
+ UKR_Ideological_rivalry:0 "Идеологическое соперничество"
+ UKR_Balcans_Revolution:0 "Балканская Революция"
+ UKR_New_balcans_regimen:0 "Новый режим на Балканах"
+ UKR_Strike_first:0 "Пошатнуть стены §RКремля§!"
  
- 
- 
- UKR_Death_or_Dishonor:0 "§YТретий путь§!"
+#Фошесты#
+ UKR_Death_or_Dishonor:0 "Третий §Oпуть§!"
  UKR_Identity:0 "Национальная идентичность"
  UKR_Destroy_the_Traitors:0 "Уничтожение политических оппонентов"
  UKR_One_Country_One_Nation:0 "Наша страна - наша нация"
@@ -54,7 +67,7 @@
  UKR_Kuban:0 "Вторжение в «Малиновий Клин»"
  UKR_Outline_New_Borders:0 "Очертить новые границы"
  UKR_Kuban_Railway:0 "Кубанская железная дорога"
- UKR_Volga_Region:0 "Захват «Жовтий Клин»"
+ UKR_Volga_Region:0 "Захватить «Жовтий Клин»"
  UKR_Integration_Don_Cossaks:0 "Интегрировать Кубанские степи"
  UKR_Volksdeutsche_For_Matherland:0 "Политика регулирования местных народов"
  UKR_VolgaLand:0 "Земли Волги"
@@ -92,11 +105,22 @@
  lev_akhmatov:0 "Лев Ахматов"
  grigory_petrovsky:0 "Григорий Петровский"
  stanislav_wojciechowski:0 "Станислав Войцеховский"
+ nikita_khrushchev_ukr:0 "Никита Хрущёв"
  
  
  
- 
- 
+ #Трейты 
+ oligarch_defens:0 "§YОлигарх§!\nМинистр обороны"
+ oligarch_economist:0 "§YОлигарх§!\nЭкономист"
+ oligarch_railroad_owner:0 "§YОлигарх§!\nВладелец У.Ж.Д."
+ doctor:0 "Врач эпидемиолог"
+ father_of_republic:0 "Отец Республики"
+ Minister_of_Economics:0 "Министр Экономики"
+ Militarist:0 "Милитарист"
+ General_Staff:0 "Военный в политике"
+ Polish_Puppet:0 "Польская марионетка"
+ Illiterate_leader_1:0 "Безграмотный лидер"
+ Illiterate_leader_2:0 "Участник программы ЛикБез"
  
  
  

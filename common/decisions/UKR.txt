@@ -1,0 +1,79 @@
+UKR_category_Intermarium = {
+
+	UKR_decision_invite_tag_to_the_intermarium = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 30
+
+		allowed = {
+			original_tag = UKR
+		}
+		
+		visible = {
+			is_faction_leader = yes
+		}
+		
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = UKR_Intermarium_concept
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				original_tag = POL
+			}
+		}
+		
+		available = {
+			OR = {
+				has_opinion = {
+					target = FROM
+					value > 49
+				}
+				FROM = {
+					has_opinion = {
+						target = ROOT
+						value > 49
+					}
+				}
+			}
+			FROM = {
+				is_in_faction = no
+				is_subject = no
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = LIT
+					}
+					FROM = {
+						original_tag = LAT
+					}
+					FROM = {
+						original_tag = EST
+					}
+				has_completed_focus = UKR_Baltic_politic
+				}
+			}
+		}
+
+		cost = 25
+		
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = generic.5
+				}				
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

@@ -1,12 +1,12 @@
+state = {
 
-state={
 	id=1
 	name="STATE_1" # Corsica
 	manpower = 322900
 	
 	state_category = town
 
-	history={
+	history = {
 		owner = FRA
 		victory_points = { 3838 1 }
 		buildings = {
@@ -20,8 +20,5 @@ state={
 		add_core_of = FRA
 		add_core_of = COR
 	}
-
-	provinces={
-		3838 9851 11804 
-	}
+	provinces = { 3838 9851 11804 }
 }

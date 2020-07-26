@@ -1,26 +1,44 @@
+state = {
 
-state={
 	id=454
 	name="STATE_454" #Palestine
-	manpower = 130540
+	manpower = 642990
 	
-	state_category = rural
+	state_category = large_town
 
-	history={
-		owner = ENG
+	history = {
+		owner = JOR
 		buildings = {
-			infrastructure = 5
-			industrial_complex = 1
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 2
+			13319 = {
+				naval_base = 3
+			}
 			4088 = {
 				naval_base = 3
 			}
+			1065 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			13308 15 
+		}
+		victory_points = {
+			13319 10
+		}
+		victory_points = {
+			1065 5 
 		}
 		victory_points = {
 			4088 1 
 		}
+		victory_points = {
+			7107 1 
+		}
+		add_core_of = PAL
+		add_core_of = JOR
 	}
-
-	provinces={
-		4088 4206
-	}
+	provinces = { 1065 1201 4088 4206 7107 13308 13319 13320 }
 }

@@ -1,15 +1,16 @@
-state={
+state = {
+
 	id=680
 	name="STATE_680"
 	manpower = 224110
 	
 	state_category = pastoral
 	
-	resources={
+	resources = {
 		oil=4
 	}
 
-	history={
+	history = {
 		owner = IRQ
 		buildings = {
 			infrastructure = 3
@@ -17,12 +18,9 @@ state={
 		victory_points = {
 			2013 1 
 		}
+		set_demilitarized_zone = yes
 		add_core_of = SYR
 		add_core_of = IRQ
 	}
-
-
-	provinces={
-		2013 3942 7513 10383 12316 12442 14290
-	}
+	provinces = { 2013 3942 7513 12316 14290 }
 }

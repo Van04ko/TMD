@@ -1,20 +1,18 @@
-state={
+state = {
+
 	id=998
 	name="STATE_998" #Raqqa
 	manpower = 100000
 	
-	state_category = wasteland
+	state_category = rural
 
-	history={
-		owner = IRQ
+	history = {
+		owner = KUR
 		buildings = {
 			infrastructure = 2
 		}
+		add_core_of = KUR
 		add_core_of = SYR
-		add_core_of = IRQ
 	}
-
-	provinces={
-		901 1606 1634 6883 10882 14190
-	}
+	provinces = { 901 1606 1634 6883 10882 14190 }
 }

@@ -3,19 +3,20 @@ ideas = {
 country = {
 		
 		UKR_Language_question = {
-		picture = hol_the_foundations_of_defense
-		allowed = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
 			}
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.07
 				research_speed_factor = -0.09
+				conscription_factor = -0.29
 			}
 		}
 		
 		UKR_Likbezgr = {
-		picture = jap_duplicate_research
-		allowed = {
+			picture = jap_duplicate_research
+			allowed = {
 			}
 			removal_cost = -1
 			modifier = {
@@ -359,7 +360,58 @@ country = {
 				conscription_factor = -0.06
 			}
 		}
-
+		
+		###Fascism
+		
+		UKR_Propaganda_idea = {
+			picture = officers_purged
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				
+				fascism_drift = 0.12
+			}
+		}
+		
+		UKR_Repression_idea = {
+			picture = officers_purged
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				
+				monarchy_drift = -0.06
+				communism_drift = -0.06
+				democratic_drift = -0.06
+			}
+		}
+		
+		UKR_Language_question_fascism_1 = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.09
+				research_speed_factor = -0.05
+				conscription_factor = -0.18
+				
+			}
+		}
+		
+		UKR_Language_question_fascism_2 = {
+			picture = hol_the_foundations_of_defense
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.03
+				research_speed_factor = -0.02
+				conscription_factor = 0.07
+				
+			}
+		}
 	}
 	
 	political_advisor = {
@@ -373,7 +425,7 @@ country = {
 				has_completed_focus = UKR_Earth_Revolution
 			}
 			
-
+			picture =  nikita_khrushchev
 			
 			traits = { communist_revolutionary }
 	
@@ -390,7 +442,7 @@ country = {
 		
 		sidor_kovpak = {
 			
-			picture = kenneth_anderson
+			picture = trafford_leigh_mallory
 			
 			allowed = {
 				original_tag = "UKR"

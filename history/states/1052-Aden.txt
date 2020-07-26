@@ -1,11 +1,15 @@
-state={
+state = {
+
 	id=1052
 	name="STATE_1052"
+	manpower=42638
 	
 	state_category = rural
+	
+	buildings_max_level_factor=1.000
 
-	history={
-		owner = RAJ
+	history = {
+		owner = ENG
 		victory_points = {
 			4913 1 
 		}		
@@ -18,10 +22,5 @@ state={
 		}
 		add_core_of = YEM
 	}
-
-	provinces={
-		4913
-	}
-	manpower=42638
-	buildings_max_level_factor=1.000
+	provinces = { 4913 }
 }

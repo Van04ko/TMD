@@ -1,25 +1,18 @@
+state = {
 
-state={
 	id=852
 	name="STATE_852"
 	manpower = 9345
+	
 	state_category = wasteland
 
-	history={
-		owner = ENG
+	history = {
+		owner = SAU
 		buildings = {
 			infrastructure = 1
 		}
 		add_core_of = UAE
-		#add_claim_by = SAU
-		1941.11.1 = {
-			owner = UAE
-			add_core_of = UAE
-			add_claim_by = SAU
-		}
+		add_core_of = SAU
 	}
-
-	provinces={
-		5004 13683 13696 
-	}
+	provinces = { 5004 13683 13696 }
 }

@@ -1,4 +1,4 @@
-capital = 73 #Ivano-Frankovsk
+capital = 89 #Stanislawow
 
 oob = "WUR_1936"
 

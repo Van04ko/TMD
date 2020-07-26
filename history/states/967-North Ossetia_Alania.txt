@@ -1,24 +1,28 @@
-state={
+state = {
+
 	id=967
 	name="STATE_967"
+	manpower = 689905
+	
+	state_category=rural
 
-	history={
+	history = {
 		owner = TRA
 		buildings = {
 			infrastructure = 3
 
 		}
 		victory_points = {
-			9628 3 
-		}		
+			9628 1
+		}
+		victory_points = {
+			685 1
+		}	
+		victory_points = {
+			670 1
+		}
 		add_core_of = TRA
 		add_core_of = GEO
 	}
-
-	provinces={
-		9628 9632 9647 11614
-	}
-	manpower=329205
-	buildings_max_level_factor=1.000
-	state_category=rural
+	provinces = { 670 685 9628 9632 9647 11614 }
 }

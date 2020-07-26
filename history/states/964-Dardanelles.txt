@@ -5,15 +5,14 @@ state= {
 	
 	state_category = enclave
 
-	history= {
+	history = {
 		owner = GRE
 		buildings = {
 			infrastructure = 5
+			849 = { bunker = 1 }
+			6864 = { bunker = 2 }
 		}
-		add_core_of = TUR
-		set_demilitarized_zone = yes
+		add_core_of = GRE
 	}
-	provinces = { 
-		849 6864	
-	}
+	provinces = { 849 6864 }
 }

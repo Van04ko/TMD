@@ -1,29 +1,23 @@
+state = {
 
-state={
 	id=1026
 	name="STATE_1026"
 	manpower = 34535
 	
 	state_category = rural
 	
-	resources={
+	resources = {
 		chromium=2
 	}
 
-	history={
+	history = {
 		owner = GRE
 		buildings = {
 			infrastructure = 4
+			11905 = { bunker = 1 }
+			13834 = { bunker = 1 }
 		}
 		add_core_of = GRE	
-		1941.11.1 = {
-			owner = BUL
-			controller = BUL
-			add_core_of = BUL
-		}		
 	}
-
-	provinces={
-		11905 13834
-	}
+	provinces = { 11905 13834 }
 }

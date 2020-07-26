@@ -1,15 +1,16 @@
-
 state={
+
 	id=412
 	name="STATE_412"
-	manpower = 918619
+	manpower = 917619
+	
 	resources={
-		oil=10 # was: 12
+		oil=10
 	}
 
-
 	state_category = rural
-	history={
+	
+	history = {
 		owner = PER
 		victory_points = {
 			8117 1 
@@ -28,8 +29,5 @@ state={
 		}
 		add_core_of = PER
 	}
-
-	provinces={
-		1889 4959 4966 5089 5095 7982 8117 10797 10881 12832 14197 14200 14201 14202 14203 14204 14205 14206 14209
-	}
+	provinces = { 1889 4966 5089 5095 7982 8117 10797 10881 12832 14197 14200 14201 14202 14203 14204 14205 14206 14209 }
 }

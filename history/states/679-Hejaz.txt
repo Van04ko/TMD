@@ -1,15 +1,16 @@
-state={
+state = {
+
 	id=679
 	name="STATE_679"
-	manpower = 1331000
+	manpower = 1181000
 	
 	state_category = pastoral
 
-	resources={
+	resources = {
 		steel=1
 	}
 
-	history={
+	history = {
 		owner = SAU
 		victory_points = {
 			5037 2 
@@ -37,8 +38,5 @@ state={
 		}
 		add_core_of = SAU
 	}
-
-	provinces={
-		1033 2027 2033 2095 4981 5037 5136 8092 10835 12883 13612 13613 13650 13655 13664 13693 13670 13711 13714 13719
-	}
+	provinces = { 2033 4981 5037 5136 12883 13612 13613 13650 13655 13664 13693 13670 13714 }
 }

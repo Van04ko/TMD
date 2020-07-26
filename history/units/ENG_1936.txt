@@ -489,7 +489,7 @@ air_wings = {
 			amount = 48
 		}
 	}
-	659 = { 
+	1052 = { 
 		### RAF Aden
 		fighter_equipment_0 = {
 			owner = "ENG" 

@@ -1,34 +1,29 @@
+state = {
 
-state={
 	id=1122
 	name="STATE_1122"
 	manpower = 38600
 	
 	state_category = small_island
 
-	resources={
+	resources = {
 		oil=1
 	}
 	
-	history={
-	
-		owner = ENG		
-		
-		victory_points = {
-			8000 1 
-		}
-	
+	history = {
+		owner = YEM		
 		buildings = {
 			infrastructure = 1
 			8000 = {
 				naval_base = 1
 			}	
 		}
+		victory_points = {
+			8000 1 
+		}
 		add_core_of = YEM
 		add_claim_by = SOM
 	}
 
-	provinces={
-		8000
-	}
+	provinces = { 8000 }
 }

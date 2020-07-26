@@ -1,17 +1,17 @@
+state = {
 
-state={
 	id=339
 	name="STATE_339"
 	manpower = 1311755
-	resources={
-		chromium=50 # was: 86
-	}
 	
 	state_category = town
+	
+	resources = {
+		chromium=50
+	}
 
-	history={
+	history = {
 		owner = GRE
-		
 		victory_points = {
 			4112 5 
 		}
@@ -23,12 +23,7 @@ state={
 				naval_base = 5
 			}
 		}
-		add_core_of = TUR
-		
-		set_demilitarized_zone = yes
+		add_core_of = GRE
 	}
-
-	provinces={
-		928 4112 6992 7130 11848 
-	}
+	provinces = { 928 4112 6992 7130 11848 }
 }

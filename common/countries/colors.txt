@@ -5,8 +5,8 @@ GER = {
 	color_ui = rgb { 37 40 80 }
 }
 ENG = {
-	color = rgb { 201 56 93 }
-	color_ui = rgb { 255 73 121 }
+	color = rgb { 155 17 30 }
+	color_ui = rgb { 155 17 30 }
 }
 SOV = {
 	color = rgb { 125 13 24 }
@@ -74,12 +74,12 @@ SWI = {
 	color_ui = rgb { 193 81 81 }
 }
 TUR = {
-	color = rgb { 201 165 131 }
-	color_ui = rgb { 201 165 131 }
+	color = rgb { 204 119 34 }
+	color_ui = rgb { 204 119 34 }
 }
 GRE = {
-	color = rgb { 93 181 227 }
-	color_ui = rgb { 121 235 255 }
+	color = rgb { 93  181  227 }
+	color_ui = rgb { 93  181  227 }
 }
 ALB = {
 	color = rgb { 149 45 102 }
@@ -178,8 +178,8 @@ HON = {
 	color_ui = rgb { 128 145 65 }
 }
 IRQ = {
-	color = rgb { 178 114 99 }
-	color_ui = rgb { 231 148 129 }
+	color = rgb { 123 160 91 }
+	color_ui = rgb { 123 160 91 }
 }
 JAP = {
 	color = hsv { 0.05 0.3 1 }
@@ -226,8 +226,8 @@ SAF = {
 	color_ui = rgb { 198 169 248 }
 }
 SAU = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 198 199 133 }
+	color_ui = rgb { 198 199 133 }
 }
 SIA = {
 	color = rgb { 171 190 152 }
@@ -287,12 +287,12 @@ HAI = {
 	color_ui = rgb { 174 113 113 }
 }
 YEM = {
-	color = rgb { 155 101 107 }
-	color_ui = rgb { 202 131 139 }
+	color = rgb { 128 62 117 }
+	color_ui = rgb { 128 62 117 }
 }
 OMA = {
-	color = rgb { 155 101 107 }
-	color_ui = rgb { 202 131 139 }
+	color = rgb { 72 142 74 }
+	color_ui = rgb { 72 142 74 }
 }
 SLO = {
 	color = rgb { 158  161  188 }
@@ -354,8 +354,8 @@ JOR = {
 }
 
 SYR = {
-	color = rgb { 100  100  150 }
-	color_ui = rgb { 100  100  150 }
+	color = rgb { 131 131 175 }
+	color_ui = rgb { 131 131 175 }
 }
 
 SER = {
@@ -384,8 +384,8 @@ GEO = {
 }
 
 ARM = {
-	color = rgb { 176  102  180 }
-	color_ui = rgb { 176  102  180 }
+	color = rgb { 112 41 99 }
+	color_ui = rgb { 112 41 99 }
 }
 
 LAO = {
@@ -712,18 +712,26 @@ JIR = {
 	color_ui = rgb { 48 213 200 }
 }
 BIR = {
-	color = rgb { 38  127  230 }
-	color_ui = rgb { 38  127  230 }
+	color = rgb { 38 127 230 }
+	color_ui = rgb { 38 127 230 }
 }
 KUB = {
-	color = rgb { 150	43	29 }
-	color_ui = rgb { 150	43	29 }
+	color = rgb { 150 43 29 }
+	color_ui = rgb { 150 43 29 }
 }
 TRA = {
-	color = rgb { 244	164	96 } ####color = rgb { 251	206	177 } #########
-	color_ui = rgb { 244	164	96 }
+	color = rgb { 244 164 96 }
+	color_ui = rgb { 244 164 96 }
 }
 WUK = {
 	color = rgb { 180 76 67 }
 	color_ui = rgb { 180 76 67 }
+}
+KAR = {
+	color = rgb { 139 137 64 }
+	color_ui = rgb { 139 137 64 }
+}
+KUR = {
+	color = rgb { 140 69 102 }
+	color_ui = rgb { 140 69 102 }
 }

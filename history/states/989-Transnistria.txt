@@ -12,6 +12,9 @@ state={
 		}
 		add_core_of = MOL
 		add_core_of = UKR
+		victory_points = {
+			13836 2
+		}
 	}
 
 	provinces={

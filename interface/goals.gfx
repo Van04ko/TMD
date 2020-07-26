@@ -2392,4 +2392,49 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/finish_what_you_started.dds"
 	}
 	
+	SpriteType = { 
+		name = "GFX_moscow_visit_sov"
+		texturefile = "gfx/interface/goals/moscow_visit_sov.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_grain_crop_sov"
+		texturefile = "gfx/interface/goals/grain_crop_sov.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_officer_school"
+		texturefile = "gfx/interface/goals/generic_officer_school.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_destruction_of_political_opponents"
+		texturefile = "gfx/interface/goals/generic_destruction_of_political_opponents.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_labour_camp"
+		texturefile = "gfx/interface/goals/generic_labour_camp.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_deport_the_population"
+		texturefile = "gfx/interface/goals/generic_deport_the_population.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_soviet_army"
+		texturefile = "gfx/interface/goals/generic_soviet_army.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_soviet_deal"
+		texturefile = "gfx/interface/goals/generic_soviet_deal.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_generic_take_the_factory_sov"
+		texturefile = "gfx/interface/goals/generic_take_the_factory_sov.dds"
+	}
+	
 }

@@ -1,23 +1,20 @@
+state = {
 
-state={
 	id=352
 	name="STATE_352" # Van
 	manpower = 1065490
 
 	state_category = rural
 
-	history={
-		owner = TUR
+	history = {
+		owner = ARM
 		victory_points = {
-			6935 1 
+			6935 3
 		}		
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = TUR
+		add_core_of = ARM
 	}
-
-	provinces={
-		864 1463 4583 6935 7470 7530 11880 12318 12476 13121
-	}
+	provinces = { 864 1463 4583 6935 7470 7530 11880 12318 12476 13121 }
 }

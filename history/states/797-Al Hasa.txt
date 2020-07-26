@@ -1,12 +1,12 @@
+state = {
 
-state={
 	id=797
 	name="STATE_797"
-	manpower = 52000
+	manpower = 58642
 	
 	state_category = rural
 	
-	history={
+	history = {
 		owner = SAU
 		victory_points = {
 			12702 2
@@ -17,13 +17,7 @@ state={
 				naval_base = 1
 			}			
 		}
-		1941.11.1 = {
-			owner = UAE
-			add_core_of = UAE
-		}
+		add_core_of = SAU
 	}
-
-	provinces={
-		1955 12702 13715
-	}
+	provinces = { 1955 12702 13715 13736 }
 }

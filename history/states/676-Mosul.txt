@@ -1,33 +1,25 @@
-state={
+state = {
+
 	id=676
 	name="STATE_676"
 	manpower = 1182741
 	
 	state_category = town
 	
-	resources={
-		oil=8 # was: 10
+	resources = {
+		oil=2
+		steel=4
 	}
 
-
-	history={
-		owner = IRQ
+	history = {
+		owner = KUR
 		buildings = {
 			infrastructure = 3
 		}
 		victory_points = {
 			10106 5
 		}
-		victory_points = {
-			8123 1 
-		}
-		add_core_of = IRQ
-		1941.11.1 = {
-			add_core_of = SYR
-		}
+		add_core_of = KUR
 	}
-	
-	provinces={
-		1600 1938 3916 8123 10106 10793 10804 12372 
-	}
+	provinces = { 1600 1938 10106 10804 12372 }
 }

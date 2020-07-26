@@ -1,25 +1,21 @@
+state = {
 
-state={
 	id=1101
 	name="STATE_1101"
 	manpower = 20000
 	
 	state_category = wasteland
 
-	history={
-		owner = ITA
-		victory_points = {
-			4486 1 
-		}
+	history = {
+		owner = JOR
+		add_core_of = SYR
+		add_core_of = JOR
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = SYR
-
+		victory_points = {
+			4486 1 
+		}
 	}
-
-
-	provinces={
-		4486
-	}
+	provinces = { 4486 13814 }
 }

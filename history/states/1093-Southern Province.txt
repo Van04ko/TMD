@@ -1,16 +1,16 @@
-state=
-{
+state = {
+
 	id=1093
 	name="STATE_1093"
 	manpower = 1000000
 	
 	state_category = pastoral
 
-	resources={
+	resources = {
 		rubber=10
 	}
 
-	history={
+	history = {
 		owner = ENG
 		victory_points = {
 			4219 1
@@ -18,9 +18,7 @@ state=
 		buildings = {
 			infrastructure = 4
 		}
+		add_core_of = SRL
 	}
-	
-	provinces={
-		4219 14142
-	}
+	provinces = { 4219 14142 }
 }
